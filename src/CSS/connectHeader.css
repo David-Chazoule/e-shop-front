@@ -1,0 +1,20 @@
+.connect-header-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+}
+
+.icon-user {
+    width: 16%;
+}
+
+.btn-connect-box{
+    margin: 10px 0;
+}
+
+.btn-connect {
+    margin: 0 5px;
+    cursor: pointer;
+}
