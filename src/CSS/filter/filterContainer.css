@@ -1,6 +1,7 @@
 .filter_container{
     width: 100%;
-    background-color: aqua;
-    height: 400px;
+    background-color:rgb(189, 186, 180);
+    height: 354px;
     margin-top: 50px;
+    border: 1px solid black;
 }
