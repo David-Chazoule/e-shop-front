@@ -1,5 +1,6 @@
 import BodyContainer from './components/BodyContainer';
 
+import Header from './components/header/Header';
 import './App.css';
 
 function App() {
@@ -7,6 +8,7 @@ function App() {
     <div className="App">
 
       <BodyContainer />
+   <Header />   
       
     </div>
   );
