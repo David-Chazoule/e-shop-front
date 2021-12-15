@@ -1,0 +1,21 @@
+
+
+.body_container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background-color: cadetblue;
+    padding: 30px;
+    
+}
+
+.container{
+    width: 80%;
+    
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
