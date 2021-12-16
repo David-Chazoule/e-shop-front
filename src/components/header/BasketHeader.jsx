@@ -14,10 +14,10 @@ function BasketHeader(){
       };
 
     return (
-        <div className="basket-header-container">
+        <div className="basket-header-container" onMouseEnter={()=>showBasket(false)} onMouseLeave={()=>showBasket(true)}>
             
             
-            <div className="basket-box" onMouseEnter={()=>showBasket(false)} onMouseLeave={()=>showBasket(true)}>
+            <div className="basket-box" >
             <img className="icon-basket" src={basket} alt="" />
             <div id="circle"><p className="number-article-basket">1</p></div>
             

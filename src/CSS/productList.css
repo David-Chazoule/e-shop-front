@@ -1,7 +1,7 @@
 .productlist_container{
     width: 20%;
     display: flex;
-    flex-direction: column;
+    
     align-items: center;
     justify-content: center;
     background-color: white;
@@ -11,9 +11,10 @@
 }
 
 .productlist_container:hover{
-    transform: scale(1.03);
+    transform: scale(1.02);
     transition-duration: 0.3s;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    
 }
 
 .list-card{
@@ -26,7 +27,7 @@
 
 
 .list-img{
-    width: 140px;
+    width: 100px;
     height: auto;
 }
 
@@ -57,4 +58,16 @@
     display: flex;
     align-items: flex-start;
     width: 100%;
+}
+
+.bar-seperate{
+    margin-top: 8px;
+    border-top: 6px solid orange;
+    width: 12%;
+}
+
+.bar-v-seperate{
+    margin-left: 20px;
+    border-right: 4px solid orange;
+    height: 16vh;
 }

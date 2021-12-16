@@ -1,0 +1,7 @@
+.filter_container{
+    width: 100%;
+    background-color:rgb(189, 186, 180);
+    height: 260px;
+    margin: 0;
+    border-bottom: 1px solid black;
+}

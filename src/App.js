@@ -1,15 +1,19 @@
 import BodyContainer from './components/BodyContainer';
 
 import Header from './components/header/Header';
+import FiltrerContainer from './components/filter/FilterContainer';
+
+
 import './App.css';
 
 function App() {
   return (
     <div className="App">
 
-      <BodyContainer />
-   <Header />   
       
+   <Header />   
+  <FiltrerContainer />
+  <BodyContainer />
     </div>
   );
 }
