@@ -3,7 +3,7 @@ import BasketHeader from './BasketHeader';
 import ConnectHeader from './ConnectHeader';
 import logo from '../../img/logo.png';
 
-import '../../CSS/header.css';
+import '../../CSS/header/header.css';
 
 
 function Header() {

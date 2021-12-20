@@ -1,24 +1,35 @@
+import { Navigate, useNavigate} from "react-router-dom";
+
+
+import '../CSS/product-card/productList.css';
 
 
 
-import '../CSS/productList.css';
 
+function ProductList ({id, img, title, marque, price}) {
 
+    let navigate = useNavigate();
 
+  const handleClick = () => {
+    navigate(`/card/${id}`);
+  };
 
-function ProductList (props) {
+    
     return (
         
         
-        <div className="productlist_container">
+        <div className="productlist_container" onClick={handleClick}
+        onKeyPress={handleClick}
+        role="button"
+        tabIndex={0}>
           
-          <div className="list-card">
-              <img className="list-img" src={props.index.img} alt="" />
-              <p className="title-list">{props.index.title} </p>
+          <div className="list-card" >
+              <img className="list-img" src={img} alt="" />
+              <p className="title-list">{title} </p>
               <div className='marque-list-box'>
-              <p className="marque-list">{props.index.marque}</p>
+              <p className="marque-list">{marque}</p>
               </div>
-              <p className="price-list">{props.index.price}</p>
+              <p className="price-list">{price}</p>
               <div className="bar-seperate"></div>
           </div>
 

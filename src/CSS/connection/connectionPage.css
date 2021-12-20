@@ -1,0 +1,56 @@
+.Connection_container{
+    display: flex;
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.connection-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    width: 100%;
+    padding: 40px 0;
+    margin: 20% 0 10% 0;
+}
+
+.bar-h {
+    border-left: 6px solid orange;
+    height: 25vh;
+    margin-left: 40px ;
+
+
+}
+
+.connection-box p {
+    font-weight: bold;
+    margin: 5px 0 0 0;
+}
+
+.btn-user-box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    width: 100%;
+
+}
+
+.btn-user{
+    text-align: center;
+    padding: 1% 4%;
+    border-radius: 15px;
+    cursor: pointer;
+    background-color: orange;
+    color: white;
+    font-weight: 600;
+}
+
+.btn-user:hover{
+    background-color: white;
+    color: orange;
+
+}

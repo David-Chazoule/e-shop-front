@@ -1,6 +1,7 @@
 import user from '../../img/user.png'
 import { useState } from 'react';
-import  '../../CSS/connectHeader.css'
+import {Link} from 'react-router-dom';
+import  '../../CSS/header/connectHeader.css';
 
 function ConnectHeader(){
 
@@ -30,8 +31,14 @@ function ConnectHeader(){
             <div className= "connect-list">
                 <div className="list-connect-box">
                 <div className="btn-connect-box">
+
+            <Link to="/connection">
             <button className="btn-connect">Connection</button>
+            </Link>
+
+            <Link to="/register">
             <button className="btn-connect">inscription</button>
+            </Link>
             </div> 
                    </div>
 
