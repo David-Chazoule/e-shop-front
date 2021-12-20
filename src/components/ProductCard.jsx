@@ -30,16 +30,20 @@ function ProductCard() {
     useEffect(() => {
 
         // getItem()
-
+        products.forEach((x)=>{
+            if(x.id === parseInt(id)){
+                setProduct(x)
+            }
+        })
 
         // const data = products.map((x) => x.id === id )
-        const data = products[id - 1]
-        console.log(data, products);
-        if (data === []) {
-            // AUCUN PRODUIT TROUVÉ
-            return
-        }
-        setProduct(data)
+        // const data = products[id - 1]
+        console.log(productInfos, products);
+        // if (productInfos === []) {
+        //     // AUCUN PRODUIT TROUVÉ
+        //     return
+        // }
+        // setProduct(data)
         setLoad(false)
     }, [])
 
