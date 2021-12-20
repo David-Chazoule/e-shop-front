@@ -1,33 +1,47 @@
 
 import { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
-import product from '../list.js'
+import { useParams, Link } from 'react-router-dom';
+import products from '../list.json'
 
 import '../CSS/product-card/productCard.css';
 import valid from '../img/IconValide.png';
 
 
-function ProductCard ({}) {
+function ProductCard () {
 
-    const [productInfos, setProduct] = useState([])
-const [load, setLoad] = useState(true)
+    const [productInfos, setProduct] = useState({})
+    const [load, setLoad] = useState(true)
 
-const params = useParams();
+    const {id} = useParams();
 
-const id = params.id
+    // const id = params.id
+    
+    // function getItem(){
+    //     const data = products.map((p)=>{
+    //         if(p.id === id){
+    //             return p
+    //         }
+    //     })
+
+    //     console.log(data)
+    // }
 
 
+    useEffect(() => {
+        
+        // getItem()
 
-useEffect(async() => {
-  const data = await product.filter((x) => x.id === id )
-  if(data[0] === undefined) {
-    // AUCUN PRODUIT TROUVÉ
-    return
-  }
 
-  setProduct(data)
-  setLoad(false)
-}, [])
+        // const data = products.map((x) => x.id === id )
+        const data = products[id -1]
+        console.log(data, products);
+        if(data === []) {
+            // AUCUN PRODUIT TROUVÉ
+            return
+        }
+        setProduct(data)
+        setLoad(false)
+    }, [])
 
 
 return (
@@ -46,7 +60,7 @@ return (
           
         
         <div className="img-card-box">
-            <img className="img-card" src={productInfos.img}alt="" />
+            <img className="img-card" src={productInfos.img} alt="" />
 
         </div>
 
@@ -91,6 +105,10 @@ return (
 
 
       </div>
+
+      <Link to="/produit">
+             <button className='btn-back-next'>retour </button>
+             </Link>
 
         </div>
     )

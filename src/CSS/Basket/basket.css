@@ -130,13 +130,20 @@
     margin:  30px 0 ;
 }
 
-.btn-back-next{
-    padding: 1% 4%;
+Link{
+    display: flex;
+    width: 100%;
+}
+
+  .btn-back-next{
+    padding: 10px 40px;
     border-radius: 15px;
     cursor: pointer;
     background-color: orange;
     color: white;
     font-weight: 600;
+    font-size: 20px;
+    
 }
 
 .btn-back-next:hover{

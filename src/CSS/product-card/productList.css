@@ -71,3 +71,19 @@
     border-right: 4px solid orange;
     height: 16vh;
 }
+
+.seperate-bar{
+    width: 80%;
+    border-top: 4px solid orange;
+    margin: 5% 0;
+    
+}
+
+.choice-box-bar{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin: 40px 0;
+}

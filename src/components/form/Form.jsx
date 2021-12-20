@@ -59,7 +59,9 @@ function Form () {
              <button className='btn-back-next'>revenir </button>
              </Link>
              
+             <Link to="/paiement">
              <button className='btn-back-next'>paiement</button>
+             </Link>
          </div>     
                     
                 

@@ -10,7 +10,7 @@ function FiltrerContainer () {
 
             <div className='choice-container'>
              
-             <Choicebox />
+             {/* <Choicebox /> */}
              <SearchBar />
             </div>
         

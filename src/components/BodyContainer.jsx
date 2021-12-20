@@ -8,6 +8,7 @@ import Register from '../components/inscription/Register';
 import ProductCard from '../components/ProductCard';
 
 import '../CSS/bodyContainer.css';
+import PaymentContainer from './Payment/PaymentContainer';
 
 
 
@@ -18,6 +19,8 @@ function BodyContainer () {
         <div className="body_container">
 
             <div className='container-general'>
+
+                
             
             <Routes>
             
@@ -32,6 +35,8 @@ function BodyContainer () {
                 < Route path="/register" element={<Register/>} />
 
                 < Route path="/card/:id" element={<ProductCard/>} />
+
+                <Route path="/paiement" element={<PaymentContainer/>} />
                 
 
                 

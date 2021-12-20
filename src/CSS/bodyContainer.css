@@ -13,7 +13,7 @@
 
 .container-general{
     width: 80%;
-    margin-top: 20px;
+    margin: 0 0 40px 0;
     height: fit-content;
     display: flex;
     flex-direction: column;
@@ -25,7 +25,8 @@
 }
 
 .container{
-    width: 80%;
+    width: 90%;
+    padding-bottom: 20px;
     margin-top: 20px;
     height: fit-content;
     display: flex;
@@ -33,3 +34,4 @@
     justify-content: center;
     flex-wrap: wrap;
 }
+
