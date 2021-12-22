@@ -5,6 +5,7 @@ import products from '../list.json'
 
 import '../CSS/product-card/productCard.css';
 import valid from '../img/IconValide.png';
+import wrong from '../img/Not_allowed.svg';
 
 
 function ProductCard() {
@@ -14,42 +15,63 @@ function ProductCard() {
 
     const { id } = useParams();
 
-    // const id = params.id
+       useEffect(() => {
 
-    // function getItem(){
-    //     const data = products.map((p)=>{
-    //         if(p.id === id){
-    //             return p
-    //         }
-    //     })
-
-    //     console.log(data)
-    // }
-
-
-    useEffect(() => {
-
-        // getItem()
+        
         products.forEach((x)=>{
             if(x.id === parseInt(id)){
                 setProduct(x)
             }
         })
-
-        // const data = products.map((x) => x.id === id )
-        // const data = products[id - 1]
-        console.log(productInfos, products);
-        // if (productInfos === []) {
-        //     // AUCUN PRODUIT TROUVÉ
-        //     return
-        // }
-        // setProduct(data)
+        
         setLoad(false)
     }, [])
 
 
+    function showQuantity() {
+        if ( productInfos.quantity >= 10){
+            return <>
+                <div className="stock">
+                            <img className='icon-valid' src={valid} alt="" />
+                            <p className='good-stock'>En stock</p>
+                        </div>
+                        </>
+        } }
+
+
+    function noQuantity() {
+        if( productInfos.quantity === 0 ){
+           return <>
+                <div className="stock">
+                                <img className='icon-not-valid' src={wrong} alt="" />
+                                <p className='no-stock'> produit indisponible</p>
+                            </div>
+                            </>
+         }
+    }
+
+    function smallstock() {
+        if (productInfos.quantity <= 10 && productInfos.quantity >= 1){
+            return <>
+            <div className="stock">
+                            <img className='icon-valid' src={valid} alt="" />
+                             <div className='small-stock'>
+                             <p className='good-stock'>En stock</p>
+                            <p className='limit-stock'>il ne reste que {productInfos.quantity} {productInfos.type}s</p>
+                            </div>
+                        </div>
+            
+            </>
+        }
+    }
+                        
+         
+        
+    
+
+
     return (
-        //check si load !== true donc affiché le contenue de la page sinon affiché un loading
+        
 
 
 
@@ -93,10 +115,11 @@ function ProductCard() {
                     </div>
 
                     <div className="order-stock-box">
-                        <div className="stock">
-                            <img className='icon-valid' src={valid} alt="" />
-                            <p>En stock</p>
-                        </div>
+                          
+                          {showQuantity()}
+                          {noQuantity()}
+                          {smallstock()}
+                          
 
                         <div className="btn-order-box">
                             <button className='btn-order'>mettre dans votre panier</button>

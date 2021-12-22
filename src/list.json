@@ -11,8 +11,10 @@
         "info2":"Android 10.0",
         "info3":"128 Go",
         "info4":"6 Go",
-        "description":"Écran Infinity-U : grâce à la technologie FHD+ Super AMOLED du Galaxy M32, votre contenu s’affiche sous son meilleur jour : clair, net et précis"
-},
+        "description":"Écran Infinity-U : grâce à la technologie FHD+ Super AMOLED du Galaxy M32, votre contenu s’affiche sous son meilleur jour : clair, net et précis",
+        "type":"smartphone",
+        "quantity": 75
+    },
 
     {   
         "id": 2,
@@ -24,8 +26,9 @@
         "info2":"Android 11.0",
         "info3":"128 Go",
         "info4":"8 Go",
-        "description":"Conçu pour une expérience inoubliable au quotidien. Pour des photos et des vidéos toujours réussies. Découvrez les Galaxy S21 5G et S21+ 5G. Conçus pour révolutionner la vidéo et la photographie, avec une résolution 8K exceptionnelle et des photos en 64 MP. Disponibles en deux tailles et avec un design affirmé et unique, les Galaxy S21 illumineront votre quotidien."
-  
+        "description":"Conçu pour une expérience inoubliable au quotidien. Pour des photos et des vidéos toujours réussies. Découvrez les Galaxy S21 5G et S21+ 5G. Conçus pour révolutionner la vidéo et la photographie, avec une résolution 8K exceptionnelle et des photos en 64 MP. Disponibles en deux tailles et avec un design affirmé et unique, les Galaxy S21 illumineront votre quotidien.",
+        "type":"smartphone",
+        "quantity": 4
 },
 
     {   
@@ -38,7 +41,9 @@
         "info2":"Android 11.0",
         "info3":"128 Go",
         "info4":"6 Go",
-        "description":"pour les gens en galeres "
+        "description":"pour les gens en galeres ",
+        "type":"smartphone",
+        "quantity": 145
 
 },
 
@@ -52,7 +57,9 @@
         "info2":" iOS 14",
         "info3":"128 Go",
         "info4":" 4go",
-        "description":"pour les gens riches"
+        "description":"pour les gens riches",
+        "type":"smartphone",
+        "quantity": 345
 
 },
 
@@ -66,7 +73,9 @@
         "info2":"iOS 15",
         "info3":"128 Go",
         "info4":" 4 Go",
-        "description":"pour les riches"
+        "description":"pour les riches",
+        "type":"smartphone",
+        "quantity": 245
 
 },
 
@@ -80,7 +89,9 @@
         "info2":" iOS 15",
         "info3":"128 Go",
         "info4":"6 Go",
-        "description":"pour les gens super riche"
+        "description":"pour les gens super riche",
+        "type":"smartphone",
+        "quantity": 0
 },
 
     {   
@@ -93,8 +104,9 @@
         "info2":" Android",
         "info3":"32go",
         "info4":"2 Go",
-        "description":"Doté d'un écran massif Dot Drop de 6,53 pouces, le Redmi 9A offre une expérience vidéo et de jeu incroyable tout en protégeant vos yeux de la lumière bleue de l’écran grâce à la certification TÜV Rheinland."
-
+        "description":"Doté d'un écran massif Dot Drop de 6,53 pouces, le Redmi 9A offre une expérience vidéo et de jeu incroyable tout en protégeant vos yeux de la lumière bleue de l’écran grâce à la certification TÜV Rheinland.",
+        "type":"smartphone",
+        "quantity":5
 },
 
     {   
@@ -107,7 +119,9 @@
         "info2":"Android 11 ",
         "info3":"128 Go",
         "info4":"8 Go",
-        "description":"Téléphone chinois avec plein de truc d'espion dedans"
+        "description":"Téléphone chinois avec plein de truc d'espion dedans",
+        "type":"smartphone",
+        "quantity": 32
 
 },
 
@@ -121,7 +135,9 @@
         "info2":"Android",
         "info3":"128 Go",
         "info4":"6 Go",
-        "description":"pas vraiment ouf vraiment pas ouf"
+        "description":"pas vraiment ouf vraiment pas ouf",
+        "type":"smartphone",
+        "quantity": 145
 
 },
 
@@ -135,7 +151,139 @@
         "info2":"",
         "info3":"128 Go",
         "info4":"8 Go",
-        "description":"Le design ultra-mince de 6,81 mm et ultra-léger de 158 g du Xiaomi 11 Lite 5G NE lui confère un look épuré et rafraîchissant, aussi attrayant qu'agréable à prendre en main. Le Xiaomi 11 Lite 5G NE, le plus fin et le plus léger des smartphones 5G de Xiaomi, affiche des bords incroyablement fins, de seulement 1,88 mm, et atteint un excellent équilibre performances-format."
+        "description":"Le design ultra-mince de 6,81 mm et ultra-léger de 158 g du Xiaomi 11 Lite 5G NE lui confère un look épuré et rafraîchissant, aussi attrayant qu'agréable à prendre en main. Le Xiaomi 11 Lite 5G NE, le plus fin et le plus léger des smartphones 5G de Xiaomi, affiche des bords incroyablement fins, de seulement 1,88 mm, et atteint un excellent équilibre performances-format.",
+        "type":"smartphone",
+        "quantity": 90
+
+},
+
+{   
+    "id": 11,
+    "title":"Oculus Quest 2",
+    "marque":"-Oculus-",
+    "price":"349,00€ ",
+    "img":"https://m.media-amazon.com/images/I/615YaAiA-ML._AC_SL1500_.jpg",
+    "info1":" 1832 x 1920 par œil",
+    "info2":"72 Hz au lancement, prochainement 90 Hz",
+    "info3":"110° maximum",
+    "info4":" 503 grammes",
+    "description":"  Oculus Quest 2 est notre système de VR tout-en-un le plus abouti. Chaque détail a été conçu pour retranscrire au mieux vos mouvements dans l’univers virtuel. Vous profitez ainsi de jeux et d’expériences à couper le souffle avec une liberté inégalée. Aucun PC ni console requis.",
+    "type":" casque VR",
+    "quantity": 40
+
+},
+
+
+{   
+    "id": 12,
+    "title":"HTC Vive Cosmos",
+    "marque":"-HTC-",
+    "price":"667,00€ ",
+    "img":"https://m.media-amazon.com/images/I/51f7SJEbTXL._AC_SL1000_.jpg",
+    "info1":" 2880 x 1700 pixels",
+    "info2":"90hz",
+    "info3":"110° maximum",
+    "info4":"651 grammes",
+    "description":"Le casque de réalité virtuelle VIVE COSMOS est un casque de VR haut de gamme, polyvalent, personnalisable et très simple à configurer. Parfait pour les joueurs débutants, comme les plus expérimentés, il offre un équilibre idéal entre un graphisme parfait et une grande simplicité d’installation et d’utilisation.",
+    "type":"casque VR",
+    "quantity": 90
+
+},
+
+{   
+    "id": 13,
+    "title":"Marshall Major III Casque ",
+    "marque":"-Marshall-",
+    "price":"109,00€ ",
+    "img":"https://m.media-amazon.com/images/I/7118TJAtRXL._AC_SL1500_.jpg",
+    "info1":" 32 Ohms ",
+    "info2":"Sans fil Bluetooth ",
+    "info3":"30 heures",
+    "info4":"178 grammes",
+    "description":"La technologie Bluetooth aptX vous offre la liberté et la commodité d'un casque sans fil Plus De 30 Heures De Lecture Sans Fil",
+    "type":"casque audio",
+    "quantity": 90
+
+},
+
+{   
+    "id": 14,
+    "title":"Beats Solo 3",
+    "marque":"-Beats by Dre-",
+    "price":"149,00€ ",
+    "img":"https://m.media-amazon.com/images/I/51QxA-98Q+L._AC_SL1000_.jpg",
+    "info1":" 53.67 Ohms",
+    "info2":"Sans fil Bluetooth",
+    "info3":"40 heures",
+    "info4":" 210 grammes ",
+    "description":" Casque Bluetooth sans fil haute performance Équipé de la puce Apple W1 pour une connectivité Bluetooth classe 1 sans filGrâce à son autonomie maximale de 40 heures, le Beats Solo3 sans fil est le choix idéal pour vos activités au quotidien ",
+    "type":"casque audio",
+    "quantity": 6
+
+},
+
+{   
+    "id": 15,
+    "title":"Samsung QE55Q80A",
+    "marque":"-Samsung-",
+    "price":"927,99€",
+    "img":"https://m.media-amazon.com/images/I/415PfYzGXEL._AC_.jpg",
+    "info1":" 6.55 pouces",
+    "info2":"",
+    "info3":"128 Go",
+    "info4":"8 Go",
+    "description":"Le design ultra-mince de 6,81 mm et ultra-léger de 158 g du Xiaomi 11 Lite 5G NE lui confère un look épuré et rafraîchissant, aussi attrayant qu'agréable à prendre en main. Le Xiaomi 11 Lite 5G NE, le plus fin et le plus léger des smartphones 5G de Xiaomi, affiche des bords incroyablement fins, de seulement 1,88 mm, et atteint un excellent équilibre performances-format.",
+    "type":"smartphone",
+    "quantity": 90
+
+},
+
+{   
+    "id": 16,
+    "title":"Xiaomi 11 lite",
+    "marque":"-Xiaomi-",
+    "price":"369,00€ ",
+    "img":"https://m.media-amazon.com/images/I/415PfYzGXEL._AC_.jpg",
+    "info1":" 6.55 pouces",
+    "info2":"",
+    "info3":"128 Go",
+    "info4":"8 Go",
+    "description":"Le design ultra-mince de 6,81 mm et ultra-léger de 158 g du Xiaomi 11 Lite 5G NE lui confère un look épuré et rafraîchissant, aussi attrayant qu'agréable à prendre en main. Le Xiaomi 11 Lite 5G NE, le plus fin et le plus léger des smartphones 5G de Xiaomi, affiche des bords incroyablement fins, de seulement 1,88 mm, et atteint un excellent équilibre performances-format.",
+    "type":"smartphone",
+    "quantity": 90
+
+},
+
+
+{   
+    "id": 17,
+    "title":"Xiaomi 11 lite",
+    "marque":"-Xiaomi-",
+    "price":"369,00€ ",
+    "img":"https://m.media-amazon.com/images/I/415PfYzGXEL._AC_.jpg",
+    "info1":" 6.55 pouces",
+    "info2":"",
+    "info3":"128 Go",
+    "info4":"8 Go",
+    "description":"Le design ultra-mince de 6,81 mm et ultra-léger de 158 g du Xiaomi 11 Lite 5G NE lui confère un look épuré et rafraîchissant, aussi attrayant qu'agréable à prendre en main. Le Xiaomi 11 Lite 5G NE, le plus fin et le plus léger des smartphones 5G de Xiaomi, affiche des bords incroyablement fins, de seulement 1,88 mm, et atteint un excellent équilibre performances-format.",
+    "type":"smartphone",
+    "quantity": 90
+
+},
+
+{   
+    "id": 18,
+    "title":"Xiaomi 11 lite",
+    "marque":"-Xiaomi-",
+    "price":"369,00€ ",
+    "img":"https://m.media-amazon.com/images/I/415PfYzGXEL._AC_.jpg",
+    "info1":" 6.55 pouces",
+    "info2":"",
+    "info3":"128 Go",
+    "info4":"8 Go",
+    "description":"Le design ultra-mince de 6,81 mm et ultra-léger de 158 g du Xiaomi 11 Lite 5G NE lui confère un look épuré et rafraîchissant, aussi attrayant qu'agréable à prendre en main. Le Xiaomi 11 Lite 5G NE, le plus fin et le plus léger des smartphones 5G de Xiaomi, affiche des bords incroyablement fins, de seulement 1,88 mm, et atteint un excellent équilibre performances-format.",
+    "type":"smartphone",
+    "quantity": 90
 
 }
     

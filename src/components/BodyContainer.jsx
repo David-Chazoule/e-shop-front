@@ -7,6 +7,8 @@ import ConnectionPage from '../components/connection/ConnectionPage';
 import Register from '../components/inscription/Register';
 import ProductCard from '../components/ProductCard';
 import PaymentContainer from '../components/Payment/PaymentContainer';
+import AdminClientContainer from '../components/adminCustomer/AdminClientContainer';
+
 
 import '../CSS/bodyContainer.css';
 
@@ -38,7 +40,7 @@ function BodyContainer() {
 
                     <Route path="/paiement" element={<PaymentContainer />} />
 
-
+                    <Route path="/compte" element={<AdminClientContainer />} />
 
                 </Routes>
             </div>

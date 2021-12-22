@@ -64,6 +64,8 @@
     display: flex;
     width: 100%;
     margin-top: 20px;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .stock{
@@ -75,7 +77,7 @@
 
 .stock p {
     margin-left: 5px;
-    color:rgb(4, 78, 4);
+    
     font-weight: bold;
 }
 
@@ -86,5 +88,22 @@
 .btn-order-box{
     display: flex;
     width: 100%;
+
+}
+
+.good-stock{
+    color: green;
+    margin: 0;
+}
+
+.no-stock {
+    color: red;
+    margin: 0;
+ }
+
+.limit-stock{
+    color: red;
+    font-size: 12px;
+    margin: 0;
 
 }

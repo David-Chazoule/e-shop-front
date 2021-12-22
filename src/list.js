@@ -11,8 +11,10 @@ let product = [
         info2:"Android 10.0",
         info3:"128 Go",
         info4:"6 Go",
-        description:"Écran Infinity-U : grâce à la technologie FHD+ Super AMOLED du Galaxy M32, votre contenu s’affiche sous son meilleur jour : clair, net et précis"
-},
+        description:"Écran Infinity-U : grâce à la technologie FHD+ Super AMOLED du Galaxy M32, votre contenu s’affiche sous son meilleur jour : clair, net et précis",
+        type:"smartphone",
+        quantity: 145
+    },
 
     {   
         id: 2,
@@ -24,8 +26,9 @@ let product = [
         info2:"Android 11.0",
         info3:"128 Go",
         info4:"8 Go",
-        description:"Conçu pour une expérience inoubliable au quotidien. Pour des photos et des vidéos toujours réussies. Découvrez les Galaxy S21 5G et S21+ 5G. Conçus pour révolutionner la vidéo et la photographie, avec une résolution 8K exceptionnelle et des photos en 64 MP. Disponibles en deux tailles et avec un design affirmé et unique, les Galaxy S21 illumineront votre quotidien."
-  
+        description:"Conçu pour une expérience inoubliable au quotidien. Pour des photos et des vidéos toujours réussies. Découvrez les Galaxy S21 5G et S21+ 5G. Conçus pour révolutionner la vidéo et la photographie, avec une résolution 8K exceptionnelle et des photos en 64 MP. Disponibles en deux tailles et avec un design affirmé et unique, les Galaxy S21 illumineront votre quotidien.",
+        type:"smartphone",
+        quantity:3
 },
 
     {   
@@ -38,7 +41,9 @@ let product = [
         info2:"Android 11.0",
         info3:"128 Go",
         info4:"6 Go",
-        description:""
+        description:"",
+        type:"smartphone",
+        quantity: 50
 
 },
 
@@ -52,7 +57,9 @@ let product = [
         info2:" iOS 14",
         info3:"128 Go",
         info4:" 4go",
-        description:""
+        description:"",
+        type:"smartphone",
+        quantity: 142
 
 },
 
@@ -66,7 +73,9 @@ let product = [
         info2:"iOS 15",
         info3:"128 Go",
         info4:" 4 Go",
-        description:""
+        description:"",
+        type:"smartphone",
+        quantity:200
 
 },
 
@@ -80,7 +89,9 @@ let product = [
         info2:" iOS 15",
         info3:"128 Go",
         info4:"6 Go",
-        description:""
+        description:"",
+        type:"smartphone",
+        quantity: 0
 },
 
     {   
@@ -93,8 +104,9 @@ let product = [
         info2:" Android",
         info3:"32go",
         info4:"2 Go",
-        description:"Doté d'un écran massif Dot Drop de 6,53 pouces, le Redmi 9A offre une expérience vidéo et de jeu incroyable tout en protégeant vos yeux de la lumière bleue de l’écran grâce à la certification TÜV Rheinland."
-
+        description:"Doté d'un écran massif Dot Drop de 6,53 pouces, le Redmi 9A offre une expérience vidéo et de jeu incroyable tout en protégeant vos yeux de la lumière bleue de l’écran grâce à la certification TÜV Rheinland.",
+        type:"smartphone",
+        quantity: 119
 },
 
     {   
@@ -107,7 +119,9 @@ let product = [
         info2:"Android 11 ",
         info3:"128 Go",
         info4:"8 Go",
-        description:"Téléphone chinois avec plein de truc d'espion dedans"
+        description:"Téléphone chinois avec plein de truc d'espion dedans",
+        type:"smartphone",
+        quantity: 54
 
 },
 
@@ -121,7 +135,9 @@ let product = [
         info2:"Android",
         info3:"128 Go",
         info4:"6 Go",
-        description:"pas vraiment ouf vraiment pas ouf"
+        description:"pas vraiment ouf vraiment pas ouf",
+        type:"smartphone",
+        quantity:300
 
 },
 
@@ -135,8 +151,9 @@ let product = [
         info2:"",
         info3:"128 Go",
         info4:"8 Go",
-        description:"Le design ultra-mince de 6,81 mm et ultra-léger de 158 g du Xiaomi 11 Lite 5G NE lui confère un look épuré et rafraîchissant, aussi attrayant qu'agréable à prendre en main. Le Xiaomi 11 Lite 5G NE, le plus fin et le plus léger des smartphones 5G de Xiaomi, affiche des bords incroyablement fins, de seulement 1,88 mm, et atteint un excellent équilibre performances-format."
-
+        description:"Le design ultra-mince de 6,81 mm et ultra-léger de 158 g du Xiaomi 11 Lite 5G NE lui confère un look épuré et rafraîchissant, aussi attrayant qu'agréable à prendre en main. Le Xiaomi 11 Lite 5G NE, le plus fin et le plus léger des smartphones 5G de Xiaomi, affiche des bords incroyablement fins, de seulement 1,88 mm, et atteint un excellent équilibre performances-format.",
+        type:"smartphone",
+        quantity:100
 }
     
 
