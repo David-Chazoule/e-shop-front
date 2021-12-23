@@ -227,63 +227,93 @@
     "title":"Samsung QE55Q80A",
     "marque":"-Samsung-",
     "price":"927,99€",
-    "img":"https://m.media-amazon.com/images/I/415PfYzGXEL._AC_.jpg",
-    "info1":" 6.55 pouces",
-    "info2":"",
-    "info3":"128 Go",
-    "info4":"8 Go",
-    "description":"Le design ultra-mince de 6,81 mm et ultra-léger de 158 g du Xiaomi 11 Lite 5G NE lui confère un look épuré et rafraîchissant, aussi attrayant qu'agréable à prendre en main. Le Xiaomi 11 Lite 5G NE, le plus fin et le plus léger des smartphones 5G de Xiaomi, affiche des bords incroyablement fins, de seulement 1,88 mm, et atteint un excellent équilibre performances-format.",
-    "type":"smartphone",
+    "img":"https://m.media-amazon.com/images/I/71UY5liMUIL._AC_SL1500_.jpg",
+    "info1":" 127 cm",
+    "info2":"4K (UHD)",
+    "info3":"oui",
+    "info4":"non",
+    "description":"Une expérience TV spectaculaire en 4K UHD",
+    "type":"ecran",
     "quantity": 90
 
 },
 
 {   
     "id": 16,
-    "title":"Xiaomi 11 lite",
-    "marque":"-Xiaomi-",
-    "price":"369,00€ ",
-    "img":"https://m.media-amazon.com/images/I/415PfYzGXEL._AC_.jpg",
-    "info1":" 6.55 pouces",
-    "info2":"",
-    "info3":"128 Go",
-    "info4":"8 Go",
-    "description":"Le design ultra-mince de 6,81 mm et ultra-léger de 158 g du Xiaomi 11 Lite 5G NE lui confère un look épuré et rafraîchissant, aussi attrayant qu'agréable à prendre en main. Le Xiaomi 11 Lite 5G NE, le plus fin et le plus léger des smartphones 5G de Xiaomi, affiche des bords incroyablement fins, de seulement 1,88 mm, et atteint un excellent équilibre performances-format.",
-    "type":"smartphone",
-    "quantity": 90
+    "title":"NEO QLED 55QN85A",
+    "marque":"-Samsung-",
+    "price":"1499,00€ ",
+    "img":"https://m.media-amazon.com/images/I/71UY5liMUIL._AC_SL1500_.jpg",
+    "info1":" 135 cm",
+    "info2":"4K (UHD)",
+    "info3":"oui",
+    "info4":"non",
+    "description":"Une image plus lumineuse pour un meilleur contraste, en 4K. ",
+    "type":"ecran",
+    "quantity": 8
 
 },
 
 
 {   
     "id": 17,
-    "title":"Xiaomi 11 lite",
-    "marque":"-Xiaomi-",
-    "price":"369,00€ ",
-    "img":"https://m.media-amazon.com/images/I/415PfYzGXEL._AC_.jpg",
-    "info1":" 6.55 pouces",
-    "info2":"",
-    "info3":"128 Go",
+    "title":"Dell XPS 13 9305  ",
+    "marque":"-Dell-",
+    "price":"1334,00€ ",
+    "img":"https://m.media-amazon.com/images/I/71ii7ORGZ3L._AC_SL1500_.jpg",
+    "info1":" 13.3 pouces",
+    "info2":"intel i7",
+    "info3":"512 Go",
     "info4":"8 Go",
-    "description":"Le design ultra-mince de 6,81 mm et ultra-léger de 158 g du Xiaomi 11 Lite 5G NE lui confère un look épuré et rafraîchissant, aussi attrayant qu'agréable à prendre en main. Le Xiaomi 11 Lite 5G NE, le plus fin et le plus léger des smartphones 5G de Xiaomi, affiche des bords incroyablement fins, de seulement 1,88 mm, et atteint un excellent équilibre performances-format.",
-    "type":"smartphone",
-    "quantity": 90
+    "description":"Superbe à l'intérieur comme à l'extérieur",
+    "type":"ordinateur",
+    "quantity": 190
 
 },
 
 {   
     "id": 18,
-    "title":"Xiaomi 11 lite",
-    "marque":"-Xiaomi-",
-    "price":"369,00€ ",
-    "img":"https://m.media-amazon.com/images/I/415PfYzGXEL._AC_.jpg",
-    "info1":" 6.55 pouces",
-    "info2":"",
-    "info3":"128 Go",
+    "title":"Acer Nitro 5",
+    "marque":"-Acer-",
+    "price":"998,00€ ",
+    "img":"https://m.media-amazon.com/images/I/81eW0o3Yw+L._AC_SL1500_.jpg",
+    "info1":" 17.3 pouces",
+    "info2":"intel i5",
+    "info3":"512 Go",
     "info4":"8 Go",
-    "description":"Le design ultra-mince de 6,81 mm et ultra-léger de 158 g du Xiaomi 11 Lite 5G NE lui confère un look épuré et rafraîchissant, aussi attrayant qu'agréable à prendre en main. Le Xiaomi 11 Lite 5G NE, le plus fin et le plus léger des smartphones 5G de Xiaomi, affiche des bords incroyablement fins, de seulement 1,88 mm, et atteint un excellent équilibre performances-format.",
-    "type":"smartphone",
-    "quantity": 90
+    "description":"Découvrez le PC portable gaming ACER Nitro 5 et dominez l'univers gaming grâce à la puissance combinée du processeur Intel Core i5-10300H et des GPU NVIDIA GeForce GTX 1650Ti. ",
+    "type":"ordinateur",
+    "quantity": 9
+
+},
+
+{"id": 19,
+    "title":"The Witcher 3: Wild Hunt",
+    "marque":"-CD Projekt RED-",
+    "price":"34,00€ ",
+    "img":"https://m.media-amazon.com/images/I/91-tzg8N8pL._AC_SL1500_.jpg",
+    "info1":" Playstation 4",
+    "info2":"Jeux de rôle",
+    "info3":"30 août 2016",
+    "info4":"50 Go minimum",
+    "description":"The Witcher 3 : Wild Hunt est un Action-RPG se déroulant dans un monde ouvert. Troisième épisode de la série du même nom, inspirée des livres du polonais Andrzej Sapkowski, cet opus relate la fin de l'histoire de Geralt de Riv.",
+    "type":"jeux",
+    "quantity": 9
+
+},
+
+{"id": 20,
+    "title":"Red dead redemption 2",
+    "marque":"-Rockstar Game-",
+    "price":"45,00€ ",
+    "img":"https://m.media-amazon.com/images/I/71lUrseKOjL._AC_SL1000_.jpg",
+    "info1":" Playstation 4",
+    "info2":"Jeu de role",
+    "info3":"26 octobre 2018 ",
+    "info4":"105 Go minimum",
+    "description":"Développé par les créateurs de Grand Theft Auto V et Red Dead Redemption, Red Dead Redemption 2 raconte une histoire épique au cœur des terres sauvages et impitoyables des États-Unis. Le monde du jeu, vaste et immersif, sera aussi la base d'une toute nouvelle expérience multijoueur en ligne. ",
+    "type":"jeux",
+    "quantity": 9
 
 }
     
