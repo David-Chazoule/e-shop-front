@@ -11,7 +11,7 @@ function FiltrerContainer () {
             <div className='choice-container'>
              
              {/* <Choicebox /> */}
-             <SearchBar />
+             {/* <SearchBar /> */}
             </div>
         
         
