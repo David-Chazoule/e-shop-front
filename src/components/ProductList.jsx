@@ -20,7 +20,7 @@ function ProductList({ products }) {
     <>
       {products.map((product) => {
         const { id, img, title, marque, price } = product
-        return <div className="productlist_container" onClick={() => { handleClick(id) }}
+        return <div className="productlist_container" onClick={()=> {handleClick(id)}}
           onKeyPress={() => { handleClick(id) }}
           role="button"
           tabIndex={0}>
