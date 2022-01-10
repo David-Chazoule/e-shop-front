@@ -14,7 +14,6 @@
     justify-content: center;
     flex-direction: row;
     width: 100%;
-
 }
 
 .img-card-box{
@@ -36,21 +35,48 @@
 
 .detail-box{
     display: flex;
-    flex-direction: column;
+    flex-direction: row-reverse;
     width: 100%;
-
+    margin-bottom: 20px;
 }
 
-.line-detail-a, .line-detail-b {
+.line-detail-case-a  {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content:center;
+    align-items: flex-end;
     width: 100%;
     font-weight: 600;
 }
 
-.line-detail-a{
+.line-detail-case-b {
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: flex-start;
+    width: 100%;
+    font-weight: 600;
+}
+
+.line-a{
+    display: flex;
     background-color: orange;
     color: white;
+    width: 100%;
+    padding: 0 60px 0 0;
+
+}
+
+.line-b{
+    display: flex;
+    background-color: white;
+    color: orange;
+    width: 100%;
+    
+}
+
+.info-detail {
+    margin-left: 4px;
 }
 
 .description-box{
