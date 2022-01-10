@@ -3,14 +3,15 @@ import { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import products from '../list.json'
 
+import Characteristic from "../CSS/product-card/Characteristic";
 import '../CSS/product-card/productCard.css';
 import valid from '../img/IconValide.png';
 import wrong from '../img/Not_allowed.svg';
 
 
-function ProductCard() {
+function ProductCard(props) {
 
-    const [productInfos, setProduct] = useState({})
+    const [productInfos, setProductInfo] = useState({})
     const [load, setLoad] = useState(true)
 
     const { id } = useParams();
@@ -20,7 +21,7 @@ function ProductCard() {
         
         products.forEach((x)=>{
             if(x.id === parseInt(id)){
-                setProduct(x)
+                setProductInfo(x)
             }
         })
         
@@ -28,48 +29,7 @@ function ProductCard() {
     }, [])
 
 
-    let titles = [
-        {
-        titleInfo1 : "Taille écran",
-        titleInfo2 : "Système d'exploitation",
-        titleInfo3 : "stockage",
-        titleInfo4 : "memoire vive",
-        },
-
-        {
-        titleInfo1 : "taille de l'écran",
-        titleInfo2 : "Frequence d'affichage",
-        titleInfo3 : "Champ de vision",
-        titleInfo4 : "Poid",
-        },
-
-        {
-        titleInfo1 : "Impétance",
-        titleInfo2 : "Connection sans fil",
-        titleInfo3 : "Autonomie",
-        titleInfo4 : "Poid",
-        },
-        {
-            titleInfo1 : "Taille de l'écran",
-            titleInfo2 : "résolution",
-            titleInfo3 : "Smart TV",
-            titleInfo4 : "écran incurvé",
-        },
-
-        {
-            titleInfo1 : "Taille de l'écran",
-            titleInfo2 : "Processeur",
-            titleInfo3 : "Stockage",
-            titleInfo4 : "Mémoire vive",
-        },
-
-        {
-            titleInfo1 : "Plateforme",
-            titleInfo2 : "Genre",
-            titleInfo3 : "Date de sortie",
-            titleInfo4 : "Espace minimum",
-        }
-]
+  
 
 
     function showQuantity() {
@@ -136,22 +96,25 @@ function ProductCard() {
 
                 <div className="information-box">
                     <div className="detail-box">
-                        <div className="line-detail-a">
-                            <p className="info-title">{productInfos.title1}</p>
+                        <div className="line-detail-case-a">
+                        
                             <p className="info-detail">{productInfos.info1}</p>
-                        </div>
-                        <div className="line-detail-b">
-                            <p className="info-title">{productInfos.title2}</p>
+                            
+                            
                             <p className="info-detail">{productInfos.info2}</p>
-                        </div>
-                        <div className="line-detail-a">
-                            <p className="info-title">{productInfos.title3}</p>
+                            
+                            
                             <p className="info-detail">{productInfos.info3}</p>
-                        </div>
-                        <div className="line-detail-b">
-                            <p className="info-title">{productInfos.title4}</p>
+                            
+                            
                             <p className="info-detail">{productInfos.info4}</p>
+
+
                         </div>
+                        <div className="line-detail-case-b">
+                            < Characteristic productInfos={productInfos} />
+                        </div>
+                       
                     </div>
 
                     <div className="description-box">
