@@ -4,7 +4,7 @@
     
     {   "id": 1,
         "title":"Samsung Galaxy M32",
-        "marque":"-Samsung-",
+        "marque":"Samsung",
         "price":"309,00€",
         "img":"https://m.media-amazon.com/images/I/81xPgr4c1rL._AC_SL1500_.jpg",
         "title1" :"Taille écran",
@@ -17,13 +17,14 @@
         "info4":"6 Go",
         "description":"Écran Infinity-U : grâce à la technologie FHD+ Super AMOLED du Galaxy M32, votre contenu s’affiche sous son meilleur jour : clair, net et précis",
         "type":"smartphone",
+        "its_a_phone": true,
         "quantity": 75
     },
 
     {   
         "id": 2,
         "title":"Samsung Galaxy S21",
-        "marque":"-Samsung-",
+        "marque":"Samsung",
         "price":"749,00€",
         "img":"https://m.media-amazon.com/images/I/81g7zh69wYL._AC_SL1500_.jpg",
         "title1" :"Taille écran",
@@ -36,13 +37,14 @@
         "info4":"8 Go",
         "description":"Conçu pour une expérience inoubliable au quotidien. Pour des photos et des vidéos toujours réussies. Découvrez les Galaxy S21 5G et S21+ 5G. Conçus pour révolutionner la vidéo et la photographie, avec une résolution 8K exceptionnelle et des photos en 64 MP. Disponibles en deux tailles et avec un design affirmé et unique, les Galaxy S21 illumineront votre quotidien.",
         "type":"smartphone",
+        "its_a_phone": true,
         "quantity": 4
 },
 
     {   
         "id": 3,
         "title":"Samsung Galaxy A52s ",
-        "marque":"-Samsung-",
+        "marque":"Samsung",
         "price":"404.99€",
         "img":"https://m.media-amazon.com/images/I/61QJNO7gNDL._AC_SL1500_.jpg",
         "title1" :"Taille écran",
@@ -55,6 +57,7 @@
         "info4":"6 Go",
         "description":"pour les gens en galeres ",
         "type":"smartphone",
+        "its_a_phone": true,
         "quantity": 145
 
 },
@@ -62,7 +65,7 @@
     {   
         "id": 4,
         "title":"Apple iPhone 12",
-        "marque":"-Apple-",
+        "marque":"Apple",
         "price":"809,00€ ",
         "img":"https://m.media-amazon.com/images/I/71fVoqRC0wL._AC_SL1500_.jpg",
         "title1" :"Taille écran",
@@ -75,6 +78,7 @@
         "info4":" 4go",
         "description":"pour les gens riches",
         "type":"smartphone",
+        "its_a_phone": true,
         "quantity": 345
 
 },
@@ -82,7 +86,7 @@
     {   
         "id": 5,
         "title":"Apple iphone 13 mini",
-        "marque":"-Apple-",
+        "marque":"Apple",
         "price":"809,00€ ",
         "img":"https://m.media-amazon.com/images/I/61neib4uMCL._AC_SL1500_.jpg",
         "title1" :"Taille écran",
@@ -95,6 +99,7 @@
         "info4":" 4 Go",
         "description":"pour les riches",
         "type":"smartphone",
+        "its_a_phone": true,
         "quantity": 245
 
 },
@@ -102,7 +107,7 @@
     {   
         "id": 6,
         "title":"Apple iPhone 13 Pro",
-        "marque":"-Apple-",
+        "marque":"Apple",
         "price":"1 112,26€ ",
         "img":"https://m.media-amazon.com/images/I/613vLmkDsJL._AC_SL1500_.jpg",
         "title1" :"Taille écran",
@@ -115,13 +120,14 @@
         "info4":"6 Go",
         "description":"pour les gens super riche",
         "type":"smartphone",
+        "its_a_phone": true,
         "quantity": 0
 },
 
     {   
         "id": 7,
         "title":"Xiaomi Redmi 9A",
-        "marque":"-Xiaomi",
+        "marque":"Xiaomi",
         "price":"118.69€",
         "img":"https://m.media-amazon.com/images/I/81oPj2JzHDL._AC_SL1500_.jpg",
         "title1" :"Taille écran",
@@ -134,13 +140,14 @@
         "info4":"2 Go",
         "description":"Doté d'un écran massif Dot Drop de 6,53 pouces, le Redmi 9A offre une expérience vidéo et de jeu incroyable tout en protégeant vos yeux de la lumière bleue de l’écran grâce à la certification TÜV Rheinland.",
         "type":"smartphone",
+        "its_a_phone": true,
         "quantity":5
 },
 
     {   
         "id": 8,
         "title":"Xiaomi 11T ",
-        "marque":"-Xiaomi-",
+        "marque":"Xiaomi",
         "price":"539,90€",
         "img":"https://m.media-amazon.com/images/I/51y1naG3cfL._AC_SL1001_.jpg",
         "title1" :"Taille écran",
@@ -153,6 +160,7 @@
         "info4":"8 Go",
         "description":"Téléphone chinois avec plein de truc d'espion dedans",
         "type":"smartphone",
+        "its_a_phone": true,
         "quantity": 32
 
 },
@@ -160,7 +168,7 @@
     {   
         "id": 9,
         "title":"Poco X3 pro",
-        "marque":"-Xiaomi-",
+        "marque":"Xiaomi",
         "price":"299,00€ ",
         "img":"https://m.media-amazon.com/images/I/61ar9vdB3RL._AC_SL1001_.jpg",
         "title1" :"Taille écran",
@@ -173,6 +181,7 @@
         "info4":"6 Go",
         "description":"pas vraiment ouf vraiment pas ouf",
         "type":"smartphone",
+        "its_a_phone": true,
         "quantity": 145
 
 },
@@ -180,7 +189,7 @@
     {   
         "id": 10,
         "title":"Xiaomi 11 lite",
-        "marque":"-Xiaomi-",
+        "marque":"Xiaomi",
         "price":"369,00€ ",
         "img":"https://m.media-amazon.com/images/I/415PfYzGXEL._AC_.jpg",
         "title1" :"Taille écran",
@@ -193,6 +202,7 @@
         "info4":"8 Go",
         "description":"Le design ultra-mince de 6,81 mm et ultra-léger de 158 g du Xiaomi 11 Lite 5G NE lui confère un look épuré et rafraîchissant, aussi attrayant qu'agréable à prendre en main. Le Xiaomi 11 Lite 5G NE, le plus fin et le plus léger des smartphones 5G de Xiaomi, affiche des bords incroyablement fins, de seulement 1,88 mm, et atteint un excellent équilibre performances-format.",
         "type":"smartphone",
+        "its_a_phone": true,
         "quantity": 90
 
 },
@@ -200,7 +210,7 @@
 {   
     "id": 11,
     "title":"Oculus Quest 2",
-    "marque":"-Oculus-",
+    "marque":"Oculus",
     "price":"349,00€ ",
     "img":"https://m.media-amazon.com/images/I/615YaAiA-ML._AC_SL1500_.jpg",
     "title1":"taille de l'écran",
@@ -213,6 +223,7 @@
     "info4":" 503 grammes",
     "description":"  Oculus Quest 2 est notre système de VR tout-en-un le plus abouti. Chaque détail a été conçu pour retranscrire au mieux vos mouvements dans l’univers virtuel. Vous profitez ainsi de jeux et d’expériences à couper le souffle avec une liberté inégalée. Aucun PC ni console requis.",
     "type":" casque VR",
+    "its_a_vr": true,
     "quantity": 40
 
 },
@@ -221,7 +232,7 @@
 {   
     "id": 12,
     "title":"HTC Vive Cosmos",
-    "marque":"-HTC-",
+    "marque":"HTC",
     "price":"667,00€ ",
     "img":"https://m.media-amazon.com/images/I/51f7SJEbTXL._AC_SL1000_.jpg",
     "title1":"taille de l'écran",
@@ -234,6 +245,7 @@
     "info4":"651 grammes",
     "description":"Le casque de réalité virtuelle VIVE COSMOS est un casque de VR haut de gamme, polyvalent, personnalisable et très simple à configurer. Parfait pour les joueurs débutants, comme les plus expérimentés, il offre un équilibre idéal entre un graphisme parfait et une grande simplicité d’installation et d’utilisation.",
     "type":"casque VR",
+    "its_a_vr": true,
     "quantity": 90
 
 },
@@ -241,7 +253,7 @@
 {   
     "id": 13,
     "title":"Marshall Major III Casque ",
-    "marque":"-Marshall-",
+    "marque":"Marshall",
     "price":"109,00€ ",
     "img":"https://m.media-amazon.com/images/I/7118TJAtRXL._AC_SL1500_.jpg",
     "title1":"Impétance",
@@ -254,6 +266,7 @@
     "info4":"178 grammes",
     "description":"La technologie Bluetooth aptX vous offre la liberté et la commodité d'un casque sans fil Plus De 30 Heures De Lecture Sans Fil",
     "type":"casque audio",
+    "its_a_audio": true,
     "quantity": 90
 
 },
@@ -261,7 +274,7 @@
 {   
     "id": 14,
     "title":"Beats Solo 3",
-    "marque":"-Beats by Dre-",
+    "marque":"Beats by Dre",
     "price":"149,00€ ",
     "img":"https://m.media-amazon.com/images/I/51QxA-98Q+L._AC_SL1000_.jpg",
     "title1":"Impétance",
@@ -274,6 +287,7 @@
     "info4":" 210 grammes ",
     "description":" Casque Bluetooth sans fil haute performance Équipé de la puce Apple W1 pour une connectivité Bluetooth classe 1 sans filGrâce à son autonomie maximale de 40 heures, le Beats Solo3 sans fil est le choix idéal pour vos activités au quotidien ",
     "type":"casque audio",
+    "its_a_audio": true,
     "quantity": 6
 
 },
@@ -281,7 +295,7 @@
 {   
     "id": 15,
     "title":"Samsung QE55Q80A",
-    "marque":"-Samsung-",
+    "marque":"Samsung",
     "price":"927,99€",
     "img":"https://m.media-amazon.com/images/I/71UY5liMUIL._AC_SL1500_.jpg",
     "title1":"Taille de l'écran",
@@ -294,6 +308,7 @@
     "info4":"non",
     "description":"Une expérience TV spectaculaire en 4K UHD",
     "type":"ecran",
+    "its_a_screen": true,
     "quantity": 90
 
 },
@@ -301,7 +316,7 @@
 {   
     "id": 16,
     "title":"NEO QLED 55QN85A",
-    "marque":"-Samsung-",
+    "marque":"Samsung",
     "price":"1499,00€ ",
     "img":"https://m.media-amazon.com/images/I/71UY5liMUIL._AC_SL1500_.jpg",
     "title1":"Taille de l'écran",
@@ -314,6 +329,7 @@
     "info4":"non",
     "description":"Une image plus lumineuse pour un meilleur contraste, en 4K. ",
     "type":"ecran",
+    "its_a_screen": true,
     "quantity": 8
 
 },
@@ -322,7 +338,7 @@
 {   
     "id": 17,
     "title":"Dell XPS 13 9305  ",
-    "marque":"-Dell-",
+    "marque":"Dell",
     "price":"1334,00€ ",
     "img":"https://m.media-amazon.com/images/I/71ii7ORGZ3L._AC_SL1500_.jpg",
     "title1":"Taille de l'écran",
@@ -335,6 +351,7 @@
     "info4":"8 Go",
     "description":"Superbe à l'intérieur comme à l'extérieur",
     "type":"ordinateur",
+    "its_a_computer": true,
     "quantity": 190
 
 },
@@ -342,7 +359,7 @@
 {   
     "id": 18,
     "title":"Acer Nitro 5",
-    "marque":"-Acer-",
+    "marque":"Acer",
     "price":"998,00€ ",
     "img":"https://m.media-amazon.com/images/I/81eW0o3Yw+L._AC_SL1500_.jpg",
     "title1":"Taille de l'écran",
@@ -355,13 +372,14 @@
     "info4":"8 Go",
     "description":"Découvrez le PC portable gaming ACER Nitro 5 et dominez l'univers gaming grâce à la puissance combinée du processeur Intel Core i5-10300H et des GPU NVIDIA GeForce GTX 1650Ti. ",
     "type":"ordinateur",
+    "its_a_screen": true,
     "quantity": 9
 
 },
 
 {"id": 19,
     "title":"The Witcher 3: Wild Hunt",
-    "marque":"-CD Projekt RED-",
+    "marque":"CD Projekt RED",
     "price":"34,00€ ",
     "img":"https://m.media-amazon.com/images/I/91-tzg8N8pL._AC_SL1500_.jpg",
     "title1":"Plateforme",
@@ -374,13 +392,14 @@
     "info4":"50 Go minimum",
     "description":"The Witcher 3 : Wild Hunt est un Action-RPG se déroulant dans un monde ouvert. Troisième épisode de la série du même nom, inspirée des livres du polonais Andrzej Sapkowski, cet opus relate la fin de l'histoire de Geralt de Riv.",
     "type":"jeux",
+    "its_a_game": true,
     "quantity": 9
 
 },
 
 {"id": 20,
     "title":"Red dead redemption 2",
-    "marque":"-Rockstar Game-",
+    "marque":"Rockstar Game",
     "price":"45,00€ ",
     "img":"https://m.media-amazon.com/images/I/71lUrseKOjL._AC_SL1000_.jpg",
     "title1":"Plateforme",
@@ -393,6 +412,7 @@
     "info4":"105 Go minimum",
     "description":"Développé par les créateurs de Grand Theft Auto V et Red Dead Redemption, Red Dead Redemption 2 raconte une histoire épique au cœur des terres sauvages et impitoyables des États-Unis. Le monde du jeu, vaste et immersif, sera aussi la base d'une toute nouvelle expérience multijoueur en ligne. ",
     "type":"jeux",
+    "its_a_game": true,
     "quantity": 9
 
 }

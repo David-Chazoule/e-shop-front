@@ -80,22 +80,14 @@ function ProductCard() {
                             <p className='good-stock'>En stock</p>
                         </div>
                         </>
-        } }
-
-
-    function noQuantity() {
-        if( productInfos.quantity === 0 ){
-           return <>
-                <div className="stock">
-                                <img className='icon-not-valid' src={wrong} alt="" />
-                                <p className='no-stock'> produit indisponible</p>
-                            </div>
-                            </>
-         }
-    }
-
-    function smallstock() {
-        if (productInfos.quantity <= 10 && productInfos.quantity >= 1){
+        } else if ( productInfos.quantity === 0 ){
+            return <>
+                 <div className="stock">
+                                 <img className='icon-not-valid' src={wrong} alt="" />
+                                 <p className='no-stock'> produit indisponible</p>
+                             </div>
+                             </>
+          } else if (productInfos.quantity <= 10 && productInfos.quantity >= 1){
             return <>
             <div className="stock">
                             <img className='icon-valid' src={valid} alt="" />
@@ -106,9 +98,32 @@ function ProductCard() {
                         </div>
             
             </>
-        }
-    }
-                        
+        }}
+
+                    //     function title() {
+                    //         if (productInfos.type === "smartphone") {
+                    //         return<>
+                    //         <div className="detail-box">
+                    //     <div className="line-detail-a">
+                    //         <p className="info-title">taille de l'écran</p>
+                    //         <p className="info-detail">{productInfos.info1}</p>
+                    //     </div>
+                    //     <div className="line-detail-b">
+                    //         <p className="info-title">Système d'exploitation</p>
+                    //         <p className="info-detail">{productInfos.info2}</p>
+                    //     </div>
+                    //     <div className="line-detail-a">
+                    //         <p className="info-title">Stockage</p>
+                    //         <p className="info-detail">{productInfos.info3}</p>
+                    //     </div>
+                    //     <div className="line-detail-b">
+                    //         <p className="info-title">memoire vive</p>
+                    //         <p className="info-detail">{productInfos.info4}</p>
+                    //     </div>
+                    // </div>
+                    //         </>
+                    //         }
+                    //     }
          
         
     
@@ -131,10 +146,14 @@ function ProductCard() {
 
                 <div className="img-card-box">
                     <img className="img-card" src={productInfos.img} alt="" />
+                    
 
                 </div>
 
                 <div className="information-box">
+
+                {/* {title()} */}
+                    
                     <div className="detail-box">
                         <div className="line-detail-a">
                             <p className="info-title">{productInfos.title1}</p>
@@ -161,8 +180,8 @@ function ProductCard() {
                     <div className="order-stock-box">
                           
                           {showQuantity()}
-                          {noQuantity()}
-                          {smallstock()}
+                         
+                        
                           
 
                         <div className="btn-order-box">

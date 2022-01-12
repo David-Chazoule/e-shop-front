@@ -29,7 +29,7 @@ function ProductList({ products }) {
             <img className="list-img" src={img} alt="" />
             <p className="title-list">{title} </p>
             <div className='marque-list-box'>
-              <p className="marque-list">{marque}</p>
+              <p className="marque-list">-{marque}-</p>
             </div>
             <p className="price-list">{price}</p>
             <div className="bar-seperate"></div>
