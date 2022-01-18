@@ -10,7 +10,8 @@ function Header() {
     return (
         < div className="header-container"> 
          <div className="logo">
-             <img className="logo"src={logo} alt="logo" />
+             <img className="logo-img"src={logo} alt="logo" />
+             <p className='logo-name'>Technologeek</p>
          </div>
 
          <div className="basket-connection">

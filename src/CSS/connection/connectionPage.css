@@ -3,6 +3,7 @@
     width: 50%;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
     
 }
 
@@ -14,11 +15,11 @@
     box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
     width: 100%;
     padding: 40px 0;
-    margin: 20% 0 10% 0;
+    margin: 6% 0 10% 0;
 }
 
 .bar-h {
-    border-left: 6px solid orange;
+    border-left: 6px solid rgb(87, 194, 243);
     height: 25vh;
     margin-left: 40px ;
 
@@ -44,13 +45,31 @@
     padding: 1% 4%;
     border-radius: 15px;
     cursor: pointer;
-    background-color: orange;
+    background-color: rgb(87, 194, 243);
     color: white;
     font-weight: 600;
 }
 
 .btn-user:hover{
     background-color: white;
-    color: orange;
+    color: rgb(87, 194, 243);
 
+}
+
+.logo-connection{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+}
+
+
+.logo-connection img{
+    width: 200px;
+}
+
+.logo-connection p{
+    margin: 0;
+    font-size: 40px;
 }

@@ -20,7 +20,10 @@ function BasketHeader(){
             
             
             <div className="basket-box" >
+                <div className='basket-logo-box'>
             <img className="icon-basket" src={basket} alt="" />
+            {/* <p className='basket-title'>Panier</p> */}
+            </div>
             <div id="circle"><p className="number-article-basket">1</p></div>
             
             { onBasket && (

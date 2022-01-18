@@ -121,6 +121,7 @@
         "title":"Xiaomi 11T ",
         "marque":"Xiaomi",
         "price":"539,90€",
+        "img":"https://m.media-amazon.com/images/I/611D1B4fxoL._AC_SL1302_.jpg",
         "info1":"6.5 pouces",
         "info2":"Android 11 ",
         "info3":"128 Go",
@@ -265,7 +266,7 @@
     "description":"Une image plus lumineuse pour un meilleur contraste, en 4K. ",
     "type":"ecran",
     "its_a_screen": true,
-    "quantity": 8
+    "quantity": 18
 
 },
 
