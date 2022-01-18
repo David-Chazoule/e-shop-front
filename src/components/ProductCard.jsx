@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import products from '../list.json'
 
-import Characteristic from "../CSS/product-card/Characteristic";
+import Characteristic from "../components/Characteristic";
 import '../CSS/product-card/productCard.css';
 import valid from '../img/IconValide.png';
 import wrong from '../img/Not_allowed.svg';

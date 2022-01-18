@@ -67,17 +67,17 @@
     padding: 1% 4%;
     border-radius: 15px;
     cursor: pointer;
-    background-color: orange;
+    background-color: rgb(87, 194, 243);
     color: white;
     font-weight: 600;
 }
 
 .btn-change-billing:hover {
     background-color: white;
-    color: orange;
+    color: rgb(87, 194, 243);
 }
 
 .btn-change-delivery:hover {
     background-color: white;
-    color: orange;
+    color: rgb(87, 194, 243);
 }

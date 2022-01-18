@@ -62,19 +62,19 @@
 
 .bar-seperate{
     margin-top: 8px;
-    border-top: 6px solid orange;
+    border-top: 6px solid rgb(87, 194, 243);
     width: 12%;
 }
 
 .bar-v-seperate{
     margin-left: 20px;
-    border-right: 4px solid orange;
+    border-right: 4px solid rgb(87, 194, 243);
     height: 16vh;
 }
 
 .seperate-bar{
     width: 80%;
-    border-top: 4px solid orange;
+    border-top: 4px solid rgb(87, 194, 243);
     margin: 5% 0;
     
 }

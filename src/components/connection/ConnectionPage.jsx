@@ -1,12 +1,17 @@
 
 import '../../CSS/connection/connectionPage.css';
-
+import logo from '../../img/logo.png';
 
 
 
 function ConnectionPage () {
     return (
         <div className="Connection_container">
+            
+            <div className='logo-connection'>
+            <img  src={logo} alt="" />
+            <p>Technologeek</p>
+            </div>
         
         <div className='connection-box'>
             <div className='user-box'>

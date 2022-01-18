@@ -88,7 +88,7 @@ function Characteristic (props) {
                         </div>
                     </div>
 
-        } else if (props.productInfos.marque==="jeux") {
+        } else if (props.productInfos.type==="jeux") {
             return <div className="line-detail-case-b">
                         <div className="line-a">
                             <p className="info-detail-a">Plateforme</p>

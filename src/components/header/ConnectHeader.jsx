@@ -19,7 +19,10 @@ function ConnectHeader(){
         <div className="connect-header-container"onMouseEnter={()=>showConnect(false)} onMouseLeave={()=>showConnect(true)}>
 
 <div className="connect-box" >
-            <img className="icon-user" src={user} alt="" />
+            <div className='connect-div'>
+            <p className='customer'>Mon compte</p>
+            <p className='identification'>Identifiez-vous</p>
+            </div>
             
                 
                 
@@ -33,12 +36,14 @@ function ConnectHeader(){
                 <div className="btn-connect-box">
 
             <Link to="/connection">
-            <button className="btn-connect">Connection</button>
+            <button className="btn-connect">Identifiez-vous</button>
             </Link>
 
-            <Link to="/register">
-            <button className="btn-connect">inscription</button>
+            <div className='register-basket-box'>
+            <p className='new-customer'>Nouveau Client ? </p> 
+            <Link to="/register"><p  className='new-account'> Créez un compte</p>
             </Link>
+            </div>
             </div> 
                    </div>
 

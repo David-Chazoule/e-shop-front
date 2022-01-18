@@ -11,8 +11,10 @@ function App() {
     <div className="App">
 
       
-   <Header />   
-  <FiltrerContainer />
+   <Header />
+
+  {/* <FiltrerContainer /> */}
+
   <BodyContainer />
   <Footer />
     </div>

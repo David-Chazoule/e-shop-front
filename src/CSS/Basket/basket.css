@@ -139,7 +139,7 @@ Link{
     padding: 10px 40px;
     border-radius: 15px;
     cursor: pointer;
-    background-color: orange;
+    background-color: rgb(87, 194, 243);
     color: white;
     font-weight: 600;
     font-size: 20px;
@@ -148,5 +148,5 @@ Link{
 
 .btn-back-next:hover{
     background-color: white;
-    color: orange;
+    color: rgb(87, 194, 243);
 }
