@@ -11,7 +11,7 @@ function Form () {
                 <div className="contact-adresse-box">
                     <div className="form-contact">
 
-                        <img className='img-form' src={logo} alt="" />
+                        <img  src={logo} alt="" />
                        
                         <div className="form-input">
                             <div className="label-input">
