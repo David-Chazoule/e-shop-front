@@ -1,27 +1,34 @@
 import { useNavigate } from "react-router-dom";
-
+// import { useEffect , useState } from "react";
 
 import '../CSS/product-card/productList.css';
 
 
 
 
-function ProductList({ products }) {
-  // const {id, img, title, marque, price} = product
-  let navigate = useNavigate();
+function ProductList({ title, brand, img, price, id }) {
 
-  const handleClick = (id) => {
-    navigate(`/card/${id}`);
+ 
+
+  // const {id, img, title, marque, price} = product
+  const nav = useNavigate();
+
+  const handleClick = () => {
+    
+    nav(`/card/${id}`);
   };
 
+  // const handleClick = (id) => {
+  //   navigate(`/card/${id}`);
+  // };
+
+ 
 
   return (
 
-    <>
-      {products.map((product) => {
-        const { id, img, title, marque, price } = product
-        return <div className="productlist_container" onClick={()=> {handleClick(id)}}
-          onKeyPress={() => { handleClick(id) }}
+    
+        <div className="productlist_container" onClick={handleClick}
+          onKeyPress={handleClick}
           role="button"
           tabIndex={0}>
 
@@ -29,7 +36,7 @@ function ProductList({ products }) {
             <img className="list-img" src={img} alt="" />
             <p className="title-list">{title} </p>
             <div className='marque-list-box'>
-              <p className="marque-list">-{marque}-</p>
+              <p className="marque-list">-{brand}-</p>
             </div>
             <p className="price-list">{price}</p>
             <div className="bar-seperate"></div>
@@ -37,12 +44,12 @@ function ProductList({ products }) {
 
           <div className="bar-v-seperate"></div>
         </div>
-      })}
-    </>
+      )
+    
 
 
 
-  )
+  
 }
 
 export default ProductList;

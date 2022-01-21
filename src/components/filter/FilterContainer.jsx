@@ -1,5 +1,5 @@
 import Choicebox from './Choicebox';
-import SearchBar from './SearchBar';
+
 import '../../CSS/filter/filterContainer.css';
 
 
@@ -11,7 +11,7 @@ function FiltrerContainer () {
             <div className='choice-container'>
              
              {/* <Choicebox /> */}
-             {/* <SearchBar /> */}
+   
             </div>
         
         

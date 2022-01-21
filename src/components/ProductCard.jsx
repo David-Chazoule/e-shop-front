@@ -1,7 +1,7 @@
-
+import axios from 'axios';
 import { useState, useEffect } from 'react';
-import { useParams, Link } from 'react-router-dom';
-import products from '../list.json'
+import {  Link, useParams } from 'react-router-dom';
+// import products from '../list.json'
 
 import Characteristic from "../components/Characteristic";
 import '../CSS/product-card/productCard.css';
@@ -9,27 +9,40 @@ import valid from '../img/IconValide.png';
 import wrong from '../img/Not_allowed.svg';
 
 
-function ProductCard(props) {
+function ProductCard() {
+    const params = useParams();
+    const [productInfos, setProductInfos] = useState([]);
+    // const [load, setLoad] = useState(true)
 
-    const [productInfos, setProductInfo] = useState({})
-    const [load, setLoad] = useState(true)
+    // const { id } = useParams();
 
-    const { id } = useParams();
-
-       useEffect(() => {
+    //    useEffect(() => {
 
         
-        products.forEach((x)=>{
-            if(x.id === parseInt(id)){
-                setProductInfo(x)
-            }
-        })
+    //     products.forEach((x)=>{
+    //         if(x.id === parseInt(id)){
+    //             setProductInfo(x)
+    //         }
+    //     })
         
-        setLoad(false)
-    }, [])
-
-
+    //     setLoad(false)
+    // }, [])
   
+ 
+    useEffect(() => {
+        const fetchproduct = async() => {
+        
+            const result = await axios.get('http://localhost:8000/product/'+ params.id)
+            setProductInfos(result.data[0])
+           
+         } 
+        fetchproduct()      
+                
+    }, [params.id]);    
+    
+
+
+    console.log(productInfos)
 
 
     function showQuantity() {
@@ -60,31 +73,7 @@ function ProductCard(props) {
             </>
         }}
 
-                    //     function title() {
-                    //         if (productInfos.type === "smartphone") {
-                    //         return<>
-                    //         <div className="detail-box">
-                    //     <div className="line-detail-a">
-                    //         <p className="info-title">taille de l'écran</p>
-                    //         <p className="info-detail">{productInfos.info1}</p>
-                    //     </div>
-                    //     <div className="line-detail-b">
-                    //         <p className="info-title">Système d'exploitation</p>
-                    //         <p className="info-detail">{productInfos.info2}</p>
-                    //     </div>
-                    //     <div className="line-detail-a">
-                    //         <p className="info-title">Stockage</p>
-                    //         <p className="info-detail">{productInfos.info3}</p>
-                    //     </div>
-                    //     <div className="line-detail-b">
-                    //         <p className="info-title">memoire vive</p>
-                    //         <p className="info-detail">{productInfos.info4}</p>
-                    //     </div>
-                    // </div>
-                    //         </>
-                    //         }
-                    //     }
-         
+            
         
     
 

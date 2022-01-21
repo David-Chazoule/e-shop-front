@@ -9,41 +9,46 @@ function Basket () {
          <h1>Mon Panier</h1>
          <div className='basket'>
          <div className="basket-recap">
-         <div className="article-box">
+         <div className="article-title-box">
              <p className="article-title">Article</p>
-             <div className="article-bar"></div>
-             <div>
+             <p className="article-title">Prix</p>
+             <p className="article-title">Quantité</p>
+             <p className="article-title">Total</p>
+             </div>
+           
+             <div className='recap-basket-box'>
                  <div className='img-article-box'>
              <img className="img-article" src={product[1].img} alt="" />
-             <p className="article-result">{product[1].title}</p>
+             <div className='title-result'>
+             <p className="article-result-img">{product[1].title}</p>
              </div>
              </div>
-             </div>
-             
-             <div className="article-box">
-             <p className="article-title">Prix</p>
-             <div className="article-bar"></div>
-             <div>
              <p className="article-result">{product[1].price}</p>
-             </div>
-             </div>
-
-             <div className="article-box">
-             <p className="article-title">Quantité</p>
-             <div className="article-bar"></div>
              <div className='quantity-box'>
                <button className='btn-quantity-a'>-</button>
                <input className='input-basket' />
                <button className='btn-quantity-b'>+</button>
+               </div>
+               <p className="article-result">{product[1].price}</p>
+             
+             
              </div>
-             </div>
-
-             <div className="article-box" >
-             <p className="article-title">Total</p>
+             
+             
+             
+             
              <div className="article-bar"></div>
+             
+             
+             
+             
+
+             
+             
+             
              <div>
-                 <p className="article-result">{product[1].price}</p>
-             </div>
+                 
+             
              </div>
          </div>
          
@@ -55,6 +60,7 @@ function Basket () {
          <p className='basket-total-title'>TOTAL</p>
              <p className='basket-total-price'>{product[1].price}</p>
              </div>
+         </div>
          </div>
 
         
@@ -70,7 +76,7 @@ function Basket () {
              </Link>
          </div>
          </div>
-        </div>
+        
     )
 }
 

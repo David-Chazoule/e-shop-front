@@ -9,21 +9,11 @@
 .search{
     width: 40%;
     padding: 8px;
-    border-radius: 20px 0 0 20px;
+    border-radius: 20px ;
+    border: 1px solid rgb(87, 194, 243);
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
-.search-btn{
-    width: 10%;
-    padding: 7px;
-    border-radius: 0 20px 20px 0;
-    cursor: pointer;
-    background-color: #E51B1B;
-    color: white;
-    font-size: 16px;
-    font-weight: 600;
-}
-
-.search-btn:hover{
-    background-color: white;
-    color: #E51B1B;
+.search:hover{
+    border: 1px solid red;
 }

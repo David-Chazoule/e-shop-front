@@ -51,7 +51,7 @@ function Register () {
         
         
 
-        <div className='bar-h-r'></div>
+        
      
 
         </div>

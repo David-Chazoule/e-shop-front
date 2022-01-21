@@ -10,6 +10,11 @@
     height: 40vh;
 }
 
+.div-map{
+    display: flex;
+    flex-wrap: wrap;
+}
+
 .productlist_container:hover{
     transform: scale(1.02);
     transition-duration: 0.3s;

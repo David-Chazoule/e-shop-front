@@ -35,7 +35,7 @@ function ConnectionPage () {
 
         </div>
 
-        <div className='bar-h'></div>
+        
      
 
         </div>

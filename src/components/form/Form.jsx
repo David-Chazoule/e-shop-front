@@ -1,5 +1,6 @@
 import '../../CSS/form/form.css'
 import {Link} from "react-router-dom"
+import logo from '../../img/logo.png'
 
 function Form () {
     return(
@@ -9,6 +10,8 @@ function Form () {
                
                 <div className="contact-adresse-box">
                     <div className="form-contact">
+
+                        <img className='img-form' src={logo} alt="" />
                        
                         <div className="form-input">
                             <div className="label-input">
@@ -53,7 +56,12 @@ function Form () {
                     </div>
                     
                         
-                    <div className="btn-back-next-box">
+                    
+                    
+                
+            </form>
+
+            <div className="btn-back-next-box">
 
              <Link to="/panier">
              <button className='btn-back-next'>revenir </button>
@@ -63,9 +71,6 @@ function Form () {
              <button className='btn-back-next'>paiement</button>
              </Link>
          </div>     
-                    
-                
-            </form>
 
         </div>
     )

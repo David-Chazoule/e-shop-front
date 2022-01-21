@@ -7,6 +7,35 @@
     width: 100%;
 }
 
+.article-title-box{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    margin: 30px 0;
+
+}
+
+.article-title{
+    margin: 0  ;
+    width: 16%;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 600;
+    background-color:rgb(87, 194, 243) ;
+    color: white;
+}
+
+
+.recap-basket-box{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    align-self: center;
+    margin: 20px 0;
+}
+
 .basket{
     display: flex;
     flex-direction: column;
@@ -17,6 +46,7 @@
 
 .basket-recap{
     display: flex;
+    flex-direction: column;
     width: 100%;
     justify-content: center;
     align-items: center;
@@ -25,9 +55,10 @@
 
 .img-article-box{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 90%;
+    width: 16%;
 }
 
 .article-box{
@@ -41,22 +72,32 @@
 
 .quantity-box{
     display: flex;
-    margin-top : 100px ;
+    width: 16%;
     justify-content: center;
     align-items: center;
 }
 
 .img-article{
-    width: 24%;
-    margin-right: 20px;
+    width: 30%;
+   
 }
 
-.article-title{
-    margin: 10px 0 ;
+.title-result{
+    display: flex ;
 }
+
+.article-result-img {
+    width: 100%;
+    margin: 0;
+    font-size: 14px;
+    
+}
+
 
 .article-result{
-    margin-top: 100px ;
+    margin: 0 ;
+    width: 16%;
+    text-align: center;
 }
 
 .input-basket{
@@ -67,33 +108,34 @@
     padding: 2px 10px 0 12px;
     border-radius: 50% 0 0 50%;
     text-align: center;
-    background-color: orange;
+    background-color: rgb(87, 194, 243);
     color:white;
 }
 
 
 .btn-quantity-a:hover{
     background-color: white;
-    color:orange;
+    color:rgb(87, 194, 243);
 }
 
 .btn-quantity-b{
     padding: 2px 10px 0 12px;
     border-radius: 0 50% 50% 0;
     text-align: center;
-    background-color: orange;
+    background-color: rgb(87, 194, 243);
     color:white;
 }
 
 .btn-quantity-b:hover{
     background-color: white;
-    color:orange;
+    color:rgb(87, 194, 243);
 }
 
 
 .article-bar{
-    border-top: 4px solid orange;
-    width: 10%;
+    border-top: 2px solid rgb(87, 194, 243);
+    width: 20%;
+    margin: 10px 0;
 }
 
 .basket-total{
@@ -105,26 +147,35 @@
     margin-top: 60px;
 }
 
+.basket-total-price{
+    width: 30%;
+    text-align: center;
+}
+
+
+
 .article-bar-total{
-    border-top: 4px solid orange;
-    width: 10%;
+    border-top: 2px solid rgb(87, 194, 243);
+    width: 26%;
 }
 
 .basket-final-result{
     display: flex;
     margin: 10px 0;
     justify-content: flex-end;
-    align-items: flex-end;
-    width: 84%;
+    align-items:center;
+    width: 50%;
 }
 
 .basket-total-title{
-    margin-right: 80px;
+    margin: 0;
+    width: 20%;
+    text-align: center ;
 }
 
 .btn-back-next-box{
     display: flex;
-    width: 100%;
+    width: 80%;
     justify-content: space-between;
     align-items: center;
     margin:  30px 0 ;
