@@ -11,8 +11,16 @@
 }
 
 .div-map{
+    
+    width: 90%;
+    padding-bottom: 20px;
+    margin-top: 20px;
+    height: fit-content;
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
 }
 
 .productlist_container:hover{
@@ -34,6 +42,13 @@
 .list-img{
     width: 100px;
     height: auto;
+    margin-bottom: 10px;
+}
+
+.list-img-b{
+    width: 200px;
+    height: auto;
+    margin-bottom: 10px;
 }
 
 .title-list, .marque-list, .price-list{
@@ -65,17 +80,7 @@
     width: 100%;
 }
 
-.bar-seperate{
-    margin-top: 8px;
-    border-top: 6px solid rgb(87, 194, 243);
-    width: 12%;
-}
 
-.bar-v-seperate{
-    margin-left: 20px;
-    border-right: 4px solid rgb(87, 194, 243);
-    height: 16vh;
-}
 
 .seperate-bar{
     width: 80%;

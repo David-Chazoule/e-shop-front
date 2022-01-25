@@ -33,7 +33,9 @@ function ProductCard() {
         const fetchproduct = async() => {
         
             const result = await axios.get('http://localhost:8000/product/'+ params.id)
-            setProductInfos(result.data[0])
+            
+            
+            setProductInfos(result.data)
            
          } 
         fetchproduct()      
@@ -101,9 +103,24 @@ function ProductCard() {
 
                 <div className="information-box">
 
+                <div className="stock-price-box">
+                          
+                          {showQuantity()}
+                         
+                        
+                          
+
+                        
+                            <h2 className='price-card'>{productInfos.price}€</h2>
+                        
+                    </div>
+
                 {/* {title()} */}
                     
                     <div className="detail-box">
+
+                    
+
                         <div className="line-detail-case-a">
                         
                             <p className="info-detail">{productInfos.info1}</p>
@@ -129,16 +146,10 @@ function ProductCard() {
                         <p>{productInfos.description}</p>
                     </div>
 
-                    <div className="order-stock-box">
+                    <div className="orders-basket-box">
                           
-                          {showQuantity()}
-                         
+                    <button className='btn-put-basket'>mettre dans votre panier</button>
                         
-                          
-
-                        <div className="btn-order-box">
-                            <button className='btn-order'>mettre dans votre panier</button>
-                        </div>
                     </div>
 
                 </div>
@@ -150,7 +161,11 @@ function ProductCard() {
             <div className="btn-back-next-box">
 
             <Link to="/produit">
-                <button className='btn-back-next'>retour </button>
+                <button className='btn-back-next'>Poursuivre mes achats </button>
+            </Link>
+
+            <Link to="/panier">
+                <button className='btn-back-next'>Terminer ma commande  </button> 
             </Link>
 
             </div>

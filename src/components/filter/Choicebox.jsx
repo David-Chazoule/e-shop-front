@@ -9,35 +9,57 @@ import tv  from "../../img/tv.png"
 import vr  from "../../img/vr.png"
 import audio from "../../img/audio.png"
 
+const data = [
+    {
+        name: "All",
+        image: computer,
+        type: "all"
+},
+    {
+        name: "Informatique",
+        image: computer,
+        type: "ordinateur"
+},
+    {
+        name: "Mobile",
+        image: mobile,
+        type:"smartphone"
+},
+    {
+        name: "Jeux video",
+        image: game,
+        type: "jeu"
+},
+    {
+        name: "Casque audio",
+        image: audio,
+        type: "casque audio"
+},
+    {
+        name: "ecran tv",
+        image: tv,
+        type:"ecran"
+},
+    {
+        name: "casque VR",
+        image: vr,
+        type:"casque VR"
+},
+]
 
-function Choicebox () {
+
+function Choicebox (props) {
+
+
+    
     return(
         <div className="choicebox">
-        <div className='choice-title-img'>
-         <img className='img-choice' src={computer} alt="informatique" />
-         <p className='choice-title'>Informatique</p>
-         </div>
-         
-         <div className='choice-title-img'>
-         <img className='img-choice' src={mobile} alt="téléphones" />
-         <p className='choice-title'>Mobile</p>
-         </div>
-         <div className='choice-title-img'>
-         <img className='img-choice' src={game} alt="jeux vidéo" />
-         <p className='choice-title'>Jeux video</p>
-         </div>
-         <div className='choice-title-img'>
-         <img className='img-choice' src={audio} alt="casque" />
-         <p className='choice-title'>Casque audio</p>
-         </div>
-         <div className='choice-title-img'>
-         <img className='img-choice' src={tv} alt="tv" />
-         <p className='choice-title'>ecran tv</p>
-         </div>
-         <div className='choice-title-img'>
-         <img className='img-choice' src={vr} alt="vr" />
-         <p className='choice-title'> casque VR</p>
-        </div>
+        {data && data.map(elem => 
+             <div className='choice-title-img' key={elem.name} onClick={() => props.setType(elem.type)}>
+             <img className='img-choice' src={elem.image} alt={elem.name} />
+             <p className='choice-title'>{elem.name}</p>
+             </div>
+        )}
         </div>
     )
 }

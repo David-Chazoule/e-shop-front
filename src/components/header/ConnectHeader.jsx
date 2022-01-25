@@ -22,6 +22,10 @@ function ConnectHeader(){
             <div className='connect-div'>
             <p className='customer'>Mon compte</p>
             <p className='identification'>Identifiez-vous</p>
+            
+            {/* <p className='customer'>Bienvenue!</p>
+            <p className='identification'>David</p> */}
+            
             </div>
             
                 
@@ -45,6 +49,24 @@ function ConnectHeader(){
             </Link>
             </div>
             </div> 
+
+            
+            {/* <div className="btn-connect-box">
+
+            <Link to="/compte">
+            <button className="btn-connect">Administration</button>
+            </Link>
+
+            <div className='disconnect-box'>
+            
+            <Link to="/"><p  className='disconnect-btn'> Déconnection</p>
+            </Link>
+            </div>
+            </div>  */}
+
+            
+
+
                    </div>
 
             </div>

@@ -8,7 +8,7 @@ import Register from '../components/inscription/Register';
 import ProductCard from '../components/ProductCard';
 import PaymentContainer from '../components/Payment/PaymentContainer';
 import AdminClientContainer from '../components/adminCustomer/AdminClientContainer';
-
+import HomePage from '../components/homepage/HomePage';
 
 import '../CSS/bodyContainer.css';
 
@@ -25,6 +25,8 @@ function BodyContainer() {
 
 
                 <Routes>
+
+                < Route exact path="/" element={<HomePage /> } />
 
                     < Route path="/information" element={<Form />} />
 

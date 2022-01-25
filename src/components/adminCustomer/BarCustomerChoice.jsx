@@ -2,7 +2,7 @@ import { useState } from 'react';
 import ContactDetails from './ContactDetails';
 import OrderedList from './OrderedList';
 import '../../CSS/adminCustomer/barCustomerChoice.css';
-
+import logo from '../../img/logo.png'
 
 function BarCustomerChoice () {
 
@@ -47,12 +47,14 @@ function BarCustomerChoice () {
 
 
         {homepage && (
-        <div className="homepage">
+        <div className="home-page">
+            <div>
+            <img src={logo} alt =""  />
+            </div>
             <h1>Mon compte</h1>
-            <p> David, bienvenue sur votre compte!
-                Ici vous trouverez tout pour gérer votre compte client.
-                Message d' Aigle Rusé :
-                Vous pouvez retenter le paiement d'une commande non réglée.
+            <h2> David, bienvenue sur votre compte!</h2>
+               <p> Ici vous trouverez tout pour gérer votre compte client.
+                
             </p>
 
         </div>

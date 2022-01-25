@@ -11,23 +11,23 @@ function OrderedList () {
     
     <div className="order-detail-box">
     <div className="order-box">
-        <p>Numero </p>
+        <p className='order-title'>Numero </p>
         <p>32156</p>
     </div>
 
     <div className="order-box">
-        <p>Date</p>
+        <p className='order-title' >Date</p>
         <p>08/12/2021</p>
     </div>
 
     <div className="order-box">
-        <p>Montant</p>
+        <p className='order-title'>Montant</p>
         <p>900€</p>
 
     </div>
 
     <div className="order-box">
-        <p>Paiement</p>
+        <p className='order-title'>Paiement</p>
         <p>Carte Bancaire</p>
     </div>
 
@@ -35,7 +35,7 @@ function OrderedList () {
 
     <div className="btn-detail-order">
         <button className='btn-detail'>Detail</button>
-        <button className='btn-bill'> Facture</button>
+        
     </div>
 
     </div>

@@ -14,6 +14,7 @@
     justify-content: center;
     flex-direction: row;
     width: 100%;
+    margin-top: 8vh;
 }
 
 .img-card-box{
@@ -24,13 +25,15 @@
 }
 
 .img-card{
-    width: 80%;
+    width: 60%;
 }
 
 .information-box{
     display: flex;
     flex-direction: column;
     width: 100%;
+    align-items: center;
+    justify-content: center;
 }
 
 .detail-box{
@@ -86,19 +89,27 @@
     padding: 5px;
 }
 
-.order-stock-box{
+.orders-basket-box{
     display: flex;
     width: 100%;
     margin-top: 20px;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
 }
+
+.stock-price-box{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+
 
 .stock{
     display: flex;
     width: 80%;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
 }
 
 .stock p {
@@ -108,14 +119,10 @@
 }
 
 .icon-valid{
-    width: 10%;
+    width: 4%;
 }
 
-.btn-order-box{
-    display: flex;
-    width: 100%;
 
-}
 
 .good-stock{
     color: green;
@@ -132,4 +139,21 @@
     font-size: 12px;
     margin: 0;
 
+}
+
+.btn-put-basket{
+    padding: 2% 2%;
+    border-radius: 15px;
+    cursor: pointer;
+    background-color: rgb(243, 139, 139);;
+    color: white;
+    font-weight: 600;
+    font-size: 16px;
+    width: 60%;  
+}
+
+.price-card{
+    font-size: 40px;
+    color: black;
+    
 }

@@ -68,11 +68,11 @@ function Basket () {
          <div className="btn-back-next-box">
              
              <Link to="/produit">
-             <button className='btn-back-next'>revenir </button>
+             <button className='btn-back-next'>Poursuivre mes achats </button>
              </Link>
 
-             <Link to="/information">
-             <button className='btn-back-next'>paiement</button>
+             <Link to="/register">
+             <button className='btn-back-next'>Terminer ma commande</button>
              </Link>
          </div>
          </div>

@@ -4,7 +4,7 @@
 .ordered-list_container{
     display: flex;
     flex-direction: column;
-    width: 90%;
+    width: 60%;
     margin: 30px 0 30px 30px;
     background-color: rgb(253, 249, 208);
     padding: 10px;
@@ -16,17 +16,24 @@
     display: flex;
     width: 100%;
     margin-left: 2px;
+    align-items: center;
+    justify-content: center;
 }
 
 .order-box{
     display: flex;
-    width: 200px;
+    width: 100%;
     flex-direction: column;
 }
 
 .order-box p{
     margin: 6px;
     
+}
+
+.order-title {
+    font-weight: 600;
+    font-size: 18px;
 }
 
 .btn-detail-order{

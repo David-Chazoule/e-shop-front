@@ -6,7 +6,7 @@ import '../CSS/product-card/productList.css';
 
 
 
-function ProductList({ title, brand, img, price, id }) {
+function ProductList({ title, brand, img, price, type, id }) {
 
  
 
@@ -33,16 +33,16 @@ function ProductList({ title, brand, img, price, id }) {
           tabIndex={0}>
 
           <div className="list-card" >
-            <img className="list-img" src={img} alt="" />
+            <img className={ (type ==="casque VR") ? "list-img-b" : "list-img"} src={img} alt="" />
             <p className="title-list">{title} </p>
             <div className='marque-list-box'>
               <p className="marque-list">-{brand}-</p>
             </div>
-            <p className="price-list">{price}</p>
-            <div className="bar-seperate"></div>
+            <p className="price-list">{price}€</p>
+            
           </div>
 
-          <div className="bar-v-seperate"></div>
+          
         </div>
       )
     
