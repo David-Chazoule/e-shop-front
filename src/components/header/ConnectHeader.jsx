@@ -1,93 +1,99 @@
-import user from '../../img/user.png'
-import { useState } from 'react';
-import {Link} from 'react-router-dom';
-import  '../../CSS/header/connectHeader.css';
 
-function ConnectHeader(){
+import { useState, useEffect, useContext } from "react";
+import { Link, useNavigate } from "react-router-dom";
 
-    const [onConnect, setOnConnect] = useState(false);
+import "../../CSS/header/connectHeader.css";
+import Auth from "../../context/Auth";
 
-    const showConnect = (value) => {
-        
-        setOnConnect(!value);
-      };
-    return(
-        
-        
-        
-        
-        <div className="connect-header-container"onMouseEnter={()=>showConnect(false)} onMouseLeave={()=>showConnect(true)}>
+function ConnectHeader() {
+  const [onConnect, setOnConnect] = useState(false);
+  const { userInfo, setUserInfo } = useContext(Auth);
+  
 
-<div className="connect-box" >
-            <div className='connect-div'>
-            <p className='customer'>Mon compte</p>
-            <p className='identification'>Identifiez-vous</p>
-            
-            {/* <p className='customer'>Bienvenue!</p>
-            <p className='identification'>David</p> */}
-            
-            </div>
-            
-                
-                
-               
-            
-            { onConnect && (
-                <>
-                            <div id="triangle-connect" ></div>
-            <div className= "connect-list">
-                <div className="list-connect-box">
-                <div className="btn-connect-box">
+  const nav = useNavigate();
 
-            <Link to="/connection">
-            <button className="btn-connect">Identifiez-vous</button>
-            </Link>
+  // useEffect(async () => {
+  //   try {
+  //     const result = await axios.get('http://172.24.42.106:8080/connect/', {
+  //       headers: {
+  //         Authorization: 'bearer ' + localStorage.getItem('token'),
+  //       },
+  //     });
+  //     setUsers(result.data);
+  //   } catch (err) {
+  //     nav('/');
+  //   }
+  // }, []);
 
-            <div className='register-basket-box'>
-            <p className='new-customer'>Nouveau Client ? </p> 
-            <Link to="/register"><p  className='new-account'> Créez un compte</p>
-            </Link>
-            </div>
-            </div> 
+  const showConnect = (value) => {
+    setOnConnect(!value);
+  };
 
-            
-            {/* <div className="btn-connect-box">
-
-            <Link to="/compte">
-            <button className="btn-connect">Administration</button>
-            </Link>
-
-            <div className='disconnect-box'>
-            
-            <Link to="/"><p  className='disconnect-btn'> Déconnection</p>
-            </Link>
-            </div>
-            </div>  */}
-
-            
-
-
-                   </div>
-
-            </div>
+  return (
+    <div
+      className="connect-header-container"
+      onMouseEnter={() => showConnect(false)}
+      onMouseLeave={() => showConnect(true)}
+    >
+      <div className="connect-box">
+        <div className="connect-div">
+          {!userInfo.id ? (
+            <>
+              <p className="customer">Mon compte</p>
+              <p className="identification">Identifiez-vous</p>
             </>
-            )}
+          ) : (
+            <>
+              <p className="customer">Bienvenue!</p>
+              <p className="identification">{userInfo.name}</p>
+            </>
+          )}
+        </div>
 
+        {onConnect && (
+          <>
+            <div id="triangle-connect"></div>
+            <div className="connect-list">
+              <div className="list-connect-box">
+                {!userInfo.id ? (
+                  <div className="btn-connect-box">
+                    <Link to="/connection">
+                      <button className="btn-connect">Identifiez-vous</button>
+                    </Link>
+
+                    <div className="register-basket-box">
+                      <p className="new-customer">Nouveau Client ? </p>
+                      <Link to="/register">
+                        <p className="new-account"> Créez un compte</p>
+                      </Link>
+                    </div>
+                  </div>
+                ) : (
+                  <div className="btn-connect-box">
+                    <Link to="/compte">
+                      <button className="btn-connect">Administration</button>
+                    </Link>
+
+                    <div className="disconnect-box">
+                      <Link to="/">
+                        <p className="disconnect-btn"> Déconnection</p>
+                      </Link>
+                    </div>
+                  </div>
+                )}
+              </div>
             </div>
+          </>
+        )}
+      </div>
 
-
-
-
-
-
-            {/* <img className='icon-user' src={user} alt="" />
+      {/* <img className='icon-user' src={user} alt="" />
             <div className="btn-connect-box">
             <button className="btn-connect">Connection</button>
             <button className="btn-connect">inscription</button>
             </div> */}
-
-        </div>
-    )
+    </div>
+  );
 }
 
 export default ConnectHeader;

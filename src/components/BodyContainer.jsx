@@ -1,5 +1,5 @@
 import { Routes, Route } from 'react-router-dom';
-
+import {useContext} from 'react';
 import Basket from '../components/basket/Basket';
 import ProductListContainer from '../components/ProductListContainer';
 import Form from '../components/form/Form';
@@ -9,6 +9,7 @@ import ProductCard from '../components/ProductCard';
 import PaymentContainer from '../components/Payment/PaymentContainer';
 import AdminClientContainer from '../components/adminCustomer/AdminClientContainer';
 import HomePage from '../components/homepage/HomePage';
+import Auth from '../context/Auth';
 
 import '../CSS/bodyContainer.css';
 
@@ -16,6 +17,8 @@ import '../CSS/bodyContainer.css';
 
 function BodyContainer() {
 
+    const {basket, setBasket} = useContext(Auth)
+    const {userInfo, setUserInfo}= useContext(Auth);
 
     return (
         <div className="body_container">
@@ -30,15 +33,15 @@ function BodyContainer() {
 
                     < Route path="/information" element={<Form />} />
 
-                    < Route path="/panier" element={< Basket />} />
+                    < Route path="/panier" element={< Basket value={{basket, setBasket , userInfo , setUserInfo}}/>} />
 
                     < Route path="/produit" element={< ProductListContainer />} />
 
                     < Route path="/connection" element={<ConnectionPage />} />
 
-                    < Route path="/register" element={<Register />} />
+                    < Route path="/register" element={<Register />} value={{basket, setBasket}} />
 
-                    < Route path="/card/:id" element={<ProductCard />} />
+                    < Route path="/card/:id" element={<ProductCard value={{basket, setBasket}}/>} />
 
                     <Route path="/paiement" element={<PaymentContainer />} />
 

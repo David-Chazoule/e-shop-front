@@ -1,18 +1,22 @@
-import "../../CSS/inscription/register.css";
-import logo from "../../img/logo.png";
-import { Link } from "react-router-dom";
 import { useState } from "react";
+import {useContext} from 'react';
+import { Link } from "react-router-dom";
 import axios from "axios";
+import Auth from '../../context/Auth';
+import logo from "../../img/logo.png";
+import "../../CSS/inscription/register.css";
+
 
 function Register() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const {basket, setBasket} = useContext(Auth)
 
   const handlePost = async (e) => {
       e.preventDefault();
-   const result =   axios.post('http://localhost:8000/connect', { name, email, password })
-   console.log(result);
+   const result =   axios.post('http://localhost:8000/user', { name, email, password })
+   console.log(result, "coucou c moi");
   };
 
   return (
@@ -49,7 +53,7 @@ function Register() {
           <div className="register-box">
             <p>mot de passe*</p>
             <input
-              type="text"
+              type="password"
               value={password}
               className="input-register"
               onChange={(e) => setPassword(e.target.value)}
@@ -57,7 +61,15 @@ function Register() {
           </div>
 
           <div className="btn-register-box">
-            <button className="btn-register">Créez un compte</button>
+            {!basket.length ?
+          <Link to="/produit">
+            <button className="btn-register" type="submit">Créez un compte</button>
+            </Link>
+            :
+            <Link to="/information">
+            <button className="btn-register" type="submit">Créez un compte</button>
+            </Link>
+}
           </div>
         </form>
       </div>
