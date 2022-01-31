@@ -1,22 +1,29 @@
 import { useState } from "react";
-import {useContext} from 'react';
-import { Link } from "react-router-dom";
+import { useContext } from 'react';
+import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import Auth from '../../context/Auth';
 import logo from "../../img/logo.png";
 import "../../CSS/inscription/register.css";
 
 
+
+
 function Register() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const {basket, setBasket} = useContext(Auth)
+  const { basket, setBasket } = useContext(Auth)
+
+  const nav = useNavigate()
 
   const handlePost = async (e) => {
-      e.preventDefault();
-   const result =   axios.post('http://localhost:8000/user', { name, email, password })
-   console.log(result, "coucou c moi");
+     e.preventDefault();
+    const result = axios.post('http://localhost:8000/user', { name, email, password })
+    if (result) {
+      nav("/product")
+    }
+    console.log(result);
   };
 
   return (
@@ -61,15 +68,11 @@ function Register() {
           </div>
 
           <div className="btn-register-box">
-            {!basket.length ?
-          <Link to="/produit">
+
+            {/* <Link to="/information"> */}
             <button className="btn-register" type="submit">Créez un compte</button>
-            </Link>
-            :
-            <Link to="/information">
-            <button className="btn-register" type="submit">Créez un compte</button>
-            </Link>
-}
+            {/* </Link> */}
+
           </div>
         </form>
       </div>

@@ -27,7 +27,7 @@ function BasketHeader(product) {
 const totalQuantity = () => {
     let totalQuantity = 0;
     basket.forEach(product => {
-      totalQuantity += (product.quantity) 
+      totalQuantity += (+product.quantity) 
   })
   return totalQuantity
 }

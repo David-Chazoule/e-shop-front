@@ -17,18 +17,14 @@ function ConnectionPage() {
   const handlePost = async (e) => {
     try {
       e.preventDefault();
-      const userInfo = await axios.post("http://localhost:8000/user/login", {
+      const user = await axios.post("http://localhost:8000/user/login", {
         email,
         password,
       });
-      setUserInfo(userInfo.data.userInfo)
-      localStorage.setItem("token", userInfo.headers.accesstoken);
-      // const userInfo = await axios.post(`http://localhost:8000/user/me/`, {
-      //   headers: {
-      //     Authorization: "bearer " + localStorage.getItem("token"),
-      //   },
-      // })
-
+      setUserInfo(user.data)
+      
+      localStorage.setItem("token", user.headers.accesstoken);
+     
       nav("/produit");
     } catch (err) {
       nav("/connection");
