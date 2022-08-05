@@ -10,26 +10,33 @@ import Auth from "../../context/Auth";
 function ConnectionPage() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const {userInfo, setUserInfo} = useContext(Auth)
+  const { userInfo, setUserInfo } = useContext(Auth);
 
   const nav = useNavigate();
 
   const handlePost = async (e) => {
     try {
       e.preventDefault();
+      
       const user = await axios.post("http://localhost:8000/user/login", {
         email,
         password,
       });
-      setUserInfo(user.data)
-      
+      setUserInfo(user.data);
+
       localStorage.setItem("token", user.headers.accesstoken);
-     
+
       nav("/produit");
     } catch (err) {
+      const validation = document.querySelector(".error");
+      validation.style.visibility = "visible";
+      
       nav("/connection");
     }
   };
+
+
+  
 
   return (
     <div className="Connection_container">
@@ -38,8 +45,8 @@ function ConnectionPage() {
         <p>Technologeek</p>
       </div>
 
-      <form onSubmit={(e) => handlePost(e)}>
-        <div className="connection-box">
+      <div className="connection-box">
+        <form onSubmit={(e) => handlePost(e)}>
           <div className="user-box">
             <p>Email*</p>
             <input
@@ -57,12 +64,15 @@ function ConnectionPage() {
               onChange={(e) => setPassword(e.target.value)}
             ></input>
           </div>
+          
 
           <div className="btn-user-box">
             <button className="btn-user">Connection</button>
+            <span className="error">nous avons un problème avec votre identifiant ou votre mot de passe</span>
           </div>
-        </div>
-      </form>
+          
+        </form>
+      </div>
     </div>
   );
 }

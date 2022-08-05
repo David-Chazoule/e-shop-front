@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
+import { TypeButton } from "../Datas/TypeButton";
 // import products from "../list.json";
 import ProductList from "../components/ProductList";
 import Choicebox from "./filter/Choicebox";
+
 // import SearchBar from "./filter/SearchBar";
 import axios from "axios";
 import "../CSS/filter/searchBar.css";
@@ -28,7 +30,7 @@ function ProductListContainer() {
     <div className="container">
       <div className="search-bars-box">
         <div className="choice-box-bar">
-          <Choicebox setType={setType} />
+          <Choicebox setType={setType} type={type} />
         </div>
 
         {/* <div className="search-box-bar"> */}
@@ -43,23 +45,29 @@ function ProductListContainer() {
           />
         </div>
 
-        {/* <SearchBar /> */}
-
-        {/* < div className="search-bar-box">
-        <input className="search" type="text" name="searchBar" id="search" placeholder="" onChange={handleSearchTerm} />
-        <button className="search-btn"  >Rechercher</button>
-
-        </div> */}
-
-        {/* </div> */}
-
         <div className="seperate-bar"></div>
+
+        <div className="tag-box">
+          {TypeButton.filter((val) => {
+            return val.type === type;
+          }).map((elem) => (
+            <>
+              <button
+                className="button-tag"
+                onClick={() => setType(type.length && type !== "all")}
+              >
+                X
+              </button>
+              <p className="tag">{elem.name}</p>
+            </>
+          ))}
+        </div>
       </div>
 
       <div className="div-map">
         {productInfos
           .filter((val) => {
-              return (type.length && type !== "all") ? val.type === type : val
+            return type.length && type !== "all" ? val.type === type : val;
           })
           .filter((elem) => {
             return elem.title.toLowerCase().includes(searchTerm.toLowerCase());

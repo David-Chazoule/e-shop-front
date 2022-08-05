@@ -24,12 +24,18 @@
 
 
 
+.register-box  {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .register-box p {
     font-weight: bold;
     margin: 5px 0 0 0;
 }
 
-.register-box input {
+.register-box input , .name-register-box input , .mail-register-box input, .password-register-box p {
     padding: 8px;
 }
 
@@ -112,3 +118,110 @@
     font-weight: 600;
     width: 260px;
 }
+
+.confirm-pass{
+    font-size: italic;
+    color: red;
+    padding: 2px 5px;
+    margin-top: 5px;
+    visibility: hidden;
+}
+
+.password-container {
+    display: flex;
+    align-items: center;
+    margin-left: 24px;
+    
+
+}
+
+.password-container img{
+    width: 20px;
+    margin-left: 5px;
+    cursor: pointer;
+    
+
+}
+
+/* .confirm-mail{
+    font-size: italic;
+    color: red;
+    padding: 2px 5px;
+    margin-top: 5px;
+    visibility: hidden;
+} */
+
+/* .confirm-name{
+    font-size: italic;
+    color: red;
+    padding: 2px 5px;
+    margin-top: 5px;
+    
+} */
+
+.error span {
+    visibility: visible;
+    opacity: 1;
+    color: red;
+    font-size: 10px;
+    font-style: italic;
+    padding: 0 5px;
+    margin-top: 2px;
+    
+    
+  }
+
+  .progressRed {
+    background: red;
+    width: 20%;
+    height: 6px;
+    border-radius: 10px;
+    margin: 6px 0 0 0;
+    
+  }
+  .progressBlue {
+    background: #16d9e7;
+    width: 50%;
+    height: 6px;
+    border-radius: 10px;
+    margin: 6px 0 0 0;
+  }
+  .progressGreen {
+    width: 80%;
+    height: 6px;
+    background: #5ef9a4;
+    border-radius: 10px;
+    margin: 6px 0 0 0;
+  }
+
+  .mail-register, .name-register, .password-register {
+    display: flex;
+    
+    align-items: center;
+    height: 16px;
+   
+  }
+  
+  .password-register{
+    width: 100%;
+  }
+
+
+
+
+  
+  .welcome{
+    
+    
+    font-size: 18px ;
+    margin-bottom: 1rem;
+    font-weight: 600;
+    
+    
+  }
+
+  .welcome span {
+    color: rgb(87, 194, 243) ;
+    font-weight: 600;
+  }
+

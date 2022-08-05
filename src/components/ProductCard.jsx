@@ -2,30 +2,45 @@ import axios from "axios";
 import { useState, useEffect, useContext } from "react";
 import { Link, useParams, useNavigate } from "react-router-dom";
 
-
 import Characteristic from "../components/Characteristic";
 import "../CSS/product-card/productCard.css";
 import valid from "../img/IconValide.png";
 import wrong from "../img/Not_allowed.svg";
 import Auth from "../context/Auth";
 
+import basketValidate from "../img/validate-basketW.png"
+
 function ProductCard() {
   const params = useParams();
   const [productInfos, setProductInfos] = useState([]);
-  const {basket, setBasket} = useContext(Auth);
-  const nav = useNavigate()
-  
-  const addBasket = (product) => {
-    const productInfo = {title: product.title,
-    image: product.img,
-    price: product.price,
-    id: product.id,
-    quantity : 1
-  }
-  setBasket([...basket, productInfo]);
-    nav('/panier')
 
-  }
+  const { basket, setBasket } = useContext(Auth);
+  const nav = useNavigate();
+
+  const addBasket = (product) => {
+    const productInfo = {
+      title: product.title,
+      image: product.img,
+      price: product.price,
+      id: product.id,
+      quantity: 1,
+    };
+    setBasket([...basket, productInfo]);
+
+    const modal = document.querySelector(".modal-basket");
+    modal.style.visibility = "visible";
+
+    setTimeout(() => {
+      // modal.style.transform = "translateX(200px)";
+      modal.style.opacity = 0;
+      modal.style.transition = "0.6s";
+      modal.style.visibility = "hidden";
+      setTimeout(() => {
+        // modal.style.transform = "";
+        modal.style.opacity = 1;
+      }, 800);
+    }, 2000);
+  };
 
   useEffect(() => {
     const fetchproduct = async () => {
@@ -111,7 +126,14 @@ function ProductCard() {
           </div>
 
           <div className="orders-basket-box">
-            <button className="btn-put-basket" onClick={() => addBasket(productInfos)}>Mettre dans votre panier</button>
+            <button
+              className="btn-put-basket"
+              onClick={() => addBasket(productInfos)}
+            >
+              Mettre dans votre panier
+            </button>
+
+            <div className="modal-basket"><img src={basketValidate} alt="basket-logo" /><p >ajouté au panier</p></div>
           </div>
         </div>
       </div>

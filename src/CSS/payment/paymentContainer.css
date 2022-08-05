@@ -33,3 +33,22 @@
     justify-content: center;
     margin: 40px 0;
 }
+
+.total-price-payment{
+   
+    font-size: 28px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    display: flex;
+    text-align: center;
+    color: #57C2F3;
+    font-weight: 600;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border: 1px solid #57C2F3 ;
+}
+
+.total-price-payment p{
+    margin: 0;
+
+}

@@ -57,6 +57,7 @@
     box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
     top: 96px;
     position: absolute;
+    z-index: 2;
 }
 
 .list-shop-box{
@@ -87,13 +88,30 @@
     margin: 20px 0;
 }
 
-.produce, .quantity-produce, .total-title-basket-header, .total-price-basket-header {
+.produce-container{
+    width: 47%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin: 0;
+}
+
+.produce {
+    margin: 10px 0px 10px 10px;
+    font-size: 14px;  
+}
+
+.quantity-produce{
+    margin: 10px 0px 10px 0;
+    font-size: 14px;  
+}
+
+ .total-title-basket-header, .total-price-basket-header {
     margin: 10px;
     font-size: 14px;
 }
 
 .quantity-produce, .total-price-basket-header{
-    
     font-weight: 600;
 }
 
@@ -152,4 +170,5 @@ display : inline-block;
 
 .number-article-basket{
     color: white;
+    margin: 0;
 }

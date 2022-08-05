@@ -8,5 +8,67 @@
 
 
 .security{
+    width: 350px;
     margin: 20px 0;
+}
+
+.CB-container{
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    padding: 50px 30px;
+    border-radius: 10px;
+
+}
+
+.CB-information img{
+    width: 40px;
+    height: auto;
+}
+
+.CB-information{
+    display: flex;
+    padding: 6px;
+    
+    
+}
+
+ .CB{
+    border: 1px solid rgb(214, 213, 213);
+    border-radius: 5px;
+}
+
+.CB-information input {
+    border: none;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: 600;
+    color: black;
+    border-radius: 5px;
+    text-align: left;
+    align-items: center;
+    
+}
+
+.cb-number{
+    width: 80%;
+}
+
+.cb-date{
+    width: 10%;
+}
+
+.CVC{
+    width: 10%;
+}
+
+.button-pay{
+    width: 100%;
+    border: none;
+    padding: 14px;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    background-color: #92A4B6;
+    border-radius: 0 0 5px 5px;
+    cursor: pointer;
+
 }

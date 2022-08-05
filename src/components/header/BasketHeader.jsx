@@ -1,5 +1,3 @@
-
-
 import basketIcon from "../../img/shoppingCart.png";
 import Auth from "../../context/Auth";
 import BasketHeaderCard from "../header/BasketHeaderCard";
@@ -7,41 +5,34 @@ import React, { useState, useContext } from "react";
 import "../../CSS/header/basketHeader.css";
 import { Link } from "react-router-dom";
 
-
 function BasketHeader(product) {
   const [onBasket, setOnBasket] = useState(false);
   const { basket, setBasket } = useContext(Auth);
   const [quantity, setQuantity] = useState(1);
-  
-
-
 
   const totalPrice = () => {
     let totalPrice = 0;
-    basket.forEach(product => {
-        totalPrice += (product.quantity) * parseInt(product.price)
-    })
-    return totalPrice.toFixed(2)
-}
+    basket.forEach((product) => {
+      totalPrice += product.quantity * parseInt(product.price);
+    });
+    return totalPrice.toFixed(2);
+  };
 
-const totalQuantity = () => {
+  const totalQuantity = () => {
     let totalQuantity = 0;
-    basket.forEach(product => {
-      totalQuantity += (+product.quantity) 
-  })
-  return totalQuantity
-}
+    basket.forEach((product) => {
+      totalQuantity += +product.quantity;
+    });
+    return totalQuantity;
+  };
 
-// const changeQuantity = (value) => {
-//     setQuantity(value);
-//     const productIndex = basket.findIndex(e => e.id === product.id);
-//     const myBasket = basket
-//     basket[productIndex].quantity = value
-//     setBasket([...myBasket])
-// }
-
-
-
+  // const changeQuantity = (value) => {
+  //     setQuantity(value);
+  //     const productIndex = basket.findIndex(e => e.id === product.id);
+  //     const myBasket = basket
+  //     basket[productIndex].quantity = value
+  //     setBasket([...myBasket])
+  // }
 
   const showBasket = (value) => {
     setOnBasket(!value);
@@ -55,21 +46,19 @@ const totalQuantity = () => {
     >
       <div className="basket-box">
         <div className="basket-logo-box">
-       
-          <img   className="icon-basket"   src={basketIcon} alt="" />
-          
-          
-          
-        
+          <img className="icon-basket" src={basketIcon} alt="" />
+
           {/* <p className='basket-title'>Panier</p> */}
         </div>
-        { basket.length ?
-        <div id="circle">
-          <p className="number-article-basket" value={quantity}>{totalQuantity()}</p>
-        </div>
-        :
-        <div></div>
-}
+        {basket.length ? (
+          <div id="circle">
+            <p className="number-article-basket" value={quantity}>
+              {totalQuantity()}
+            </p>
+          </div>
+        ) : (
+          <div></div>
+        )}
 
         {onBasket && (
           <>

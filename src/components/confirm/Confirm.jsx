@@ -1,14 +1,5 @@
-
-
-
-
 function Confirm() {
-    return (
-        <div className="Confirm_container">
-
-        </div>
-    )
+  return <div className="Confirm_container"></div>;
 }
 
-
-export default Confirm ;
+export default Confirm;

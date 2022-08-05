@@ -4,49 +4,61 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    
 }
 
-.connection-box {
+form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.connection-box{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
     width: 100%;
-    padding: 40px 0;
+    padding: 34px 0;
     margin: 6% 0 10% 0;
 }
 
-
-.connection-box p {
+.connection-box p{
     font-weight: bold;
     margin: 5px 0 0 0;
 }
 
+.connection-box input {
+    padding: 6px 12px;
+    font-size: 16px;
+    border-radius: 10px;
+    margin-bottom: 8px;
+}
+
 .btn-user-box{
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     margin-top: 20px;
     width: 100%;
-
 }
 
 .btn-user{
     text-align: center;
-    padding: 1% 4%;
+    padding: 2% 10%;
     border-radius: 15px;
     cursor: pointer;
     background-color: rgb(87, 194, 243);
     color: white;
     font-weight: 600;
+    font-size: 18px;
 }
 
 .btn-user:hover{
     background-color: white;
     color: rgb(87, 194, 243);
-
 }
 
 .logo-connection{
@@ -57,7 +69,6 @@
     margin-top: 40px;
 }
 
-
 .logo-connection img{
     width: 200px;
 }
@@ -65,4 +76,17 @@
 .logo-connection p{
     margin: 0;
     font-size: 40px;
+}
+
+.error-connect{
+    visibility: hidden;
+    color: red;
+    font-size: 12px;
+}
+
+.error{
+    visibility: hidden;
+    color: red;
+    font-size: 12px;
+    margin-top: 10px;
 }

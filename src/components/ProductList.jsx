@@ -24,11 +24,13 @@ function ProductList({ title, brand, img, price, type, id }) {
       tabIndex={0}
     >
       <div className="list-card">
-        <img
-          className={type === "casque VR" ? "list-img-b" : "list-img"}
-          src={img}
-          alt=""
-        />
+        <div className="img-container">
+          <img
+            className={type === "casque VR" ? "list-img-b" : "list-img"}
+            src={img}
+            alt=""
+          />
+        </div>
         <p className="title-list">{title} </p>
         <div className="marque-list-box">
           <p className="marque-list">-{brand}-</p>

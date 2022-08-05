@@ -3,13 +3,20 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  margin: 20px 0;
+  margin: 38px 0;
 }
 
 .homepage_container img {
   width: 150px;
 }
 
+.banner_container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 100px 0;
+}
 
 
 .shopping-box{
@@ -18,7 +25,8 @@
   align-items: center;
   justify-content: center;
   width: 80%;
-  padding: 20%;
+  padding: 24% 20%;
+  
 }
 
 .btn-shopping{
@@ -35,4 +43,16 @@
 .btn-shopping:hover{
   background-color: white;
   color: rgb(87, 194, 243);
+}
+
+
+.text-container{
+  width: 80%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(87, 194, 243);
+  border-radius: 20px;
+  margin-bottom: 10px;
 }

@@ -1,4 +1,5 @@
 import {useState, useContext} from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 import BodyContainer from './components/BodyContainer';
 import Header from './components/header/Header';
@@ -11,8 +12,9 @@ import './App.css';
 function App() {
   const [userInfo, setUserInfo] = useState({});
   const [basket, setBasket] = useState([]);
+  const [tag, setTag] = useState({});
   return (
-    <Auth.Provider value={{userInfo, setUserInfo, basket, setBasket}}>
+    <Auth.Provider value={{userInfo, setUserInfo, basket, setBasket, tag, setTag}}>
     <div className="App">
 
       
@@ -20,7 +22,7 @@ function App() {
 
   {/* <FiltrerContainer /> */}
 
-  <BodyContainer value={{userInfo, setUserInfo}} />
+  <BodyContainer value={{userInfo, setUserInfo, tag, setTag}} />
   <Footer />
     </div>
     </Auth.Provider>

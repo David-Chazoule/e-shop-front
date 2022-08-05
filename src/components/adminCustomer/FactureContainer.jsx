@@ -1,16 +1,5 @@
-
-
-
-
-
-function FactureContainer () {
-
-    return (
-        <div className="facture_container">
-
-        </div>
-    )
+function FactureContainer() {
+  return <div className="facture_container"></div>;
 }
 
-
-export default FactureContainer
+export default FactureContainer;

@@ -8,6 +8,19 @@
 
 }
 
+.form_container img {
+    width: 140px;
+    margin: 10px 0 20px 0 ;
+}
+
+.form_container h1 {
+    
+    margin: 20px 0 10px 0 ;
+}
+
+
+
+
     #info-form {
         display: flex;
         flex-direction: column;
@@ -23,7 +36,7 @@
         .contact-adresse-box {
             display: flex;
             width: 100%;
-            margin: 30px 0;
+            margin: 6px 0;
         }
     
         .form-contact {
@@ -37,32 +50,53 @@
            padding: 30px;
         }
 
-        .form-contact img {
-            width: 160px;
-            margin: 10px  0;
-        }
+        
 
             .form-input {
                 display: flex;
-               
+                margin: 20px 0 20px 0;
                 justify-content: center;
                 align-items: center;
                 width: 90%;
             }
    
-            .label-input{
+            .label-input, .firstname-label-input{
                 display: flex;
                 flex-direction: column;
                 margin: 6px;
                 width: 100%;
+                padding-bottom: 6px;
             }
            
             .form-input input {
+                border: none;
                 padding: 6px;
                 border-radius: 5px;
+                border-bottom: 2px solid rgb(87, 194, 243);
+                background: none;
+                font-size: 18px;
+            }
+
+            .form-input input:focus{
+                outline: none;
+                color: rgb(87, 194, 243);
+                font-weight: 600;
             }
 
             .form-input label {
                 font-size: 18px;
                 font-weight: bold;
             }
+
+
+
+            .error span {
+                visibility: visible;
+                opacity: 1;
+                color: red;
+                font-size: 12px;
+              }
+
+              .lastname-error-span, .firstname-error-span , .cityname-error-span, .postcode-error-span {
+                height: 8px;
+              }

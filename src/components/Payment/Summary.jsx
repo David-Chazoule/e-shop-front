@@ -3,27 +3,27 @@
 import '../../CSS/payment/summary.css';
 
 
-function Summary () {
+function Summary ({product}) {
     return (
         <div className="summary_container">
             <div className="summary-box">
+                <div className='img-product-summary'>
+                <img className="img-article" src={product.image} alt="" />
+                </div>
                 <div className="name-product-summary">
-                    <p>Samsung S21</p>
+                    <p>{product.title}</p>
                 </div>
             <div className="quantity-product-summary">
-               <p> X1</p>
+               <p> {product.quantity}</p>
             </div>
             <div className="price-product-summary">
-                <p>600€</p>
+                <p>{product.price * product.quantity}€</p>
             </div>
             
             </div>
-            <div className='bar-separate'></div>
-            <div className="total-summary-box">
-            <p className='total-summary'>Total</p>
-            <p className='bar-separate-total'></p>
-            <p className='total-summary-price'>600€</p>
-            </div>
+            
+            <div className='bar-summary'></div>
+            
             
 
         </div>

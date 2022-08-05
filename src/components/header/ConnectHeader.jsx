@@ -1,14 +1,15 @@
-
-import { useState, useEffect, useContext } from "react";
+import { useState,  useContext, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
-
-import "../../CSS/header/connectHeader.css";
 import Auth from "../../context/Auth";
+import "../../CSS/header/connectHeader.css";
+import axios from "axios";
+
+
 
 function ConnectHeader() {
   const [onConnect, setOnConnect] = useState(false);
   const { userInfo, setUserInfo } = useContext(Auth);
-  
+  const { basket, setBasket } = useContext(Auth);
 
   const nav = useNavigate();
 
@@ -28,6 +29,15 @@ function ConnectHeader() {
   const showConnect = (value) => {
     setOnConnect(!value);
   };
+
+  
+ 
+
+ const disconnect = () => {
+  setUserInfo(false);
+  setBasket([]);
+ }
+  
 
   return (
     <div
@@ -76,7 +86,7 @@ function ConnectHeader() {
 
                     <div className="disconnect-box">
                       <Link to="/">
-                        <p className="disconnect-btn"> Déconnection</p>
+                        <p className="disconnect-btn" onClick={disconnect}> Déconnection</p>
                       </Link>
                     </div>
                   </div>
