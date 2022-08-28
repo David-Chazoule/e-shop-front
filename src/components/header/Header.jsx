@@ -4,7 +4,6 @@ import Auth from "../../context/Auth";
 import BasketHeader from "./BasketHeader";
 import ConnectHeader from "./ConnectHeader";
 import logo from "../../img/logo.png";
-import "../../CSS/header/header.css";
 
 function Header() {
   const { basket, setBasket } = useContext(Auth);
@@ -20,7 +19,7 @@ function Header() {
 
       <div className="basket-connection">
         <BasketHeader value={{ basket, setBasket }} />
-        <ConnectHeader value={{basket, setBasket}} />
+        <ConnectHeader value={{ basket, setBasket }} />
       </div>
     </div>
   );

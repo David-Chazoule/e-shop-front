@@ -5,8 +5,9 @@ import Auth from "../../context/Auth";
 function BasketCard({ product }) {
   const [quantity, setQuantity] = useState(1);
   const { basket, setBasket } = useContext(Auth);
+  const [modalDelete, setModalDelete] = useState(false);
+
   
-  console.log("product", product);
 
   const changeQuantity = (value) => {
     setQuantity(value);
@@ -14,13 +15,18 @@ function BasketCard({ product }) {
     const myBasket = basket;
     basket[productIndex].quantity = value;
     setBasket([...myBasket]);
+    
+    
   };
 
   const deleteProduct = (e, id) => {
-   e.preventDefault();
-   setBasket(basket.filter(product=>product.id !==id))
+    e.preventDefault();
+    setBasket(basket.filter((product) => product.id !== id));
   };
- 
+
+  const handleModal = () => {
+    setModalDelete(!modalDelete);
+  };
 
   return (
     <div className="recap-basket-box" key={product.title}>
@@ -40,12 +46,29 @@ function BasketCard({ product }) {
         ></input>
       </div>
       <p className="article-result">{+product.price * quantity}€ </p>
-      <img
-        className="bin"
-        src={bin}
-        alt=""
-        onClick={(e)=>deleteProduct(e, product.id)}
-      />
+      <img className="bin" src={bin} alt="" onClick={handleModal} />
+
+      {modalDelete && (
+        <div className="modal-delete-container">
+          {quantity > 1 ? (
+            <p>Voulez-vous vraiment supprimer ses articles de votre panier?</p>
+          ) : (
+            <p>Voulez-vous vraiment supprimer cette article de votre panier?</p>
+          )}
+
+          <div className="delete-box">
+            <button
+              className="btn-delete"
+              onClick={(e) => deleteProduct(e, product.id)}
+            >
+              supprimer
+            </button>
+            <button className="btn-cancel" onClick={handleModal}>
+              annuler
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

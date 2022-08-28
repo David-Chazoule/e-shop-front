@@ -1,4 +1,3 @@
-import "../../CSS/filter/choicebox.css";
 import { TypeButton } from "../../Datas/TypeButton";
 
 function Choicebox(props) {

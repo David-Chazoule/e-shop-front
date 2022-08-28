@@ -1,4 +1,4 @@
-import "../../CSS/Basket/basket.css";
+// import "../../CSS/Basket/basket.css";
 import { useContext } from "react";
 import Auth from "../../context/Auth";
 import { Link, useNavigate } from "react-router-dom";
@@ -7,7 +7,9 @@ import basketFull from "../../img/basket-full.png";
 
 function Basket() {
   const { basket, setBasket } = useContext(Auth);
-  const { userInfo, setUserInfo } = useContext(Auth);
+  const { userInfo } = useContext(Auth);
+
+  const nav = useNavigate();
 
   const totalPrice = () => {
     let totalPrice = 0;
@@ -17,37 +19,31 @@ function Basket() {
     return totalPrice;
   };
 
-  function Next() {
-    if (userInfo.id && totalPrice() > 0) {
-      return (
-        <Link to="/information">
-          <button className="btn-back-next">Terminer ma commande</button>
-        </Link>
-      );
-    } else if (
-      (userInfo.id && totalPrice() === 0) ||
-      (!userInfo.id && totalPrice() === 0)
+  function NextDirection() {
+    if (
+      userInfo.id &&
+      totalPrice() > 0 &&
+      userInfo.firstname &&
+      userInfo.lastname &&
+      userInfo.adress &&
+      userInfo.city &&
+      userInfo.postalcode &&
+      userInfo.phone
     ) {
-      return (
-        <div>
-          <h5> votre panier est vide</h5>
-        </div>
-      );
-
-      // } else if (!userInfo.id && totalPrice() === 0) {
-
-      //   return <div>
-      //     <button className="btn-back-next">Terminer ma commande</button>
-      //     <h5> votre panier est vide</h5>
-      //   </div>
-
-      // }
+      nav("/paiement");
+    } else if (
+      userInfo.id &&
+      totalPrice() > 0 &&
+      userInfo.firstname == null &&
+      userInfo.lastname == null &&
+      userInfo.adress == null &&
+      userInfo.city == null &&
+      userInfo.postalcode == null &&
+      userInfo.phone == null
+    ) {
+      nav("/information");
     } else {
-      return (
-        <Link to="/register">
-          <button className="btn-back-next">Terminer ma commande</button>
-        </Link>
-      );
+      nav("/register");
     }
   }
 
@@ -89,17 +85,16 @@ function Basket() {
           <button className="btn-back-next">Poursuivre mes achats </button>
         </Link>
 
-        {/* {userInfo.id && totalPrice() > 0 ? (
-          <Link to="/information">
-            <button className="btn-back-next">Terminer ma commande</button>
-          </Link>
-        ) : (
-          <Link to="/register">
-            <button className="btn-back-next">Terminer ma commande</button>
-          </Link>
-        )} */}
-
-        {Next()}
+        <div>
+          {(userInfo.id && totalPrice() === 0) ||
+          (!userInfo.id && totalPrice() === 0) ? (
+            <h5> votre panier est vide</h5>
+          ) : (
+            <button className="btn-back-next" onClick={() => NextDirection()}>
+              Terminer ma commande
+            </button>
+          )}
+        </div>
       </div>
     </div>
   );

@@ -1,0 +1,95 @@
+.productlist_container {
+  width: 280px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  padding: 10px 0;
+  margin-bottom: 20px;
+  height: fit-content;
+
+  @media screen and (max-width: 600px) {
+    width: 220px;
+  }
+
+  @media screen and (max-width: 600px) {
+    border-bottom: 2px solid $color-1;
+  }
+
+  &:hover {
+    transform: scale(1.02);
+    transition-duration: 0.3s;
+    @include shadowbox;
+  }
+
+  .list-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    .img-container {
+      width: 120px;
+      height: 130px;
+      margin-bottom: 16px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      @media screen and (max-width: 600px) {
+        width: 100px;
+        height: 110px;
+      }
+
+      .list-img {
+        width: 100%;
+        height: auto;
+        margin-top: 10px;
+      }
+
+      .list-img-b {
+        width: 200px;
+        height: auto;
+        margin-bottom: 10px;
+      }
+    }
+
+    .title-list {
+      font-size: 18px;
+      font-weight: bold;
+      margin: 0;
+      text-align: center;
+
+      @media screen and (max-width: 600px) {
+        font-size: 16px;
+      }
+    }
+
+    .price-list {
+      font-size: 24px;
+      font-weight: bold;
+      text-align: center;
+      margin-top: 20px;
+
+      @media screen and (max-width: 600px) {
+        font-size: 20px;
+      }
+    }
+
+    .marque-list-box {
+      display: flex;
+      align-items: flex-start;
+      width: 100%;
+
+      .marque-list {
+        color: rgb(87, 85, 85);
+        font-size: 14px;
+        margin: 0;
+
+        @media screen and (max-width: 600px) {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}

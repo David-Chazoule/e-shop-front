@@ -1,4 +1,4 @@
-import "../../CSS/adminCustomer/orderedList.css";
+
 
 function OrderedList() {
   return (

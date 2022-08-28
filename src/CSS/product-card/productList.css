@@ -1,13 +1,4 @@
-.productlist_container{
-    width: 22%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: white;
-    padding: 10px 0;
-    margin-bottom: 20px;
-    height: fit-content;
-}
+
 
 .div-map{
     width: 90%;

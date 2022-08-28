@@ -1,17 +1,16 @@
-import React from 'react'
-import { useEffect } from 'react'
-import '../../CSS/homepage/DynamicText.css'
-
-
-
-
-
-
+import React from "react";
+import { useEffect } from "react";
 
 function DynamicText() {
   useEffect(() => {
     const target = document.getElementById("text-target");
-    let array = ["Mobile", "Ordinateur", " Casque -VR", "jeux-Videos" ,"Ecran-PC"];
+    let array = [
+      "Mobile",
+      "Ordinateur",
+      " Casque -VR",
+      "jeux-Videos",
+      "Ecran-PC",
+    ];
     let wordIndex = 0;
     let letterIndex = 0;
 
@@ -50,12 +49,10 @@ function DynamicText() {
   }, []);
 
   return (
-    <span className='dynamic-text'>
-      
-      <span id='text-target'></span>
-
+    <span className="dynamic-text">
+      <span id="text-target"></span>
     </span>
-  )
+  );
 }
 
-export default DynamicText
+export default DynamicText;

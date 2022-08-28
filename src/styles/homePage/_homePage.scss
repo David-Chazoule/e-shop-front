@@ -1,0 +1,77 @@
+.homepage_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 38px 0;
+  text-align: center;
+
+  @media screen and (max-width: 800px) {
+   margin: 120px 0 30px 0;
+}
+
+  img {
+    width: 150px;
+  }
+
+  h1{
+    @media screen and (max-width: 800px) {
+      width: 80%;
+      margin-bottom: 10px;
+  }
+}
+
+  .text-container {
+    width: 80%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $color-1;
+    border-radius: 20px;
+    margin-bottom: 10px;
+
+    @media screen and (max-width: 800px) {
+      margin-bottom: 10px;
+        }
+
+  }
+
+  .shopping-box {
+    display: flex;
+    @include shadowbox;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    padding: 24% 20%;
+    @media screen and (max-width: 800px) {
+      width: 100%;
+      box-shadow: none;
+      padding: 20% 10%;
+      margin-bottom: 30px;
+     
+        }
+
+    .btn-shopping {
+      width: 400px;
+      background-color: $color-1;
+      color: white;
+      padding: 2% 8%;
+      font-weight: 600;
+      font-size: 26px;
+      cursor: pointer;
+      border-radius: 10px;
+      @media screen and (max-width: 800px) {
+        width: 100%;
+        font-size: 90%;
+        padding: 4% 6%;
+          }
+        
+
+      &:hover {
+        background-color: white;
+        color: $color-1;
+      }
+    }
+  }
+}

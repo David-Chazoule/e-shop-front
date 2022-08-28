@@ -1,21 +1,27 @@
+import { useContext } from "react";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import CB from "../../img/cb.png";
 import badge from "../../img/trust_badge_v3.png";
-
-import "../../CSS/payment/payment.css";
+import Auth from "../../context/Auth";
 
 function Payment() {
   const [cbNumber, setCbNumber] = useState("");
   const [cbDate, setCbDate] = useState("");
   const [cvc, setCvc] = useState("");
+  const [errorNotConnect, SetErrorNotConnect] = useState(false);
+  const {basket , setBasket} = useContext(Auth);
+  const {userInfo, setUserInfo} =useContext(Auth);
 
   const nav = useNavigate();
 
   function handleInput(e) {
     e.preventDefault();
+    if(basket > 0 && userInfo ) {
     nav("/paiementConfirmation");
-    
+    } else {
+      SetErrorNotConnect(true);
+    }
   }
 
   function isNumberKey(evt) {
@@ -78,6 +84,7 @@ function Payment() {
       </div>
 
       <img className="security" src={badge} alt="" />
+      {errorNotConnect && <span>vous n'êtes pas connecté à votre compte</span>}
     </div>
   );
 }

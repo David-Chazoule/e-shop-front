@@ -1,9 +1,9 @@
 import { useState } from "react";
 import axios from "axios";
 import { ValidNameFirstName } from "../regex/Regex";
-import "../../CSS/form/form.css";
+
 import { Link, useNavigate } from "react-router-dom";
-import logo from "../../img/logo.png";
+
 import message from "../../img/message.png";
 import { useContext } from "react";
 import Auth from "../../context/Auth";
@@ -22,19 +22,22 @@ function Form() {
 
   const handlePost = async (e) => {
     e.preventDefault();
-    const result = axios.patch(`http://localhost:8000/user/${userInfo.id}`, {
-      firstname,
-      lastname,
-      adress,
-      city,
-      postalcode,
-      phone,
-    });
+    const result = await axios.patch(
+      `http://localhost:8000/user/${userInfo.id}`,
+      {
+        firstname,
+        lastname,
+        adress,
+        city,
+        postalcode,
+        phone,
+      }
+    );
+    setUserInfo(result.data);
+
     if (result) {
       nav("/paiement");
     }
-    console.log(result);
-    
   };
 
   const errorDisplay = (tag, message, valid) => {
@@ -107,6 +110,7 @@ function Form() {
                   onChange={(e) => ValidFirstName(setFirstname(e.target.value))}
                   required
                   autoComplete="off"
+                  
                 />
                 <div className="firstname-error-span">
                   <span></span>
@@ -217,17 +221,6 @@ function Form() {
           <button className="btn-back-next">paiement</button>
         </div>
       </form>
-
-      {/* <div className="btn-back-next-box">
-
-             <Link to="/panier">
-             <button className='btn-back-next'>revenir </button>
-             </Link>
-             
-             
-             <button className='btn-back-next'  >paiement</button>
-             
-         </div>      */}
     </div>
   );
 }

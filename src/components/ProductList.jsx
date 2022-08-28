@@ -1,19 +1,13 @@
 import { useNavigate } from "react-router-dom";
-// import { useEffect , useState } from "react";
 
-import "../CSS/product-card/productList.css";
+import "react-loading-skeleton/dist/skeleton.css";
 
 function ProductList({ title, brand, img, price, type, id }) {
-  // const {id, img, title, marque, price} = product
   const nav = useNavigate();
 
   const handleClick = () => {
-    nav(`/card/${id}`);
+    nav(`/card/${id}/${title}`);
   };
-
-  // const handleClick = (id) => {
-  //   navigate(`/card/${id}`);
-  // };
 
   return (
     <div

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import ContactDetails from "./ContactDetails";
 import OrderedList from "./OrderedList";
-import "../../CSS/adminCustomer/barCustomerChoice.css";
+
 import logo from "../../img/logo.png";
 import setup from "../../img/setup.png";
 import { useContext } from "react";
@@ -11,7 +11,7 @@ function BarCustomerChoice() {
   const [detailBill, setDetailBill] = useState(false);
   const [ordered, setOrdered] = useState(false);
   const [homepage, setHomepage] = useState(true);
-  const {userInfo, setUserInfo}= useContext(Auth);
+  const { userInfo } = useContext(Auth);
 
   const showDetailBill = () => {
     setDetailBill(!detailBill);
@@ -48,17 +48,20 @@ function BarCustomerChoice() {
           </p>
         </div>
       </div>
-     
+
       {homepage && (
         <div className="home-page">
           <div>
             <img src={logo} alt="" />
           </div>
           <h1>Mon compte</h1>
-          <h2> Hello <span>{userInfo.name}</span>, bienvenue sur votre compte!</h2>
+          <h2>
+            {" "}
+            Hello <span>{userInfo.name}</span>, bienvenue sur votre compte!
+          </h2>
           <p> Ici vous trouverez tout pour gérer votre compte client.</p>
           <div className="setup-box">
-          <img className="setup" src={setup} alt="" />
+            <img className="setup" src={setup} alt="" />
           </div>
         </div>
       )}

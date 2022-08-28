@@ -1,0 +1,48 @@
+@import "./settings";
+
+@import"./homePage/dynamicText";
+@import"./homePage/homePage";
+
+@import "./bodyContainer/bodyContainer";
+
+@import"./filter/choiceBox.scss";
+@import"./filter/filterContainer.scss";
+@import"./filter/searchBar.scss";
+
+
+
+@import "./header/basketHeader";
+@import "./header/basketHeaderCard";
+@import "./header/connectHeader";
+@import "./header/header";
+
+
+@import"./productCard/productCard";
+@import"./productCard/productListContainer";
+@import"./productCard/productList";
+
+@import"./basket/basket";
+
+@import"./inscription/register";
+
+@import"./connection/connectionPage";
+
+@import"./form/form";
+
+@import"./payment/billingAdress";
+@import"./payment/deliveryAdress";
+@import"./payment/payment";
+@import"./payment/paymentContainer";
+@import"./payment/summary";
+
+
+
+@import"./adminCustomer/adminClientContainer";
+@import"./adminCustomer/barCustomerChoice";
+@import"./adminCustomer/ContactDetails";
+@import"./adminCustomer/orderedList";
+
+@import"./footer/footer";
+
+
+@import "./skeleton/skeletonProductCard"

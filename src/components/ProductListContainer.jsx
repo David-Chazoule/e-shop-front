@@ -1,24 +1,27 @@
 import { useEffect, useState } from "react";
 import { TypeButton } from "../Datas/TypeButton";
-// import products from "../list.json";
+
 import ProductList from "../components/ProductList";
 import Choicebox from "./filter/Choicebox";
 
-// import SearchBar from "./filter/SearchBar";
+import "react-loading-skeleton/dist/skeleton.css";
+import SkeletonCard from "./skeleton/SkeletonCard";
+
 import axios from "axios";
-import "../CSS/filter/searchBar.css";
 
 function ProductListContainer() {
   const [productInfos, setProductInfos] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
   const [type, setType] = useState("");
+  const [isLoading, SetIsLoading] = useState(true);
 
   useEffect(() => {
-    const fetchproduct = async () => {
+    const fetchProduct = async () => {
       const result = await axios.get("http://localhost:8000/product");
       setProductInfos(result.data);
+      SetIsLoading(false);
     };
-    fetchproduct();
+    fetchProduct();
   }, []);
 
   const handleSearchTerm = (e) => {
@@ -26,14 +29,21 @@ function ProductListContainer() {
     setSearchTerm(value);
   };
 
+  const cancelbtn = () => {
+    setSearchTerm("");
+    let input = document.querySelector(".search");
+    input.value = "";
+  };
+
+  console.log("wesh", productInfos)
+
   return (
-    <div className="container">
+    <div className="container-filter-list">
       <div className="search-bars-box">
         <div className="choice-box-bar">
           <Choicebox setType={setType} type={type} />
         </div>
 
-        {/* <div className="search-box-bar"> */}
         <div className="search-bar-box">
           <input
             className="search"
@@ -43,6 +53,13 @@ function ProductListContainer() {
             placeholder="entrez votre recherche"
             onChange={handleSearchTerm}
           />
+          {searchTerm.length > 0 ? (
+            <button className="btn-cancel-search" onClick={cancelbtn}>
+              X
+            </button>
+          ) : (
+            ""
+          )}
         </div>
 
         <div className="seperate-bar"></div>
@@ -65,6 +82,7 @@ function ProductListContainer() {
       </div>
 
       <div className="div-map">
+        {isLoading && <SkeletonCard cards={20} />}
         {productInfos
           .filter((val) => {
             return type.length && type !== "all" ? val.type === type : val;

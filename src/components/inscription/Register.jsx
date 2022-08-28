@@ -6,7 +6,6 @@ import { ValidEmail, ValidPseudo, ValidPassword } from "../regex/Regex";
 import Auth from "../../context/Auth";
 import logo from "../../img/logo.png";
 import show from "../../img/show.png";
-import "../../CSS/inscription/register.css";
 
 function Register() {
   const [name, setName] = useState("");
@@ -16,8 +15,10 @@ function Register() {
   const [isShown, setIsShown] = useState(false);
   const [isShownB, setIsShownB] = useState(false);
   const [modal, setModal] = useState(false);
+  const [userAlreadyExist, setUserAlreadyExist] = useState(false);
+  const { userInfo, setUserInfo } = useContext(Auth);
 
-  const { basket, setBasket } = useContext(Auth);
+  const { basket } = useContext(Auth);
 
   const nav = useNavigate();
 
@@ -25,20 +26,31 @@ function Register() {
     e.preventDefault();
 
     if (confirmPassword === password) {
-      const result = axios.post("http://localhost:8000/user", {
-        name,
-        email,
-        password,
-      });
+      try {
+        const result = await axios.post("http://localhost:8000/user", {
+          name,
+          email,
+          password,
+        });
+        setUserInfo(result.data);
 
-      if (result) {
-        const welcome = document.querySelector(".welcome");
-        welcome.style.visibility = "visible";
-        setModal(!modal);
-        setTimeout(() => {
-          nav("/produit");
-        }, 2500);
-        console.log(result);
+        if (result && basket.length <= 0) {
+          setModal(!modal);
+          setTimeout(() => {
+            nav("/produit");
+          }, 2500);
+        }
+
+        if (result && basket.length > 0) {
+          setModal(!modal);
+          setTimeout(() => {
+            nav("/information");
+          }, 2500);
+        }
+      } catch (e) {
+        if (e.response.status === 400) {
+          setUserAlreadyExist(true);
+        }
       }
     } else {
       const validation = document.querySelector(".confirm-pass");
@@ -81,7 +93,6 @@ function Register() {
 
   const validationPseudo = () => {
     if (!ValidPseudo.test(name)) {
-      // setNameErr(true);
       errorDisplay(
         "name",
         "Le pseudo ne doit pas contenir de caractères spéciaux"
@@ -91,15 +102,10 @@ function Register() {
     } else {
       errorDisplay("name", "", true);
     }
-
-    // } else if(ValidPseudo.test(name)){
-    //   setNameErr(false);
-    // }
   };
 
   const validPassword = () => {
     if (!ValidPassword.test(password)) {
-      // const progressBar = document.getElementById("progress-bar");
       errorDisplay(
         "password",
         "Minimum de 8 caractères, une majuscule, un chiffre et un caractère spécial"
@@ -109,10 +115,6 @@ function Register() {
     } else {
       errorDisplay("password", "", true);
     }
-
-    // } else if(ValidPseudo.test(name)){
-    //   setNameErr(false);
-    // }
   };
 
   function ValidPass() {
@@ -156,11 +158,12 @@ function Register() {
               value={name}
               className="input-register"
               onChange={(e) => validationPseudo(setName(e.target.value))}
+              required
+                  autoComplete="off"
             />
             <div className="name-register">
               <span></span>
             </div>
-            {/* {nameErr && <p className="confirm-name">Your name is invalid</p>} */}
           </div>
 
           <div className="register-box">
@@ -170,11 +173,12 @@ function Register() {
               value={email}
               className="input-register"
               onChange={(e) => validMail(setEmail(e.target.value))}
+              required
+                  autoComplete="off"
             />
             <div className="mail-register">
               <span></span>
             </div>
-            {/* <span className="confirm-mail">message non similaire</span> */}
           </div>
 
           <div className="register-box">
@@ -185,6 +189,8 @@ function Register() {
                 value={password}
                 className="input-register"
                 onChange={(e) => validPassword(setPassword(e.target.value))}
+                required
+                  autoComplete="off"
               />
               <img src={show} alt="show-password" onClick={togglePassword} />
             </div>
@@ -203,20 +209,22 @@ function Register() {
                 value={confirmPassword}
                 className="input-register"
                 onChange={(e) => setConfirmPassword(e.target.value)}
+                required
+                  autoComplete="off"
               />
               <img src={show} alt="show-password" onClick={togglePasswordB} />
             </div>
 
-            <span className="confirm-pass">message non similaire</span>
+            <span className="confirm-pass">problème avec votre mot de passe</span>
           </div>
+          {userAlreadyExist && (
+            <p className="user-exist">Cette email est déjà utilisé</p>
+          )}
 
           <div className="btn-register-box">
-            {/* <Link to="/information"> */}
             <button className="btn-register" type="submit">
               Créez un compte
             </button>
-
-            {/* </Link> */}
           </div>
         </form>
       </div>

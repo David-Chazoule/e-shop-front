@@ -2,10 +2,50 @@
 .billing-adress_container{
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    padding: 20px;
-    margin: 20px;
-    width: 30%;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    margin: 0;
+    width: 100%;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background-color: rgb(230, 238, 245);
+    
+}
+
+.title-billing h1{
+    display: flex;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+    color: rgb(87, 194, 243);
+}
+
+
+
+.delivery-img-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.delivery-img-box img{
+    width: 200px;
+}
+
+.name-delivery, .adress-delivery , .city-delivery, .phone-delivery, .phone-email-delivery{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+
+}
+
+.name-delivery, .adress-delivery , .city-delivery, .phone-delivery, .phone-email-delivery p {
+    font-weight: bold;
+}
+
+.billing-details{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
 }

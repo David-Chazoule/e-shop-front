@@ -1,3 +1,41 @@
 body {
-  font-family: 'montserrat' ;
+  font-family: 'nasa' ;
+}
+
+
+
+.card-skeleton{
+  width: 22%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  background-color: white;
+  padding: 10px 0;
+  margin-bottom: 38px;
+  height: fit-content;
+  
+}
+
+.list-skeleton{
+  display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.skeleton-img{
+  width: 120px;
+  height: 130px;
+  margin-bottom: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.skeleton-marque{
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+  margin-bottom: 20px;
 }
