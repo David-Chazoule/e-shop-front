@@ -1,12 +1,13 @@
 // import "../../CSS/Basket/basket.css";
 import { useContext } from "react";
-import Auth from "../../context/Auth";
 import { Link, useNavigate } from "react-router-dom";
+import Auth from "../../context/Auth";
 import BasketCard from "../../components/basket/BasketCard";
+
 import basketFull from "../../img/basket-full.png";
 
 function Basket() {
-  const { basket, setBasket } = useContext(Auth);
+  const { basket } = useContext(Auth);
   const { userInfo } = useContext(Auth);
 
   const nav = useNavigate();

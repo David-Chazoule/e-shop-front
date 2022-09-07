@@ -1,11 +1,11 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import ContactDetails from "./ContactDetails";
 import OrderedList from "./OrderedList";
 
+import Auth from "../../context/Auth";
+
 import logo from "../../img/logo.png";
 import setup from "../../img/setup.png";
-import { useContext } from "react";
-import Auth from "../../context/Auth";
 
 function BarCustomerChoice() {
   const [detailBill, setDetailBill] = useState(false);
@@ -61,7 +61,7 @@ function BarCustomerChoice() {
           </h2>
           <p> Ici vous trouverez tout pour gérer votre compte client.</p>
           <div className="setup-box">
-            <img className="setup" src={setup} alt="" />
+            <img className="setup" src={setup} alt="setup-icon" />
           </div>
         </div>
       )}
@@ -74,10 +74,6 @@ function BarCustomerChoice() {
 
       {ordered && (
         <div className="ordered-details-box">
-          <OrderedList />
-          <OrderedList />
-          <OrderedList />
-          <OrderedList />
           <OrderedList />
         </div>
       )}

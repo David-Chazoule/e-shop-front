@@ -1,12 +1,8 @@
-import React from "react";
-import { useState } from "react";
-import axios from "axios";
-import { ValidNameFirstName } from "../regex/Regex";
-import "../../CSS/form/form.css";
+import { useState, useContext, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-
-import { useContext } from "react";
+import axios from "axios";
 import Auth from "../../context/Auth";
+import { ValidNameFirstName } from "../regex/Regex";
 
 function ModalAdress(props) {
   const [firstname, setFirstname] = useState("");
@@ -14,12 +10,21 @@ function ModalAdress(props) {
   const [adress, setAdress] = useState("");
   const [city, setCity] = useState("");
   const [postalcode, setPostalCode] = useState("");
-  const [email, setEmail] = useState("");
+  const [setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const { userInfo, setUserInfo } = useContext(Auth);
-  const { basket, setBasket } = useContext(Auth);
+  const { basket } = useContext(Auth);
 
   const nav = useNavigate();
+
+  useEffect(() => {
+    setFirstname(userInfo.firstname || "");
+    setLastname(userInfo.lastname || "");
+    setAdress(userInfo.adress || "");
+    setCity(userInfo.city || "");
+    setPostalCode(userInfo.postalcode || "");
+    setPhone(userInfo.phone || "");
+  }, []);
 
   const handlePost = async (e) => {
     e.preventDefault();
@@ -112,6 +117,7 @@ function ModalAdress(props) {
                 <input
                   id="first-name"
                   type="text"
+                  value={firstname}
                   onChange={(e) => ValidFirstName(setFirstname(e.target.value))}
                   required
                   autoComplete="off"
@@ -125,6 +131,7 @@ function ModalAdress(props) {
                 <input
                   id="last-name"
                   type="text"
+                  value={lastname}
                   onChange={(e) => ValidLastName(setLastname(e.target.value))}
                   required
                   autoComplete="off"
@@ -141,6 +148,7 @@ function ModalAdress(props) {
                 <input
                   id="address"
                   type="text"
+                  value={adress}
                   onChange={(e) => setAdress(e.target.value)}
                   required
                   autoComplete="off"
@@ -154,6 +162,7 @@ function ModalAdress(props) {
                 <input
                   id="city"
                   type="text"
+                  value={city}
                   onChange={(e) => ValidCity(setCity(e.target.value))}
                   required
                   autoComplete="off"
@@ -167,6 +176,7 @@ function ModalAdress(props) {
                 <input
                   id="postal"
                   name="zip"
+                  value={postalcode}
                   type="text"
                   maxLength="5"
                   onChange={(e) => setPostalCode(e.target.value)}
@@ -199,6 +209,7 @@ function ModalAdress(props) {
                 <input
                   id="phone"
                   type="text"
+                  value={phone}
                   maxLength="15"
                   onChange={(e) => setPhone(e.target.value)}
                   onKeyPress={(event) => {

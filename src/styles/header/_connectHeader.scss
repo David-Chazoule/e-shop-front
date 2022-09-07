@@ -27,8 +27,8 @@
         margin: 0;
 
         @media screen and (max-width: 800px) {
-         font-size: 14px;
-             }
+          font-size: 14px;
+        }
       }
 
       .identification {
@@ -36,9 +36,10 @@
         font-weight: 600;
         margin: 0;
         font-size: 80%;
+
         @media screen and (max-width: 800px) {
           font-size: 10px;
-              }
+        }
       }
     }
 
@@ -51,6 +52,16 @@
       transform: rotate(45deg);
       position: absolute;
       top: 90px;
+
+      @media screen and (max-width: 800px) {
+        top: 112px;
+      }
+
+      @media screen and (max-width: 600px) {
+        top: 108px;
+        border-top: 40px solid $color-1;
+        right: 100px;
+      }
     }
 
     .connect-list {
@@ -63,10 +74,21 @@
       padding: 40px 20px;
       box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
         rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
-      top: 96px;
+      top: 103px;
       right: 0;
       position: absolute;
       z-index: 2;
+
+      @media screen and (max-width: 800px) {
+        top: 109px;
+      }
+
+      @media screen and (max-width: 600px) {
+        width: 100%;
+        top: 105px;
+        padding: 10px 10px;
+        border: 2px solid $color-1;
+      }
 
       .btn-connect-box {
         margin: 4px 0;
@@ -89,6 +111,10 @@
           &:hover {
             background-color: white;
             color: $color-1;
+          }
+
+          @media screen and (max-width: 600px) {
+            padding: auto;
           }
         }
       }

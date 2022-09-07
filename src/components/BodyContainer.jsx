@@ -7,7 +7,6 @@ import ConnectionPage from "../components/connection/ConnectionPage";
 import Register from "../components/inscription/Register";
 import ProductCard from "../components/ProductCard";
 import PaymentContainer from "../components/Payment/PaymentContainer";
-import ConfirmPayment from "./Payment/ConfirmPayment";
 import AdminClientContainer from "../components/adminCustomer/AdminClientContainer";
 import HomePage from "../components/homepage/HomePage";
 
@@ -31,8 +30,6 @@ function BodyContainer() {
           <Route path="/card/:id/:title" element={<ProductCard />} />
 
           <Route path="/paiement" element={<PaymentContainer />} />
-
-          <Route path="/paiementConfirmation" element={<ConfirmPayment />} />
 
           <Route path="/compte" element={<AdminClientContainer />} />
         </Routes>

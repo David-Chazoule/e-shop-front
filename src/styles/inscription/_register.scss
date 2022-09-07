@@ -9,9 +9,9 @@
   max-height: 1000px;
 
   @media screen and (max-width: 800px) {
-   box-shadow: none;
-   margin-top: 100px;
-      }
+    box-shadow: none;
+    margin-top: 100px;
+  }
 
   .logo-register {
     display: flex;
@@ -75,6 +75,8 @@
         display: flex;
         width: 100%;
         align-items: center;
+        justify-content: center;
+        text-align: center;
         height: 16px;
       }
 
@@ -87,6 +89,14 @@
           width: 20px;
           margin-left: 5px;
           cursor: pointer;
+          
+          
+        }
+
+        .filterview {
+           -webkit-filter : opacity(20%);
+          filter : opacity(50%);
+
         }
       }
     }
@@ -180,6 +190,9 @@
   height: 6px;
   border-radius: 10px;
   margin: 6px 0 0 0;
+
+  @media screen and (max-width: 800px) {
+  }
 }
 .progressBlue {
   background: #16d9e7;
@@ -198,4 +211,18 @@
 
 .password-register {
   width: 100%;
+
+  span {
+    @media screen and (max-width: 1200px) {
+      margin-top: 12px;
+      line-height: 0.8;
+    }
+  }
+}
+
+.name-register {
+  @media screen and (max-width: 800px) {
+    margin-top: 4px;
+    line-height: 0.8;
+  }
 }

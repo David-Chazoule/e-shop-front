@@ -1,12 +1,10 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import axios from "axios";
-import { ValidNameFirstName } from "../regex/Regex";
-
 import { Link, useNavigate } from "react-router-dom";
+import { ValidNameFirstName } from "../regex/Regex";
+import Auth from "../../context/Auth";
 
 import message from "../../img/message.png";
-import { useContext } from "react";
-import Auth from "../../context/Auth";
 
 function Form() {
   const [firstname, setFirstname] = useState("");
@@ -14,7 +12,7 @@ function Form() {
   const [adress, setAdress] = useState("");
   const [city, setCity] = useState("");
   const [postalcode, setPostalCode] = useState("");
-  const [email, setEmail] = useState("");
+  const [setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const { userInfo, setUserInfo } = useContext(Auth);
 
@@ -110,7 +108,6 @@ function Form() {
                   onChange={(e) => ValidFirstName(setFirstname(e.target.value))}
                   required
                   autoComplete="off"
-                  
                 />
                 <div className="firstname-error-span">
                   <span></span>

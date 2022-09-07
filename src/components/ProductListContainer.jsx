@@ -1,13 +1,11 @@
 import { useEffect, useState } from "react";
-import { TypeButton } from "../Datas/TypeButton";
-
+import axios from "axios";
 import ProductList from "../components/ProductList";
 import Choicebox from "./filter/Choicebox";
+import SkeletonCard from "./skeleton/SkeletonCard";
+import { TypeButton } from "../Datas/TypeButton";
 
 import "react-loading-skeleton/dist/skeleton.css";
-import SkeletonCard from "./skeleton/SkeletonCard";
-
-import axios from "axios";
 
 function ProductListContainer() {
   const [productInfos, setProductInfos] = useState([]);
@@ -35,8 +33,6 @@ function ProductListContainer() {
     input.value = "";
   };
 
-  console.log("wesh", productInfos)
-
   return (
     <div className="container-filter-list">
       <div className="search-bars-box">
@@ -52,6 +48,7 @@ function ProductListContainer() {
             id="search"
             placeholder="entrez votre recherche"
             onChange={handleSearchTerm}
+            title="entrez votre recherche"
           />
           {searchTerm.length > 0 ? (
             <button className="btn-cancel-search" onClick={cancelbtn}>

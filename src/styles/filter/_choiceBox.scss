@@ -5,7 +5,7 @@
 
   @media screen and (max-width: 900px) {
     flex-wrap: wrap;
-      }
+  }
 
   .choice-title-img {
     display: flex;
@@ -20,8 +20,6 @@
     border-radius: 15px;
     border: 1px solid $color-1;
 
-
-
     &:hover {
       transform: scale(1.1);
       transition-duration: 0.3s;
@@ -30,22 +28,21 @@
       border: 1px solid red;
     }
 
-    
     @media screen and (max-width: 900px) {
-      margin: 20px 5px 0  5px;
+      margin: 20px 5px 0 5px;
       width: 200px;
-        }
+    }
 
-        @media screen and (max-width: 700px) {
-          margin: 10px 4px;
-          border-radius: 0;
-          width: 100px;
-            }
-            @media screen and (max-width: 500px) {
-              margin: 10px 2px;
-              border-radius: 0;
-              width: 804x;
-                }
+    @media screen and (max-width: 700px) {
+      margin: 10px 4px;
+      border-radius: 0;
+      width: 100px;
+    }
+    @media screen and (max-width: 500px) {
+      margin: 10px 2px;
+      border-radius: 0;
+      width: 804x;
+    }
 
     .img-choice {
       width: 30%;
@@ -64,12 +61,11 @@
       @media screen and (max-width: 1100px) {
         font-size: 14px;
         margin: 0 0 4px 0;
-          }
+      }
 
-          @media screen and (max-width: 900px) {
-            font-size: 11px;
-            
-              }
+      @media screen and (max-width: 900px) {
+        font-size: 11px;
+      }
     }
   }
 }

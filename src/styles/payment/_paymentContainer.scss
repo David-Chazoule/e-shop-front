@@ -1,75 +1,87 @@
-.payment-page_container{
+.payment-page_container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   width: 100%;
 
-  h1{
-    @include title;
+  @media screen and (max-width: 800px) {
+    margin-top: 120px;
   }
 
-  .summary-adress-box{
+  h1 {
+    @include title;
+    @media screen and (max-width: 600px) {
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+  }
+
+  .summary-adress-box {
     display: flex;
     flex-direction: row;
     justify-content: center;
     width: 100%;
     margin: 20px;
 
-    .summary-container{
+    @media screen and (max-width: 800px) {
+      flex-direction: column;
+      margin: 0;
+    }
+
+    .summary-container {
       display: flex;
       flex-direction: column;
-     align-items: center;
-     
+      align-items: center;
       width: 100%;
-      margin:  0;
-      .total-price-payment{
- 
+      margin: 0;
+
+      @media screen and (max-width: 800px) {
+        margin-bottom: 40px;
+      }
+
+      .total-price-payment {
         font-size: 28px;
         box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
         display: flex;
         text-align: center;
-        color: #57C2F3;
+        color: #57c2f3;
         font-weight: 600;
         justify-content: center;
         align-items: center;
         padding: 20px;
-        border: 1px solid #57C2F3 ;
+        border: 1px solid #57c2f3;
       }
-      .total-price-payment p{
+      .total-price-payment p {
         margin: 0;
-      
       }
-    
     }
   }
 
-  .billing-delivery-container{
+  .billing-delivery-container {
     display: flex;
     margin: 0 20px;
     justify-content: center;
     width: 100%;
+
+    @media screen and (max-width: 800px) {
+      margin: 0;
+    }
   }
 
-  .payment-box{
+  .payment-box {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     margin: 40px 0;
 
-    h1{
+    @media screen and (max-width: 600px) {
+      width: 80%;
+    }
+
+    h1 {
       margin-bottom: 6%;
     }
   }
 }
-
-
-
-
-
-
-
-
-
-

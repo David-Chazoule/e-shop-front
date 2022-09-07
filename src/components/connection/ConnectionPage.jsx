@@ -1,17 +1,16 @@
 import { useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
+import Auth from "../../context/Auth";
 
 import logo from "../../img/logo.png";
-
-import Auth from "../../context/Auth";
 
 function ConnectionPage() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [noExistUser, setNoExistUser] = useState(false);
-  const { userInfo, setUserInfo } = useContext(Auth);
-  const { basket, setBasket } = useContext(Auth);
+  const { setUserInfo } = useContext(Auth);
+  const { basket } = useContext(Auth);
 
   const nav = useNavigate();
 

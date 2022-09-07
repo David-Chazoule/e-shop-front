@@ -1,5 +1,3 @@
-import React from "react";
-
 function BasketHeaderCard({ product }) {
   return (
     <>

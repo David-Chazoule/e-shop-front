@@ -1,46 +1,23 @@
 import { useState, useContext } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import Auth from "../../context/Auth";
 
 function ConnectHeader() {
   const [onConnect, setOnConnect] = useState(false);
   const { userInfo, setUserInfo } = useContext(Auth);
-  const { basket, setBasket } = useContext(Auth);
+  const { setBasket } = useContext(Auth);
 
-  const nav = useNavigate();
-
-  // useEffect(async () => {
-  //   try {
-  //     const result = await axios.get('http://172.24.42.106:8080/connect/', {
-  //       headers: {
-  //         Authorization: 'bearer ' + localStorage.getItem('token'),
-  //       },
-  //     });
-  //     setUsers(result.data);
-  //   } catch (err) {
-  //     nav('/');
-  //   }
-  // }, []);
-
-  const showConnect = (value) => {
-    setOnConnect(!value);
+  const showConnect = () => {
+    setOnConnect(!onConnect);
   };
 
-
-  //a corriger
   const disconnect = () => {
     setUserInfo([]);
     setBasket([]);
   };
 
- 
-
   return (
-    <div
-      className="connect-header-container"
-      onMouseEnter={() => showConnect(false)}
-      onMouseLeave={() => showConnect(true)}
-    >
+    <div className="connect-header-container" onClick={showConnect}>
       <div className="connect-box">
         <div className="connect-div">
           {!userInfo.id ? (
@@ -50,7 +27,7 @@ function ConnectHeader() {
             </>
           ) : (
             <>
-              <p className="customer">Bienvenue!</p>
+              <p className="customer">Bienvenue !</p>
               <p className="identification">{userInfo.name}</p>
             </>
           )}

@@ -22,7 +22,8 @@ function ProductList({ title, brand, img, price, type, id }) {
           <img
             className={type === "casque VR" ? "list-img-b" : "list-img"}
             src={img}
-            alt=""
+            alt={title}
+            title={title}
           />
         </div>
         <p className="title-list">{title} </p>

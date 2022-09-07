@@ -1,13 +1,12 @@
-import axios from "axios";
 import { useState, useEffect, useContext } from "react";
-import { Link, useParams} from "react-router-dom";
-
+import { Link, useParams } from "react-router-dom";
+import axios from "axios";
 import Characteristic from "../components/Characteristic";
+import Auth from "../context/Auth";
+import Skeleton from "react-loading-skeleton";
 
 import valid from "../img/IconValide.png";
 import wrong from "../img/Not_allowed.svg";
-import Auth from "../context/Auth";
-import Skeleton from "react-loading-skeleton";
 import basketValidate from "../img/validate-basketW.png";
 
 function ProductCard() {
@@ -16,7 +15,6 @@ function ProductCard() {
   const [isLoading, SetIsLoading] = useState([true]);
 
   const { basket, setBasket } = useContext(Auth);
-  
 
   const addBasket = (product) => {
     const productInfo = {
@@ -26,7 +24,16 @@ function ProductCard() {
       id: product.id,
       quantity: 1,
     };
-    setBasket([...basket, productInfo]);
+    const itemAlreadyInBasket = basket.findIndex(
+      (elem) => elem.id === product.id
+    );
+
+    if (itemAlreadyInBasket >= 0) {
+      basket[itemAlreadyInBasket].quantity =
+        basket[itemAlreadyInBasket].quantity + 1;
+    } else {
+      setBasket([...basket, productInfo]);
+    }
 
     const modal = document.querySelector(".modal-basket");
     modal.style.visibility = "visible";
@@ -57,7 +64,7 @@ function ProductCard() {
       return (
         <>
           <div className="stock">
-            <img className="icon-valid" src={valid} alt="" />
+            <img className="icon-valid" src={valid} alt="icon-valid" />
             <p className="good-stock">En stock</p>
           </div>
         </>
@@ -66,7 +73,7 @@ function ProductCard() {
       return (
         <>
           <div className="stock">
-            <img className="icon-not-valid" src={wrong} alt="" />
+            <img className="icon-not-valid" src={wrong} alt="icon-not-vaalid" />
             <p className="no-stock"> produit indisponible</p>
           </div>
         </>
@@ -75,7 +82,7 @@ function ProductCard() {
       return (
         <>
           <div className="stock">
-            <img className="icon-valid" src={valid} alt="" />
+            <img className="icon-valid" src={valid} alt="icon-valid" />
             <div className="small-stock">
               <p className="good-stock">En stock</p>
               <p className="limit-stock">
@@ -98,7 +105,12 @@ function ProductCard() {
         <div className="img-card-box">
           {isLoading && <Skeleton className="img-skeleton" />}
 
-          <img className="img-card" src={productInfos.img} alt="" />
+          <img
+            className="img-card"
+            src={productInfos.img}
+            alt={productInfos.title}
+            title={productInfos.title}
+          />
         </div>
 
         <div className="information-box">

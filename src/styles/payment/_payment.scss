@@ -1,27 +1,46 @@
-.payment_container{
+.payment_container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-family: $font2;
 
-  .CB-container{
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  @media screen and (max-width: 600px) {
+    width: 100%;
+  }
+
+  .CB-container {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+      rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
     padding: 50px 30px;
     border-radius: 10px;
 
-    .CB{
+    @media screen and (max-width: 600px) {
+      width: 100%;
+    }
+
+    .CB {
       border: 1px solid rgb(214, 213, 213);
       border-radius: 5px;
 
-      .CB-information{
+      .CB-information {
         display: flex;
         padding: 6px;
-        img{
+        @media screen and (max-width: 600px) {
+          flex-direction: column;
+        }
+
+        img {
           width: 40px;
           height: auto;
+          @media screen and (max-width: 600px) {
+            display: none;
+          }
         }
-        
+        .cb-cvc-box {
+          display: flex;
+        }
+
         input {
           border: none;
           padding: 10px;
@@ -31,59 +50,82 @@
           border-radius: 5px;
           text-align: left;
           align-items: center;
-          
+
+          @media screen and (max-width: 800px) {
+            font-size: 16px;
+          }
+
+          @media screen and (max-width: 600px) {
+            font-size: 12px;
+            width: 100%;
+          }
         }
 
-        .cb-date  {
+        .cb-date {
           width: 120px;
         }
-        .CVC{
+        .CVC {
           width: 60px;
         }
-        
       }
     }
-  
   }
 }
 
-
-.security{
-  width: 350px;
+.security {
+  width: 80%;
   margin: 20px 0;
 }
 
-
-
-
-
-
-
-
-
-.CB-information 
-
-.cb-number{
+.CB-information .cb-number {
   width: 80%;
 }
 
-.cb-date{
+.cb-date {
   width: 10%;
 }
 
-.CVC{
+.CVC {
   width: 10%;
 }
 
-.button-pay{
+.button-pay {
   width: 100%;
   border: none;
   padding: 14px;
   color: white;
   font-size: 18px;
   font-weight: 600;
-  background-color: #92A4B6;
+  background-color: #92a4b6;
   border-radius: 0 0 5px 5px;
   cursor: pointer;
+}
 
+.error-payement {
+  color: red;
+  font-style: italic;
+}
+
+.modalPaymentBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 60px;
+  .modalPayment {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+
+    span {
+      background-color: rgba(0, 128, 0, 0.434);
+      color: white;
+      font-size: 20px;
+      padding: 10px;
+      border-radius: 15px;
+      font-weight: 600;
+      transition: 1s ease-in;
+    }
+  }
 }

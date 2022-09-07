@@ -9,8 +9,14 @@ function Choicebox(props) {
             className="choice-title-img"
             key={elem.name}
             onClick={() => props.setType(elem.type)}
+            title={elem.name}
           >
-            <img className="img-choice" src={elem.image} alt={elem.name} />
+            <img
+              className="img-choice"
+              src={elem.image}
+              alt={elem.name}
+              title={elem.name}
+            />
             <p className="choice-title">{elem.name}</p>
           </div>
         ))}

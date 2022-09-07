@@ -1,13 +1,13 @@
-import basketIcon from "../../img/shoppingCart.png";
-import Auth from "../../context/Auth";
-import BasketHeaderCard from "../header/BasketHeaderCard";
 import React, { useState, useContext } from "react";
-
 import { Link } from "react-router-dom";
+import BasketHeaderCard from "../header/BasketHeaderCard";
+import Auth from "../../context/Auth";
 
-function BasketHeader(product) {
+import basketIcon from "../../img/shoppingCart.png";
+
+function BasketHeader() {
   const [onBasket, setOnBasket] = useState(false);
-  const [onModal, setOnModal] = useState(true);
+
   const { basket, setBasket } = useContext(Auth);
   const [quantity, setQuantity] = useState(1);
 
@@ -27,37 +27,24 @@ function BasketHeader(product) {
     return totalQuantity;
   };
 
-  // const changeQuantity = (value) => {
-  //     setQuantity(value);
-  //     const productIndex = basket.findIndex(e => e.id === product.id);
-  //     const myBasket = basket
-  //     basket[productIndex].quantity = value
-  //     setBasket([...myBasket])
-  // }
-
-  const showBasket = (value) => {
-    setOnBasket(!value);
+  const showBasket = () => {
+    setOnBasket(!onBasket);
   };
 
-  const showModal = (value) => {
-    setOnModal(!value);
-
-  }
+  const closeBasket = () => {
+    setOnBasket(!onBasket);
+  };
 
   return (
-    <div
-      className="basket-header-container"
-      onMouseEnter={() => showBasket(false)}
-      onMouseLeave={() => showBasket(true)}
-    >
-      <div className="basket-header-container-responsive"
-      onClick={()=> showModal(true)}
-      >
+    <div className="basket-header-container">
       <div className="basket-box">
         <div className="basket-logo-box">
-          <img className="icon-basket" src={basketIcon} alt="" />
-
-         
+          <img
+            className="icon-basket"
+            src={basketIcon}
+            alt="logo-basket"
+            onClick={showBasket}
+          />
         </div>
         {basket.length ? (
           <div id="circle">
@@ -79,12 +66,11 @@ function BasketHeader(product) {
                 </div>
               ) : (
                 <>
-               
                   {basket.length > 0 &&
                     basket.map((product) => (
                       <BasketHeaderCard key={product.title} product={product} />
                     ))}
-                    
+
                   <div className="bar-separation"></div>
 
                   <div className="total-price-list">
@@ -93,16 +79,16 @@ function BasketHeader(product) {
                   </div>
                   <div className="btn-order-basket">
                     <Link to="/panier">
-                      <button className="btn-order">Commander</button>
+                      <button className="btn-order" onClick={closeBasket}>
+                        Commander
+                      </button>
                     </Link>
                   </div>
-                  
                 </>
               )}
             </div>
           </>
         )}
-      </div>
       </div>
     </div>
   );

@@ -1,11 +1,12 @@
-import logo from "../../img/logo.png";
 import { Link } from "react-router-dom";
 import DynamicText from "./DynamicText";
+
+import logo from "../../img/logo.png";
 
 function HomePage() {
   return (
     <div className="homepage_container">
-      <img src={logo} alt="" />
+      <img src={logo} alt="logo" />
 
       <h1>Bienvenue sur Technologeek</h1>
 

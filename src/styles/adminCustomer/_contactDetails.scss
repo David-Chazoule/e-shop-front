@@ -3,7 +3,7 @@
   justify-content: center;
   margin: 8%;
   width: 100%;
-  font-family:  $font2;
+  font-family: $font2;
 
   .billing-delivery-detail_container {
     display: flex;
@@ -15,68 +15,100 @@
     width: 100%;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     height: 80%;
-    
+
+    @media screen and (max-width: 800px) {
+      box-shadow: none;
+      margin: 0;
+    }
+
     h1 {
       font-size: 40px;
       margin: 2px 0 2px 4px;
       text-align: center;
-      color: rgb(87, 194, 243);
+      color: rgb$color-1;
       font-weight: 600;
     }
 
-    .detail-box{
+    .detail-box {
       display: flex;
       align-items: center;
       justify-content: center;
 
-    .detail {
-      margin-top: 6%;
-      display: flex;
-      flex-direction: column;
-      
-      justify-content: center;
-      border: 2px solid $color-1;
-      border-radius: 10px;
-      width: 60%;
-      padding:2% ;
-
-      p {
-        font-size: 3vh;
-        margin: 8px 8px 2px 4px;
-        
+      @media screen and (max-width: 800px) {
+        flex-direction: column;
+        width: 100%;
       }
 
-     .name-delivery-detail, .city-delivery-detail, .phone-delivery-detail{
-      display: flex;
-      align-items: center;
-      justify-content: flex-start;
-      width: 100%;
-
-      
-     }
-
-     .adress-delivery-detail{
-      display: flex;
-      align-items: center;
-      justify-content: flex-start;
-      width: 100%;
-     }
-
-
-
-    }
-
-    .img-container{
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 40%;
-       img{
+      .detail {
+        margin-top: 6%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        border: 2px solid $color-1;
+        border-radius: 10px;
         width: 60%;
-        
-       }
+        padding: 2%;
+
+        @media screen and (max-width: 800px) {
+          width: 100%;
+          padding: 3%;
+        }
+
+        p {
+          font-size: 3vh;
+          margin: 8px 8px 2px 4px;
+        }
+
+        .name-delivery-detail,
+        .city-delivery-detail,
+        .phone-delivery-detail {
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+          width: 100%;
+        }
+
+        .name-delivery-detail p,
+        .city-delivery-detail p,
+        .phone-delivery-detail p {
+          @media screen and (max-width: 900px) {
+            font-size: 18px;
+          }
+        }
+
+        .phone-delivery-detail {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+      }
+
+      .adress-delivery-detail {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        width: 100%;
+      }
+      .adress-delivery-detail p {
+        @media screen and (max-width: 900px) {
+          font-size: 18px;
+        }
+      }
+
+      .img-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40%;
+        img {
+          width: 60%;
+
+          @media screen and (max-width: 800px) {
+            width: 70%;
+            margin-top: 20px;
+          }
+        }
+      }
     }
-  }
 
     .btn-change-delivery-detail {
       display: flex;
@@ -98,54 +130,130 @@
       }
     }
   }
-
 }
 
-.modal_container{
+.modal_container {
   position: absolute;
-  top: 56%; left: 50%; 
+  top: 56%;
+  left: 50%;
   transform: translate(-50%, -50%);
   width: 60%;
   background-color: white;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  @include shadowbox;
   padding: 1% 6%;
   border-radius: 10px;
 
-  .form-contact-modal{
+  @media screen and (max-width: 800px) {
     width: 100%;
-        margin: 10px 0;
+  }
+
+  .contact-adresse-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 6px 0;
+
+    .form-contact-modal {
+      width: 100%;
+      margin: 10px 0;
+      justify-content: center;
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+
+      .form-input {
+        display: flex;
+        margin: 20px 0 20px 0;
         justify-content: center;
         align-items: center;
-        display: flex;
-        flex-direction: column;
-  .btn-box {
-    display: flex;
-    width: 100%;
-    align-items: center;
-    justify-content: space-between;
-   button{
-    padding: 4px;
-      border-radius: 10px;
-      width: 14%;
-      background-color: $color-1;
-      color: white;
+        width: 100%;
 
-      &:hover {
-        background-color: white;
-        color: $color-1;
+        @media screen and (max-width: 600px) {
+          display: flex;
+          flex-direction: column;
+          margin: 2px 0;
+        }
+
+        input {
+          border: none;
+          padding: 6px;
+          border-radius: 5px;
+          border-bottom: 2px solid $color-1;
+          background: none;
+          font-size: 18px;
+          &:focus {
+            outline: none;
+            color: $color-1;
+            font-weight: 600;
+
+            @media screen and (max-width: 800px) {
+              width: 100%;
+            }
+          }
+        }
+
+        .label-input {
+          display: flex;
+          flex-direction: column;
+          margin: 6px;
+          width: 100%;
+          padding-bottom: 6px;
+
+          label {
+            font-size: 18px;
+            font-weight: bold;
+
+            @media screen and (max-width: 800px) {
+              font-size: 14px;
+            }
+          }
+          .lastname-error-span,
+          .firstname-error-span,
+          .cityname-error-span,
+          .postcode-error-span {
+            height: 8px;
+          }
+        }
       }
-   }
 
-   .cancel{
-    background-color: red;
-    
-    
-    &:hover {
-      background-color: rgb(185, 59, 59);
-      color: white;
+      .btn-box {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: space-between;
+        button {
+          padding: 4px;
+          border-radius: 10px;
+          width: 20%;
+          background-color: $color-1;
+          color: white;
+          font-weight: 600;
+          font-size: 14px;
+
+          &:hover {
+            background-color: white;
+            color: $color-1;
+          }
+
+          @media screen and (max-width: 800px) {
+            font-size: 14px;
+          }
+
+          @media screen and (max-width: 600px) {
+            font-size: 12px;
+          }
+        }
+
+        .cancel {
+          background-color: red;
+
+          &:hover {
+            background-color: rgb(185, 59, 59);
+            color: white;
+          }
+        }
+      }
     }
-   }
-  }
-    
   }
 }

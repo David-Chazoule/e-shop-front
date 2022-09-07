@@ -1,13 +1,12 @@
-import React, { useState, useContext } from "react";
-import bin from "../../img/bin.png";
+import React, { useState, useContext, useEffect } from "react";
 import Auth from "../../context/Auth";
+
+import bin from "../../img/bin.png";
 
 function BasketCard({ product }) {
   const [quantity, setQuantity] = useState(1);
   const { basket, setBasket } = useContext(Auth);
   const [modalDelete, setModalDelete] = useState(false);
-
-  
 
   const changeQuantity = (value) => {
     setQuantity(value);
@@ -15,9 +14,11 @@ function BasketCard({ product }) {
     const myBasket = basket;
     basket[productIndex].quantity = value;
     setBasket([...myBasket]);
-    
-    
   };
+
+  useEffect(() => {
+    setQuantity(product.quantity);
+  }, []);
 
   const deleteProduct = (e, id) => {
     e.preventDefault();
@@ -29,9 +30,19 @@ function BasketCard({ product }) {
   };
 
   return (
-    <div className="recap-basket-box" key={product.title}>
+    <div
+      className={
+        modalDelete ? "recap-basket-box recap-delete" : "recap-basket-box"
+      }
+      key={product.title}
+    >
       <div className="img-article-box">
-        <img className="img-article" src={product.image} alt="" />
+        <img
+          className="img-article"
+          src={product.image}
+          alt={product.title}
+          title={product.title}
+        />
         <div className="title-result">
           <p className="article-result-img">{product.title}</p>
         </div>
@@ -46,7 +57,14 @@ function BasketCard({ product }) {
         ></input>
       </div>
       <p className="article-result">{+product.price * quantity}€ </p>
-      <img className="bin" src={bin} alt="" onClick={handleModal} />
+
+      <img
+        className="bin"
+        src={bin}
+        alt="bin-cancel"
+        onClick={handleModal}
+        title="supprimer"
+      />
 
       {modalDelete && (
         <div className="modal-delete-container">
@@ -61,10 +79,10 @@ function BasketCard({ product }) {
               className="btn-delete"
               onClick={(e) => deleteProduct(e, product.id)}
             >
-              supprimer
+              oui
             </button>
             <button className="btn-cancel" onClick={handleModal}>
-              annuler
+              non
             </button>
           </div>
         </div>

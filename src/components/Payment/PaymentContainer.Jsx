@@ -1,9 +1,7 @@
+import { useContext } from "react";
 import Summary from "./Summary";
-
 import DeliveryAdress from "./DeliveryAdress";
 import Payment from "./Payment";
-
-import { useContext } from "react";
 import Auth from "../../context/Auth";
 
 function PaymentContainer() {

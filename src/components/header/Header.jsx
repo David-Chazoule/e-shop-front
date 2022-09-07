@@ -1,13 +1,9 @@
 import { Link } from "react-router-dom";
-import { useContext } from "react";
-import Auth from "../../context/Auth";
 import BasketHeader from "./BasketHeader";
 import ConnectHeader from "./ConnectHeader";
 import logo from "../../img/logo.png";
 
 function Header() {
-  const { basket, setBasket } = useContext(Auth);
-
   return (
     <div className="header-container">
       <Link to="/">
@@ -18,8 +14,8 @@ function Header() {
       </Link>
 
       <div className="basket-connection">
-        <BasketHeader value={{ basket, setBasket }} />
-        <ConnectHeader value={{ basket, setBasket }} />
+        <BasketHeader />
+        <ConnectHeader />
       </div>
     </div>
   );

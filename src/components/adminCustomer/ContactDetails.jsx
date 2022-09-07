@@ -1,9 +1,9 @@
-// import "../../CSS/adminCustomer/contactDetails.css";
-import Auth from "../../context/Auth";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import ModalAdress from "./ModalAdress";
-import { useState } from "react";
+import Auth from "../../context/Auth";
+
 import homeLogo from "../../img/homelogo.png";
+
 function ContactDetails() {
   const { userInfo } = useContext(Auth);
   const [modalOn, setModalOn] = useState(false);

@@ -1,6 +1,5 @@
 .product-card-container {
   display: flex;
-
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -8,6 +7,14 @@
 
   h1 {
     margin-top: 2%;
+  }
+
+  @media screen and (max-width: 1100px) {
+    min-height: 72vh ;
+  }
+
+  @media screen and (max-width: 800px) {
+    min-height: none;
   }
 
   .card {
@@ -32,8 +39,13 @@
       justify-content: center;
       margin: 20px;
 
+      width: 70%;
+      @media screen and (max-width: 900px) {
+        width: 100%;
+      }
+
       .img-card {
-        width: 60%;
+        width: 70%;
         @media screen and (max-width: 900px) {
           width: 50%;
         }
@@ -125,6 +137,10 @@
             margin-left: 0;
             margin-bottom: 0;
 
+            @media screen and (max-width: 1500px) {
+              font-size: 14px;
+            }
+
             @media screen and (max-width: 600px) {
               font-size: 12px;
             }
@@ -148,6 +164,10 @@
 
             p {
               margin: 0 0 0 5px;
+
+              @media screen and (max-width: 1500px) {
+                font-size: 14px;
+              }
 
               @media screen and (max-width: 600px) {
                 font-size: 12px;

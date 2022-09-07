@@ -1,7 +1,5 @@
 .list-shop-box {
   display: flex;
- 
- 
   justify-content: space-between !important;
   width: 100%;
   margin-top: 10px;
@@ -16,29 +14,35 @@
     color: $color-1;
     font-weight: 600;
     .produce {
-      
       font-size: 14px;
-      
-    }
-    
-  }
- .quantity-container{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 10%;
-  
 
- }
- .total-container{
-  display: flex;
-  align-items: center;
-  justify-content:flex-end;
-  width: 30%;
-  .quantity-produce {
-    
-    font-size: 14px;
-    font-weight: 600;
+      @media screen and (max-width: 600px) {
+        font-size: 12px;
+      }
+    }
   }
-}
+  .quantity-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 10%;
+
+    @media screen and (max-width: 600px) {
+      font-size: 12px;
+    }
+  }
+  .total-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 30%;
+    .quantity-produce {
+      font-size: 14px;
+      font-weight: 600;
+
+      @media screen and (max-width: 600px) {
+        font-size: 12px;
+      }
+    }
+  }
 }

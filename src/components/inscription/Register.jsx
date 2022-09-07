@@ -1,9 +1,9 @@
-import { useState } from "react";
-import { useContext } from "react";
+import { useState, useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import { ValidEmail, ValidPseudo, ValidPassword } from "../regex/Regex";
 import Auth from "../../context/Auth";
+
 import logo from "../../img/logo.png";
 import show from "../../img/show.png";
 
@@ -16,7 +16,7 @@ function Register() {
   const [isShownB, setIsShownB] = useState(false);
   const [modal, setModal] = useState(false);
   const [userAlreadyExist, setUserAlreadyExist] = useState(false);
-  const { userInfo, setUserInfo } = useContext(Auth);
+  const { setUserInfo } = useContext(Auth);
 
   const { basket } = useContext(Auth);
 
@@ -110,8 +110,6 @@ function Register() {
         "password",
         "Minimum de 8 caractères, une majuscule, un chiffre et un caractère spécial"
       );
-    } else if (password.length < 14) {
-      errorDisplay("password", "", true);
     } else {
       errorDisplay("password", "", true);
     }
@@ -137,7 +135,7 @@ function Register() {
   return (
     <div className="register_container">
       <div className="logo-register">
-        <img src={logo} alt="" />
+        <img src={logo} alt="logo" />
         <p>Technologeek</p>
       </div>
 
@@ -159,7 +157,7 @@ function Register() {
               className="input-register"
               onChange={(e) => validationPseudo(setName(e.target.value))}
               required
-                  autoComplete="off"
+              autoComplete="off"
             />
             <div className="name-register">
               <span></span>
@@ -174,7 +172,7 @@ function Register() {
               className="input-register"
               onChange={(e) => validMail(setEmail(e.target.value))}
               required
-                  autoComplete="off"
+              autoComplete="off"
             />
             <div className="mail-register">
               <span></span>
@@ -190,9 +188,14 @@ function Register() {
                 className="input-register"
                 onChange={(e) => validPassword(setPassword(e.target.value))}
                 required
-                  autoComplete="off"
+                autoComplete="off"
               />
-              <img src={show} alt="show-password" onClick={togglePassword} />
+              <img
+                src={show}
+                className={isShown ? "filterview" : ""}
+                alt="show-password"
+                onClick={togglePassword}
+              />
             </div>
 
             <div className={ValidPass()}></div>
@@ -210,12 +213,19 @@ function Register() {
                 className="input-register"
                 onChange={(e) => setConfirmPassword(e.target.value)}
                 required
-                  autoComplete="off"
+                autoComplete="off"
               />
-              <img src={show} alt="show-password" onClick={togglePasswordB} />
+              <img
+                src={show}
+                className={isShownB ? "filterview" : ""}
+                alt="show-password"
+                onClick={togglePasswordB}
+              />
             </div>
 
-            <span className="confirm-pass">problème avec votre mot de passe</span>
+            <span className="confirm-pass">
+              problème avec votre mot de passe
+            </span>
           </div>
           {userAlreadyExist && (
             <p className="user-exist">Cette email est déjà utilisé</p>
