@@ -82,5 +82,26 @@
     }
   }
 
+  .order-details-box{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .order-title-detail{
+    font-weight: 600;
+        font-size: 18px;
+        width: 100%;
+        text-align: center;
+        @media screen and (max-width: 800px) {
+          font-size: 16px;
+        }
+        @media screen and (max-width: 600px) {
+          font-size: 14px;
+        }
+
+  }
+
   
 }

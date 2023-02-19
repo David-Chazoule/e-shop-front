@@ -78,13 +78,17 @@
     width: 100%;
     text-align: center;
 
+    @media screen and (max-width: 1100px) {
+      min-height: 64vh;
+    }
+
     img {
-      width: 30%;
-      margin: 10% 0;
+      width: 20%;
+      margin: 4% 0;
     }
 
     span {
-      color: rgb(87, 194, 243);
+      color: $color-1;
     }
 
     .setup-box {
@@ -95,7 +99,7 @@
       margin-top: 24px;
 
       .setup {
-        width: 30%;
+        width: 20%;
         margin-bottom: 5%;
       }
     }
@@ -119,7 +123,12 @@
     min-height: 60vh;
     margin-bottom:0 0 30px 0;
     @media screen and (max-width: 1050px) {
-      min-height: 63.5vh;
+      min-height: 70.5vh;
+     
+    }
+
+    @media screen and (max-width: 900px) {
+      min-height: 60.5vh;
      
     }
     @media screen and (max-width: 450px) {

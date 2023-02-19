@@ -12,6 +12,8 @@ function Basket() {
 
   const nav = useNavigate();
 
+//calculate the total price  
+
   const totalPrice = () => {
     let totalPrice = 0;
     basket.forEach((product) => {
@@ -19,6 +21,8 @@ function Basket() {
     });
     return totalPrice;
   };
+
+  //redirect the customer depending on whether he already has an account
 
   function NextDirection() {
     if (

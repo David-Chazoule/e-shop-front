@@ -11,6 +11,8 @@ function BasketHeader() {
   const { basket, setBasket } = useContext(Auth);
   const [quantity, setQuantity] = useState(1);
 
+  //calculate the total price
+
   const totalPrice = () => {
     let totalPrice = 0;
     basket.forEach((product) => {
@@ -18,6 +20,8 @@ function BasketHeader() {
     });
     return totalPrice.toFixed(2);
   };
+
+  //calculate the total quantity
 
   const totalQuantity = () => {
     let totalQuantity = 0;

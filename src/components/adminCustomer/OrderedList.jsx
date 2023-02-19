@@ -4,9 +4,10 @@ import Auth from "../../context/Auth";
 
 function OrderedList() {
   const [orderList, setOrderList] = useState([]);
-
-  const { userInfo } = useContext(Auth);
   const [modalOrder, setModalOrder] = useState(false);
+  const { userInfo } = useContext(Auth);
+
+  //retrieve customer orders
 
   const getOrderList = async () => {
     const result = await axios.get(
@@ -61,10 +62,18 @@ function OrderedList() {
             <div>
               {elem &&
                 elem.products.map((product) => (
-                  <div key={product.id}>
-                    <p>{product.title}</p>
+                  <div className="order-detail-container" key={product.id}>
+                    <div className="order-details-box">
+                      <p className="order-title-detail">{product.title}</p>
 
-                    <p>{product.price}</p>
+                      <p className="order-title-detail">{product.quantity}</p>
+
+                      <p className="order-title-detail">{product.price}</p>
+
+                      <p className="order-title-detail">
+                        {product.price * product.quantity}
+                      </p>
+                    </div>
                   </div>
                 ))}
             </div>

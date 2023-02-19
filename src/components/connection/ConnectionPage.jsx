@@ -14,6 +14,8 @@ function ConnectionPage() {
 
   const nav = useNavigate();
 
+  //allows the customer to log in to their account and verifies if the information entered is correct
+
   const handlePost = async (e) => {
     try {
       e.preventDefault();

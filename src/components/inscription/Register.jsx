@@ -22,6 +22,9 @@ function Register() {
 
   const nav = useNavigate();
 
+
+  //allows the customer to register his name, email and password. check that the password is identical to the confirmation password
+
   const handlePost = async (e) => {
     e.preventDefault();
 
@@ -69,6 +72,8 @@ function Register() {
   const togglePasswordB = () => {
     setIsShownB((isShownB) => !isShownB);
   };
+
+  //various error handling functions checking client input
 
   const errorDisplay = (tag, message, valid) => {
     const box = document.querySelector("." + tag + "-register");

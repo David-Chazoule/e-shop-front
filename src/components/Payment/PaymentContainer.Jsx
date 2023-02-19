@@ -7,6 +7,10 @@ import Auth from "../../context/Auth";
 function PaymentContainer() {
   const { basket } = useContext(Auth);
 
+
+
+  //calculate total price
+  
   const totalPrice = () => {
     let totalPrice = 0;
     basket.forEach((product) => {

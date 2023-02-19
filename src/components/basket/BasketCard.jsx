@@ -8,6 +8,8 @@ function BasketCard({ product }) {
   const { basket, setBasket } = useContext(Auth);
   const [modalDelete, setModalDelete] = useState(false);
 
+  //allows you to change the quantity
+
   const changeQuantity = (value) => {
     setQuantity(value);
     const productIndex = basket.findIndex((e) => e.id === product.id);
@@ -19,6 +21,9 @@ function BasketCard({ product }) {
   useEffect(() => {
     setQuantity(product.quantity);
   }, []);
+
+  
+  //allows you to delete a product
 
   const deleteProduct = (e, id) => {
     e.preventDefault();

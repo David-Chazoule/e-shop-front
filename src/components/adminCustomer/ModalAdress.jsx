@@ -26,6 +26,8 @@ function ModalAdress(props) {
     setPhone(userInfo.phone || "");
   }, []);
 
+  // allows the customer to send his personal data
+
   const handlePost = async (e) => {
     e.preventDefault();
     const result = await axios.patch(

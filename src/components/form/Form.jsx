@@ -18,6 +18,8 @@ function Form() {
 
   const nav = useNavigate();
 
+  //allows the customer to send his personal data
+
   const handlePost = async (e) => {
     e.preventDefault();
     const result = await axios.patch(
@@ -37,6 +39,8 @@ function Form() {
       nav("/paiement");
     }
   };
+
+  //various client input error handling functions
 
   const errorDisplay = (tag, message, valid) => {
     const box = document.querySelector("." + tag + "-error-span");
