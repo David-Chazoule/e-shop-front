@@ -1,48 +1,39 @@
 import { useNavigate } from "react-router-dom";
 
+import "react-loading-skeleton/dist/skeleton.css";
 
-import '../CSS/product-card/productList.css';
+function ProductList({ title, brand, img, price, type, id }) {
+  const nav = useNavigate();
 
-
-
-
-function ProductList({ products }) {
-  // const {id, img, title, marque, price} = product
-  let navigate = useNavigate();
-
-  const handleClick = (id) => {
-    navigate(`/card/${id}`);
+  const handleClick = () => {
+    nav(`/card/${id}/${title}`);
   };
 
-
   return (
-
-    <>
-      {products.map((product) => {
-        const { id, img, title, marque, price } = product
-        return <div className="productlist_container" onClick={() => { handleClick(id) }}
-          onKeyPress={() => { handleClick(id) }}
-          role="button"
-          tabIndex={0}>
-
-          <div className="list-card" >
-            <img className="list-img" src={img} alt="" />
-            <p className="title-list">{title} </p>
-            <div className='marque-list-box'>
-              <p className="marque-list">-{marque}-</p>
-            </div>
-            <p className="price-list">{price}</p>
-            <div className="bar-seperate"></div>
-          </div>
-
-          <div className="bar-v-seperate"></div>
+    <div
+      className="productlist_container"
+      onClick={handleClick}
+      onKeyPress={handleClick}
+      role="button"
+      tabIndex={0}
+    >
+      <div className="list-card">
+        <div className="img-container">
+          <img
+            className={type === "casque VR" ? "list-img-b" : "list-img"}
+            src={img}
+            alt={title}
+            title={title}
+          />
         </div>
-      })}
-    </>
-
-
-
-  )
+        <p className="title-list">{title} </p>
+        <div className="marque-list-box">
+          <p className="marque-list">-{brand}-</p>
+        </div>
+        <p className="price-list">{price}€</p>
+      </div>
+    </div>
+  );
 }
 
 export default ProductList;

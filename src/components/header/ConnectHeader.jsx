@@ -1,66 +1,79 @@
-import user from '../../img/user.png'
-import { useState } from 'react';
-import {Link} from 'react-router-dom';
-import  '../../CSS/header/connectHeader.css';
+import { useState, useContext } from "react";
+import { Link } from "react-router-dom";
+import Auth from "../../context/Auth";
 
-function ConnectHeader(){
+function ConnectHeader() {
+  const [onConnect, setOnConnect] = useState(false);
+  const { userInfo, setUserInfo } = useContext(Auth);
+  const { setBasket } = useContext(Auth);
 
-    const [onConnect, setOnConnect] = useState(false);
+  const showConnect = () => {
+    setOnConnect(!onConnect);
+  };
 
-    const showConnect = (value) => {
-        
-        setOnConnect(!value);
-      };
-    return(
-        
-        
-        
-        
-        <div className="connect-header-container"onMouseEnter={()=>showConnect(false)} onMouseLeave={()=>showConnect(true)}>
+  const disconnect = () => {
+    setUserInfo([]);
+    setBasket([]);
+  };
 
-<div className="connect-box" >
-            <img className="icon-user" src={user} alt="" />
-            
-                
-                
-               
-            
-            { onConnect && (
-                <>
-                            <div id="triangle-connect" ></div>
-            <div className= "connect-list">
-                <div className="list-connect-box">
-                <div className="btn-connect-box">
-
-            <Link to="/connection">
-            <button className="btn-connect">Connection</button>
-            </Link>
-
-            <Link to="/register">
-            <button className="btn-connect">inscription</button>
-            </Link>
-            </div> 
-                   </div>
-
-            </div>
+  return (
+    <div className="connect-header-container" onClick={showConnect}>
+      <div className="connect-box">
+        <div className="connect-div">
+          {!userInfo.id ? (
+            <>
+              <p className="customer">Mon compte</p>
+              <p className="identification">Identifiez-vous</p>
             </>
-            )}
-
-            </div>
-
-
-
-
-
-
-            {/* <img className='icon-user' src={user} alt="" />
-            <div className="btn-connect-box">
-            <button className="btn-connect">Connection</button>
-            <button className="btn-connect">inscription</button>
-            </div> */}
-
+          ) : (
+            <>
+              <p className="customer">Bienvenue !</p>
+              <p className="identification">{userInfo.name}</p>
+            </>
+          )}
         </div>
-    )
+
+        {onConnect && (
+          <>
+            <div id="triangle-connect"></div>
+            <div className="connect-list">
+              <div className="list-connect-box">
+                {!userInfo.id ? (
+                  <div className="btn-connect-box">
+                    <Link to="/connection">
+                      <button className="btn-connect">Identifiez-vous</button>
+                    </Link>
+
+                    <div className="register-basket-box">
+                      <p className="new-customer">Nouveau Client ? </p>
+                      <Link to="/register">
+                        <p className="new-account"> Créez un compte</p>
+                      </Link>
+                    </div>
+                  </div>
+                ) : (
+                  <div className="btn-connect-box">
+                    <Link to="/compte">
+                      <button className="btn-connect">Administration</button>
+                    </Link>
+
+                    <div className="disconnect-box">
+                      <Link to="/">
+                        <p className="disconnect-btn" onClick={disconnect}>
+                          {" "}
+                          Déconnection
+                        </p>
+                      </Link>
+                    </div>
+                  </div>
+                )}
+              </div>
+            </div>
+          </>
+        )}
+      </div>
+    </div>
+  );
 }
 
 export default ConnectHeader;

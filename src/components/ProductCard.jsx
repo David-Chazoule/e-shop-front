@@ -1,210 +1,182 @@
+import { useState, useEffect, useContext } from "react";
+import { Link, useParams } from "react-router-dom";
+import axios from "axios";
+import Characteristic from "../components/Characteristic";
+import Auth from "../context/Auth";
+import Skeleton from "react-loading-skeleton";
 
-import { useState, useEffect } from 'react';
-import { useParams, Link } from 'react-router-dom';
-import products from '../list.json'
-
-import '../CSS/product-card/productCard.css';
-import valid from '../img/IconValide.png';
-import wrong from '../img/Not_allowed.svg';
-
+import valid from "../img/IconValide.png";
+import wrong from "../img/Not_allowed.svg";
+import basketValidate from "../img/validate-basketW.png";
 
 function ProductCard() {
+  const params = useParams();
+  const [productInfos, setProductInfos] = useState([]);
+  const [isLoading, SetIsLoading] = useState([true]);
 
-    const [productInfos, setProduct] = useState({})
-    const [load, setLoad] = useState(true)
+  const { basket, setBasket } = useContext(Auth);
 
-    const { id } = useParams();
+  const addBasket = (product) => {
+    const productInfo = {
+      title: product.title,
+      image: product.img,
+      price: product.price,
+      id: product.id,
+      quantity: 1,
+    };
+    const itemAlreadyInBasket = basket.findIndex(
+      (elem) => elem.id === product.id
+    );
 
-       useEffect(() => {
+    if (itemAlreadyInBasket >= 0) {
+      basket[itemAlreadyInBasket].quantity =
+        basket[itemAlreadyInBasket].quantity + 1;
+    } else {
+      setBasket([...basket, productInfo]);
+    }
 
-        
-        products.forEach((x)=>{
-            if(x.id === parseInt(id)){
-                setProduct(x)
-            }
-        })
-        
-        setLoad(false)
-    }, [])
+    const modal = document.querySelector(".modal-basket");
+    modal.style.visibility = "visible";
 
+    setTimeout(() => {
+      modal.style.opacity = 0;
+      modal.style.transition = "0.6s";
+      modal.style.visibility = "hidden";
+      setTimeout(() => {
+        modal.style.opacity = 1;
+      }, 800);
+    }, 2000);
+  };
 
-    let titles = [
-        {
-        titleInfo1 : "Taille écran",
-        titleInfo2 : "Système d'exploitation",
-        titleInfo3 : "stockage",
-        titleInfo4 : "memoire vive",
-        },
+  useEffect(() => {
+    const fetchproduct = async () => {
+      const result = await axios.get(
+        "http://localhost:8000/product/" + params.id
+      );
+      setProductInfos(result.data);
+    };
+    fetchproduct();
+    SetIsLoading(false);
+  }, [params.id]);
 
-        {
-        titleInfo1 : "taille de l'écran",
-        titleInfo2 : "Frequence d'affichage",
-        titleInfo3 : "Champ de vision",
-        titleInfo4 : "Poid",
-        },
-
-        {
-        titleInfo1 : "Impétance",
-        titleInfo2 : "Connection sans fil",
-        titleInfo3 : "Autonomie",
-        titleInfo4 : "Poid",
-        },
-        {
-            titleInfo1 : "Taille de l'écran",
-            titleInfo2 : "résolution",
-            titleInfo3 : "Smart TV",
-            titleInfo4 : "écran incurvé",
-        },
-
-        {
-            titleInfo1 : "Taille de l'écran",
-            titleInfo2 : "Processeur",
-            titleInfo3 : "Stockage",
-            titleInfo4 : "Mémoire vive",
-        },
-
-        {
-            titleInfo1 : "Plateforme",
-            titleInfo2 : "Genre",
-            titleInfo3 : "Date de sortie",
-            titleInfo4 : "Espace minimum",
-        }
-]
-
-
-    function showQuantity() {
-        if ( productInfos.quantity >= 10){
-            return <>
-                <div className="stock">
-                            <img className='icon-valid' src={valid} alt="" />
-                            <p className='good-stock'>En stock</p>
-                        </div>
-                        </>
-        } else if ( productInfos.quantity === 0 ){
-            return <>
-                 <div className="stock">
-                                 <img className='icon-not-valid' src={wrong} alt="" />
-                                 <p className='no-stock'> produit indisponible</p>
-                             </div>
-                             </>
-          } else if (productInfos.quantity <= 10 && productInfos.quantity >= 1){
-            return <>
-            <div className="stock">
-                            <img className='icon-valid' src={valid} alt="" />
-                             <div className='small-stock'>
-                             <p className='good-stock'>En stock</p>
-                            <p className='limit-stock'>il ne reste que {productInfos.quantity} {productInfos.type}s</p>
-                            </div>
-                        </div>
-            
-            </>
-        }}
-
-                    //     function title() {
-                    //         if (productInfos.type === "smartphone") {
-                    //         return<>
-                    //         <div className="detail-box">
-                    //     <div className="line-detail-a">
-                    //         <p className="info-title">taille de l'écran</p>
-                    //         <p className="info-detail">{productInfos.info1}</p>
-                    //     </div>
-                    //     <div className="line-detail-b">
-                    //         <p className="info-title">Système d'exploitation</p>
-                    //         <p className="info-detail">{productInfos.info2}</p>
-                    //     </div>
-                    //     <div className="line-detail-a">
-                    //         <p className="info-title">Stockage</p>
-                    //         <p className="info-detail">{productInfos.info3}</p>
-                    //     </div>
-                    //     <div className="line-detail-b">
-                    //         <p className="info-title">memoire vive</p>
-                    //         <p className="info-detail">{productInfos.info4}</p>
-                    //     </div>
-                    // </div>
-                    //         </>
-                    //         }
-                    //     }
-         
-        
-    
-
-
-    return (
-        
-
-
-
-        <div className="product-card-container">
-
-
-            <h1>{productInfos.title} </h1>
-
-
-            <div className="card">
-
-
-
-                <div className="img-card-box">
-                    <img className="img-card" src={productInfos.img} alt="" />
-                    
-
-                </div>
-
-                <div className="information-box">
-
-                {/* {title()} */}
-                    
-                    <div className="detail-box">
-                        <div className="line-detail-a">
-                            <p className="info-title">{productInfos.title1}</p>
-                            <p className="info-detail">{productInfos.info1}</p>
-                        </div>
-                        <div className="line-detail-b">
-                            <p className="info-title">{productInfos.title2}</p>
-                            <p className="info-detail">{productInfos.info2}</p>
-                        </div>
-                        <div className="line-detail-a">
-                            <p className="info-title">{productInfos.title3}</p>
-                            <p className="info-detail">{productInfos.info3}</p>
-                        </div>
-                        <div className="line-detail-b">
-                            <p className="info-title">{productInfos.title4}</p>
-                            <p className="info-detail">{productInfos.info4}</p>
-                        </div>
-                    </div>
-
-                    <div className="description-box">
-                        <p>{productInfos.description}</p>
-                    </div>
-
-                    <div className="order-stock-box">
-                          
-                          {showQuantity()}
-                         
-                        
-                          
-
-                        <div className="btn-order-box">
-                            <button className='btn-order'>mettre dans votre panier</button>
-                        </div>
-                    </div>
-
-                </div>
-
-
-
-
+  function showQuantity() {
+    if (productInfos.quantity >= 10) {
+      return (
+        <>
+          <div className="stock">
+            <img className="icon-valid" src={valid} alt="icon-valid" />
+            <p className="good-stock">En stock</p>
+          </div>
+        </>
+      );
+    } else if (productInfos.quantity <= 0) {
+      return (
+        <>
+          <div className="stock">
+            <img className="icon-not-valid" src={wrong} alt="icon-not-vaalid" />
+            <p className="no-stock"> produit indisponible</p>
+          </div>
+        </>
+      );
+    } else if (productInfos.quantity <= 10 && productInfos.quantity >= 1) {
+      return (
+        <>
+          <div className="stock">
+            <img className="icon-valid" src={valid} alt="icon-valid" />
+            <div className="small-stock">
+              <p className="good-stock">En stock</p>
+              <p className="limit-stock">
+                il ne reste que {productInfos.quantity} {productInfos.type}s
+              </p>
             </div>
-            <div className="btn-back-next-box">
+          </div>
+        </>
+      );
+    }
+  }
 
-            <Link to="/produit">
-                <button className='btn-back-next'>retour </button>
-            </Link>
+  return (
+    <div className="product-card-container">
+      <h1>
+        {productInfos.title || <Skeleton className="skeleton-title-card" />}{" "}
+      </h1>
 
-            </div>
+      <div className="card">
+        <div className="img-card-box">
+          {isLoading && <Skeleton className="img-skeleton" />}
 
+          <img
+            className="img-card"
+            src={productInfos.img}
+            alt={productInfos.title}
+            title={productInfos.title}
+          />
         </div>
-    )
+
+        <div className="information-box">
+          <div className="stock-price-box">
+            {isLoading && <Skeleton className="quantity-skeleton" />}
+
+            {showQuantity()}
+
+            <h2 className="price-card">
+              {productInfos.price || <Skeleton className="skeleton-price" />}€
+            </h2>
+          </div>
+
+          <div className="detail-box">
+            <div className="line-detail-case-a">
+              <p className="info-detail">
+                {productInfos.info1 || <Skeleton className="info-skeleton" />}
+              </p>
+
+              <p className="info-detail">
+                {productInfos.info2 || <Skeleton className="info-skeleton" />}
+              </p>
+
+              <p className="info-detail">
+                {productInfos.info3 || <Skeleton className="info-skeleton" />}
+              </p>
+
+              <p className="info-detail">
+                {productInfos.info4 || <Skeleton className="info-skeleton" />}
+              </p>
+            </div>
+            <div className="line-detail-case-b">
+              <Characteristic productInfos={productInfos} />
+            </div>
+          </div>
+
+          <div className="description-box">
+            <p>{productInfos.description || <Skeleton />}</p>
+          </div>
+
+          <div className="orders-basket-box">
+            <button
+              className="btn-put-basket"
+              onClick={() => addBasket(productInfos)}
+            >
+              Mettre dans votre panier
+            </button>
+
+            <div className="modal-basket">
+              <img src={basketValidate} alt="basket-logo" />
+              <p>ajouté au panier</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="button-back-next-box">
+        <Link to="/produit">
+          <button className="btn-back-next">Poursuivre mes achats </button>
+        </Link>
+
+        <Link to="/panier">
+          <button className="btn-back-next">Terminer ma commande </button>
+        </Link>
+      </div>
+    </div>
+  );
 }
 
-export default ProductCard
+export default ProductCard;

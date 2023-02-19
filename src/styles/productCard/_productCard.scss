@@ -1,0 +1,330 @@
+.product-card-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+
+  h1 {
+    margin-top: 2%;
+  }
+
+  @media screen and (max-width: 1100px) {
+    min-height: 72vh ;
+  }
+
+  @media screen and (max-width: 800px) {
+    min-height: none;
+  }
+
+  .card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    width: 100%;
+    margin-top: 10vh;
+    border: none;
+
+    @media screen and (max-width: 900px) {
+      flex-direction: column;
+    }
+    @media screen and (max-width: 800px) {
+      margin-top: 6vh;
+    }
+
+    .img-card-box {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 20px;
+
+      width: 70%;
+      @media screen and (max-width: 900px) {
+        width: 100%;
+      }
+
+      .img-card {
+        width: 70%;
+        @media screen and (max-width: 900px) {
+          width: 50%;
+        }
+      }
+    }
+
+    .information-box {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      align-items: center;
+      justify-content: center;
+
+      .stock-price-box {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 20px;
+
+        .price-card {
+          font-size: 40px;
+          color: black;
+
+          @media screen and (max-width: 600px) {
+            font-size: 30px;
+          }
+        }
+
+        .stock {
+          display: flex;
+          width: 80%;
+          align-items: center;
+          justify-content: flex-start;
+
+          p {
+            margin-left: 5px;
+            font-weight: bold;
+          }
+
+          .icon-valid {
+            width: 3%;
+            margin-right: 1%;
+          }
+
+          .icon-not-valid {
+            width: 4%;
+          }
+
+          .good-stock {
+            color: green;
+            margin: 0;
+            @media screen and (max-width: 600px) {
+              font-size: 14px;
+            }
+          }
+
+          .no-stock {
+            color: red;
+            margin: 0;
+          }
+
+          .limit-stock {
+            color: red;
+            font-size: 12px;
+            margin: 0;
+            @media screen and (max-width: 600px) {
+              font-size: 10px;
+            }
+          }
+        }
+      }
+
+      .detail-box {
+        display: flex;
+        flex-direction: row-reverse;
+        width: 100%;
+        margin-bottom: 20px;
+
+        .line-detail-case-a {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: flex-end;
+          width: 100%;
+          font-weight: 600;
+
+          .info-detail {
+            margin-left: 0;
+            margin-bottom: 0;
+
+            @media screen and (max-width: 1500px) {
+              font-size: 14px;
+            }
+
+            @media screen and (max-width: 600px) {
+              font-size: 12px;
+            }
+          }
+        }
+
+        .line-detail-case-b {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: flex-start;
+          width: 100%;
+          font-weight: 600;
+
+          .line-a {
+            display: flex;
+            background-color: $color-1;
+            color: white;
+            width: 100%;
+            padding: 0px 60px 0px 0px;
+
+            p {
+              margin: 0 0 0 5px;
+
+              @media screen and (max-width: 1500px) {
+                font-size: 14px;
+              }
+
+              @media screen and (max-width: 600px) {
+                font-size: 12px;
+              }
+            }
+          }
+
+          .line-b {
+            display: flex;
+            background-color: white;
+            color: $color-1;
+            width: 100%;
+
+            p {
+              margin: 0 0 0 5px;
+              @media screen and (max-width: 600px) {
+                font-size: 12px;
+              }
+            }
+          }
+        }
+      }
+      .description-box {
+        display: flex;
+        width: 100%;
+        border: 1px solid $color-1;
+        padding: 5px;
+        font-family: $font2;
+      }
+
+      .orders-basket-box {
+        display: flex;
+        width: 100%;
+        margin-top: 40px;
+        justify-content: space-between;
+        align-items: center;
+
+        .btn-put-basket {
+          padding: 1% 1%;
+          border-radius: 10px;
+          cursor: pointer;
+          background-color: rgb(243, 139, 139);
+          color: white;
+          font-weight: 600;
+          font-size: 14px;
+          width: 30%;
+
+          &:hover {
+            background-color: rgb(242, 168, 168);
+          }
+          @media screen and (max-width: 1240px) {
+            width: 40%;
+          }
+
+          @media screen and (max-width: 1080px) {
+            width: 50%;
+            font-size: 12px;
+          }
+
+          @media screen and (max-width: 1000px) {
+            width: 60%;
+            font-size: 12px;
+          }
+
+          @media screen and (max-width: 900px) {
+            width: 30%;
+            font-size: 14px;
+          }
+
+          @media screen and (max-width: 600px) {
+            width: 50%;
+            font-size: 12px;
+          }
+        }
+
+        .modal-basket {
+          border: 1px solid rgba(0, 128, 0, 0.302);
+          border-radius: 15px;
+          padding: 6px 20px;
+          background-color: rgba(0, 128, 0, 0.434);
+          visibility: hidden;
+          font-size: 12px;
+          transition: 1s ease-out;
+          margin: 0;
+          color: white;
+          font-weight: 600;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          @media screen and (max-width: 1200px) {
+            padding: 6px 10px;
+            font-size: 10px;
+          }
+
+          img {
+            width: 30px;
+            margin-right: 10px;
+
+            @media screen and (max-width: 1200px) {
+              width: 20px;
+            }
+          }
+
+          p {
+            margin: 0;
+          }
+        }
+      }
+    }
+  }
+
+  .button-back-next-box {
+    display: flex;
+    width: 80%;
+    justify-content: space-between;
+    align-items: center;
+    margin: 30px 0;
+
+    @media screen and (max-width: 800px) {
+      width: 100%;
+    }
+    @media screen and (max-width: 500px) {
+      justify-content: center;
+    }
+
+    Link {
+      display: flex;
+      width: 100%;
+    }
+    button {
+      @include btnNextBack;
+    }
+  }
+
+  .skeleton-title-card {
+    width: 400px;
+    height: 30px;
+  }
+
+  .img-skeleton {
+    width: 300px;
+    height: 500px;
+  }
+
+  .info-skeleton {
+    width: 100px;
+    height: 20px;
+  }
+
+  .skeleton-price {
+    width: 80px;
+    height: 40px;
+  }
+
+  .quantity-skeleton {
+    width: 100px;
+    height: 200px;
+  }
+}
