@@ -6,7 +6,8 @@
 
 <img src="https://media.discordapp.net/attachments/1268608877755236446/1268955756011454574/techno5.PNG?ex=66ae4ea4&is=66acfd24&hm=9e4566180375892462d84501d8e77cb5e97480b1d0ea5b8edf620b12fe773ce3&=&format=webp&quality=lossless&width=867&height=419" alt="create account page screen" width="200" height="auto"/>  <img src="https://media.discordapp.net/attachments/1268608877755236446/1268955755600543876/techno4.PNG?ex=66ae4ea4&is=66acfd24&hm=4265a0211ffc885a52536499bbb948e722196f2b34031bc2a6938b41d8952bbf&=&format=webp&quality=lossless&width=870&height=419" alt="payment page screen" width="200" height="auto"/>   <img src="https://media.discordapp.net/attachments/1268608877755236446/1268955753767637043/techno6.PNG?ex=66ae4ea3&is=66acfd23&hm=f615de8c154a1359824f16fafc312e492a26d37e2b15928eceb929b197592e9b&=&format=webp&quality=lossless&width=884&height=417" alt="administration page screen" width="200" height="auto"/>
 
-**Technologeek**: Front side of an e-commerce project to obtain the professional title "Web and Mobile Application Developer". The back-end part of the project can be found [here](https://github.com/David-Chazoule/e-shop-back).
+ # Overview
+ Front side of an e-commerce project "technologeek" to obtain the professional title "Web and Mobile Application Developer". The back-end part of the project can be found [here](https://github.com/David-Chazoule/e-shop-back).
 
 ## Technologies Used
 
