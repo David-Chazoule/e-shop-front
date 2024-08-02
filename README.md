@@ -1,6 +1,6 @@
 # TECHNOLOGEEK Front-End
 
-**Technologeek**: Front side of an e-commerce project to obtain the professional title "Web and Mobile Application Developer". The back-end part of the project can be found [here](link-to-backend-repository).
+**Technologeek**: Front side of an e-commerce project to obtain the professional title "Web and Mobile Application Developer". The back-end part of the project can be found [here]((https://github.com/David-Chazoule/e-shop-back)).
 
 ## Technologies Used
 
