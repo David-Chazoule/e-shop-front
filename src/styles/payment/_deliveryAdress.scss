@@ -1,0 +1,81 @@
+.billing-adress_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  margin: 0;
+  width: 90%;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  background-color: rgb(230, 238, 245);
+  font-family: $font2;
+
+  @media screen and (max-width: 800px) {
+    width: 60%;
+  }
+
+  h1 {
+    display: flex;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 40px !important;
+    color: rgb(87, 194, 243);
+
+    @media screen and (max-width: 400px) {
+      margin-bottom: 20px !important;
+      font-size: 16px;
+    }
+  }
+
+  .billing-details {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+
+    .name-delivery,
+    .adress-delivery,
+    .city-delivery,
+    .phone-delivery,
+    .phone-email-delivery {
+      display: flex;
+      width: 100%;
+      justify-content: start;
+      font-weight: bold;
+
+      @media screen and (max-width: 400px) {
+        margin: 5px 0 0 5px;
+      }
+    }
+
+    .name-delivery p,
+    .adress-delivery p,
+    .city-delivery p,
+    .phone-delivery p,
+    .phone-email-delivery p {
+      margin-right: 10px;
+      @media screen and (max-width: 400px) {
+        margin: 0 5px 0 0;
+      }
+    }
+
+    .phone-email-delivery {
+      @media screen and (max-width: 600px) {
+        flex-direction: column;
+        margin: 0;
+      }
+    }
+  }
+
+  .delivery-img-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    img {
+      width: 200px;
+      @media screen and (max-width: 800px) {
+        width: 60%;
+      }
+    }
+  }
+}

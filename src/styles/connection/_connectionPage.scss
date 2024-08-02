@@ -1,0 +1,100 @@
+.Connection_container {
+  display: flex;
+  width: 50%;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  @media screen and (max-width: 800px) {
+    margin-top: 100px;
+  }
+
+  .logo-connection {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+
+    img {
+      width: 200px;
+    }
+
+    p {
+      margin: 0;
+      font-size: 40px;
+    }
+  }
+
+  .connection-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    width: 100%;
+    padding: 34px 0;
+    margin: 6% 0 10% 0;
+
+    @media screen and (max-width: 800px) {
+      box-shadow: none;
+    }
+
+    form {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+
+      p {
+        font-weight: bold;
+        margin: 5px 0 0 0;
+      }
+
+      input {
+        padding: 6px 12px;
+        font-size: 16px;
+        border-radius: 10px;
+        margin-bottom: 8px;
+      }
+    }
+  }
+
+  .btn-user-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    width: 100%;
+
+    .btn-user {
+      text-align: center;
+      padding: 2% 10%;
+      border-radius: 15px;
+      cursor: pointer;
+      background-color: rgb(87, 194, 243);
+      color: white;
+      font-weight: 600;
+      font-size: 18px;
+
+      &:hover {
+        background-color: white;
+        color: rgb(87, 194, 243);
+      }
+    }
+  }
+}
+
+.error-box {
+  margin-top: 10px;
+  height: 40px;
+  width: 100%;
+  text-align: center;
+  .error {
+    color: red;
+    font-size: 12px;
+    margin-top: 10px;
+    line-height: 0.6;
+  }
+}
